@@ -24,12 +24,10 @@ export const metadata: Metadata = {
     process.env.SITE_URL || "https://chick-fila-menus.com"
   ),
   title: {
-    default:
-      "Chick-fil-A Menu with Prices & Calories (2026) | CFA Menu Guide",
+    default: "Chick-fil-A Menu Prices & Calories (2026)",
     template: "%s | CFA Menu Guide",
   },
-  description:
-    "Complete Chick-fil-A menu with prices and calories for 2026. Browse all items including Breakfast, Sandwiches, Nuggets, Salads, Sides, and Drinks with full nutrition info.",
+  description: "Complete Chick-fil-A menu with 2026 prices and calories. Browse all items including breakfast, sandwiches, salads, and sides with full nutrition info.",
   keywords: [
     "chick-fil-a menu",
     "chick-fil-a menu prices",

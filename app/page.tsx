@@ -8,19 +8,17 @@ import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title:
-    "Chick-fil-A Menu With Prices & Calories (2026 Updated) | CFA Menu Guide",
-  description:
-    "See the full Chick-fil-A menu with 2026 prices, calories & protein — breakfast, sandwiches, nuggets, salads, sides, treats & drinks. Independent fan guide, updated regularly.",
+  title: "Chick-fil-A Menu Prices & Calories (2026 Updated)",
+  description: "Complete Chick-fil-A menu with 2026 prices, calories & protein. Find breakfast, sandwiches, nuggets, salads & sides. Independent fan guide.",
+  keywords: "chick-fil-a menu, chick fil a prices, chick-fil-a calories, chick fil a nutrition, cfa menu 2026, chick fil a breakfast menu",
   alternates: {
-    canonical: "https://www.cfamenuguide.com/",
+    canonical: "https://chick-fila-menus.com/",
   },
   openGraph: {
-    title: "Chick-fil-A Menu With Prices & Calories (2026)",
-    description:
-      "Full Chick-fil-A menu breakdown — prices, calories, protein for every item. Breakfast, entrées, salads, sides, treats, drinks & sauces.",
+    title: "Chick-fil-A Menu Prices & Calories (2026)",
+    description: "Complete Chick-fil-A menu breakdown — prices, calories, protein for every item including breakfast and entrées.",
     type: "website",
-    url: "https://www.cfamenuguide.com/",
+    url: "https://chick-fila-menus.com/",
   },
 };
 
@@ -187,7 +185,7 @@ export default function HomePage() {
             {/* Right Content - Single Image */}
             <div className="hidden md:flex flex-1 w-full max-w-lg lg:max-w-[550px] items-center justify-center mt-10 lg:mt-0">
               <img
-                src="/spicy-deluxe-sandwich.webp"
+                src="/Spicy-Deluxe-Sandwich.webp"
                 alt="Chick-fil-A Meal"
                 className="w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />

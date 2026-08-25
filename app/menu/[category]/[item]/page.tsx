@@ -31,6 +31,9 @@ export async function generateMetadata({
   return {
     title: `Chick-fil-A ${item.name} Price, Calories & Nutrition (${new Date().getFullYear()})`,
     description: `Complete guide to Chick-fil-A ${item.name}. Priced at ${formatPrice(item.price)} with ${item.nutrition.calories} calories. Read our review, nutrition facts, and FAQs!`,
+    alternates: {
+      canonical: `/menu/${categorySlug}/${itemSlug}`,
+    },
     openGraph: {
       title: `${item.name} — ${formatPrice(item.price)} | ${item.nutrition.calories} cal`,
       url: `/menu/${categorySlug}/${itemSlug}`,

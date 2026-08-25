@@ -26,6 +26,9 @@ export async function generateMetadata({
   return {
     title: `Chick-fil-A ${category.name} Menu with Prices & Calories (2026)`,
     description: `Chick-fil-A ${category.name} menu — all ${category.items.length} items with prices and calories. ${category.description}`,
+    alternates: {
+      canonical: `/menu/${categorySlug}`,
+    },
     openGraph: {
       title: `Chick-fil-A ${category.name} Menu — Prices & Calories 2026`,
       url: `/menu/${categorySlug}`,

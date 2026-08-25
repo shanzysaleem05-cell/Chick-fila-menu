@@ -92,9 +92,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <head>
-        <link rel="canonical" href={process.env.SITE_URL || "https://chickfilamenu.info"} />
-      </head>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", backgroundColor: "#fff", color: "#1A1A1A" }}>
         <Header />
         <main id="main-content">{children}</main>

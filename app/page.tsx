@@ -393,9 +393,6 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="font-display font-black text-3xl md:text-4xl text-[#1A1A1A] mb-8 text-center">
-          Frequently Asked Questions
-        </h2>
         <FAQAccordion items={homeFaqs} />
       </div>
     </div>

@@ -500,9 +500,6 @@ export default function HoursPage() {
 
       {/* FAQs */}
       <div className="mt-16 border-t border-[#EAE3D5] pt-12">
-        <h2 className="font-display font-bold text-3xl text-[#1A1A1A] mb-8 text-center">
-          Frequently Asked Questions
-        </h2>
         <FAQAccordion items={hoursFaqs} />
       </div>
 

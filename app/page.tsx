@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     description: "Complete Chick-fil-A menu breakdown — prices, calories, protein for every item including breakfast and entrées.",
     type: "website",
     url: "https://chick-fila-menus.com/",
+    images: [
+      {
+        url: "/Spicy-Deluxe-Sandwich.webp",
+        width: 1200,
+        height: 630,
+        alt: "Chick-fil-A Menu Guide 2026",
+      },
+    ],
   },
 };
 

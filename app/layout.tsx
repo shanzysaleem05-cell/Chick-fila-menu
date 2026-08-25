@@ -43,16 +43,18 @@ export const metadata: Metadata = {
     siteName: "CFA Menu Guide",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/Spicy-Deluxe-Sandwich.webp",
         width: 1200,
         height: 630,
-        alt: "Chick-fil-A Menu with Prices & Calories 2026",
+        alt: "Chick-fil-A Menu Guide 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og-image.jpg"],
+    title: "Chick-fil-A Menu Prices & Calories (2026)",
+    description: "Complete Chick-fil-A menu with 2026 prices and calories.",
+    images: ["/Spicy-Deluxe-Sandwich.webp"],
   },
   icons: {
     icon: [

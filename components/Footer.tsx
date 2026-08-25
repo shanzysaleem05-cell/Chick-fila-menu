@@ -37,9 +37,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 bg-brand-red rounded-xl flex items-center justify-center">
-                <span className="text-white font-display font-bold text-sm">CFA</span>
-              </div>
+              <img 
+                src="/apple-touch-icon.png" 
+                alt="CFA Menu Guide Logo" 
+                className="w-9 h-9 rounded-xl"
+              />
               <span className="font-display font-bold text-xl">CFA Menu Guide</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

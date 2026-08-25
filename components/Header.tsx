@@ -54,9 +54,11 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group">
-            <div className="w-12 h-12 rounded-full bg-[#DD0033] flex items-center justify-center flex-col transform group-hover:scale-105 transition-transform duration-300">
-              <span className="text-white font-display font-black text-lg leading-none tracking-tighter">CFA</span>
-            </div>
+            <img 
+              src="/apple-touch-icon.png" 
+              alt="CFA Menu Guide Logo" 
+              className="w-11 h-11 sm:w-12 sm:h-12 transform group-hover:scale-105 transition-transform duration-300 rounded-xl"
+            />
           </Link>
           
           {/* Nav (Desktop) */}

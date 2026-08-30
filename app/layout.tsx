@@ -24,23 +24,25 @@ export const metadata: Metadata = {
     process.env.SITE_URL || "https://chick-fila-menus.com"
   ),
   title: {
-    default: "Chick-fil-A Menu Prices & Calories (2026)",
-    template: "%s | CFA Menu Guide",
+    default: "Chick-fil-A Menu 2026: Prices, Calories & Full Item List",
+    template: "%s | Chick-fil-A Menu Guide 2026",
   },
-  description: "Complete Chick-fil-A menu with 2026 prices and calories. Browse all items including breakfast, sandwiches, salads, and sides with full nutrition info.",
+  description: "Browse the complete Chick-fil-A menu with 2026 prices, calories & protein for every item. ✓ Breakfast ✓ Sandwiches ✓ Salads ✓ Sides — Updated weekly.",
   keywords: [
     "chick-fil-a menu",
     "chick-fil-a menu prices",
     "chick-fil-a calories",
     "chick-fil-a nutrition",
     "chick-fil-a menu 2026",
+    "chick fil a prices",
+    "chick fil a menu with prices",
   ],
   authors: [{ name: "CFA Menu Guide" }],
   creator: "CFA Menu Guide",
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "CFA Menu Guide",
+    siteName: "Chick-fil-A Menu Guide",
     images: [
       {
         url: "/Spicy-Deluxe-Sandwich.webp",
@@ -52,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chick-fil-A Menu Prices & Calories (2026)",
-    description: "Complete Chick-fil-A menu with 2026 prices and calories.",
+    title: "Chick-fil-A Menu 2026: Prices, Calories & Full Item List",
+    description: "Browse the complete Chick-fil-A menu with 2026 prices, calories & protein for every item.",
     images: ["/Spicy-Deluxe-Sandwich.webp"],
   },
   icons: {

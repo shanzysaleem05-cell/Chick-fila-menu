@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/menu`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/prices`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/calories`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${siteUrl}/nutrition`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/hours`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${siteUrl}/catering`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${siteUrl}/rewards`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },

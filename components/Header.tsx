@@ -66,7 +66,7 @@ export default function Header() {
             <Link href="/menu" className="hover:text-[#DD0033] transition-colors">Menu</Link>
             <Link href="/catering" className="hover:text-[#DD0033] transition-colors">Catering</Link>
             <Link href="/rewards" className="hover:text-[#DD0033] transition-colors">Rewards</Link>
-            <Link href="/nutrition" className="hover:text-[#DD0033] transition-colors">Nutrition</Link>
+            <Link href="/calories" className="hover:text-[#DD0033] transition-colors">Calories & Nutrition</Link>
             <Link href="/blog" className="hover:text-[#DD0033] transition-colors">Blogs</Link>
             <span className="text-gray-300 font-light">|</span>
             <Link href="/hours" className="hover:text-[#DD0033] transition-colors">Chick-Fil-A Hours</Link>
@@ -88,7 +88,7 @@ export default function Header() {
           <Link href="/menu" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Menu</Link>
           <Link href="/catering" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Catering</Link>
           <Link href="/rewards" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Rewards</Link>
-          <Link href="/nutrition" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Nutrition</Link>
+          <Link href="/calories" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Calories & Nutrition</Link>
           <Link href="/blog" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Blogs</Link>
           <Link href="/hours" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Chick-Fil-A Hours</Link>
           <div className="py-4 flex flex-col gap-3">

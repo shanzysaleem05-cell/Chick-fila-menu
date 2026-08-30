@@ -7,12 +7,15 @@ import { getAllItems, menuCategories } from "@/lib/menu-data";
 import { getLastUpdated } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Chick-fil-A Menu with Prices (2026) — Every Item Listed",
+  title: "Chick-fil-A Prices 2026: Every Menu Item with Price (Full List)",
   description:
-    "Complete Chick-fil-A prices list for 2026 — every menu item with its price. Breakfast, chicken sandwiches, nuggets, salads, sides, drinks, and treats. US national average estimates.",
+    "See exact Chick-fil-A prices for all 85+ menu items in 2026. From \$1.79 Icedream Cone to \$21.50 nuggets platter. Searchable price list updated weekly.",
+  alternates: {
+    canonical: "https://chick-fila-menus.com/prices",
+  },
   openGraph: {
-    title: "Chick-fil-A Menu Prices (2026) — All Items Listed",
-    url: "/prices",
+    title: "Chick-fil-A Prices 2026: Every Item Listed",
+    url: "https://chick-fila-menus.com/prices",
   },
 };
 
@@ -45,6 +48,32 @@ export default function PricesPage() {
   const allItems = getAllItems();
   const lastUpdated = getLastUpdated();
 
+  const siteUrl = "https://chick-fila-menus.com";
+
+  const pricesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        mainEntity: pricesFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Prices", item: `${siteUrl}/prices` },
+        ],
+      },
+    ],
+  };
+
   // Price ranges per category
   const categoryPrices = menuCategories.map((cat) => ({
     ...cat,
@@ -54,6 +83,10 @@ export default function PricesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricesJsonLd) }}
+      />
       <Breadcrumbs items={[{ label: "Prices", href: "/prices" }]} />
 
       <div className="mb-10">

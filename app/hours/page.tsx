@@ -6,9 +6,16 @@ import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Chick-fil-A Hours: Breakfast, Lunch & Holiday Times (2026)",
+  title: "Chick-fil-A Hours 2026: Open & Close Times, Breakfast & Holidays",
   description:
-    "Complete guide to Chick-fil-A hours including breakfast times, lunch hours, holiday schedules, and Sunday closures. Find out what time Chick-fil-A opens and closes.",
+    "Chick-fil-A opens 6:30 AM Mon–Sat, breakfast ends 10:30 AM, closes ~9 PM. Closed Sundays. See holiday hours, drive-thru times & location finder. 2026 guide.",
+  alternates: {
+    canonical: "https://chick-fila-menus.com/hours",
+  },
+  openGraph: {
+    title: "Chick-fil-A Hours 2026: Open & Close Times Near You",
+    url: "https://chick-fila-menus.com/hours",
+  },
 };
 
 const hoursFaqs = [
@@ -55,8 +62,71 @@ const hoursFaqs = [
 ];
 
 export default function HoursPage() {
+  const siteUrl = "https://chick-fila-menus.com";
+
+  const hoursJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": `${siteUrl}/#business`,
+        name: "Chick-fil-A",
+        url: siteUrl,
+        description: "Chick-fil-A restaurant hours guide — open Mon–Sat 6:30 AM to 9 PM. Closed Sundays.",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            opens: "06:30",
+            closes: "21:00",
+          },
+        ],
+        specialOpeningHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            validFrom: "2026-11-26",
+            validThrough: "2026-11-26",
+            opens: "00:00",
+            closes: "00:00",
+            description: "Closed on Thanksgiving Day",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            validFrom: "2026-12-25",
+            validThrough: "2026-12-25",
+            opens: "00:00",
+            closes: "00:00",
+            description: "Closed on Christmas Day",
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: hoursFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Hours", item: `${siteUrl}/hours` },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hoursJsonLd) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },

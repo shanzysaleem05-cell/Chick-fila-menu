@@ -74,7 +74,7 @@ export default async function ItemPage({
         "@type": "MenuItem",
         name: item.name,
         description: item.description,
-        url: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu/${category.slug}/${item.slug}`,
+        url: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu/${category.slug}/${item.slug}`,
         offers: {
           "@type": "Offer",
           price: item.price,
@@ -98,9 +98,9 @@ export default async function ItemPage({
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Menu", item: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu` },
-          { "@type": "ListItem", position: 2, name: category.name, item: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu/${category.slug}` },
-          { "@type": "ListItem", position: 3, name: item.name, item: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu/${category.slug}/${item.slug}` },
+          { "@type": "ListItem", position: 1, name: "Menu", item: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu` },
+          { "@type": "ListItem", position: 2, name: category.name, item: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu/${category.slug}` },
+          { "@type": "ListItem", position: 3, name: item.name, item: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu/${category.slug}/${item.slug}` },
         ]
       }
     ]

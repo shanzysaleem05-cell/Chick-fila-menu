@@ -6,12 +6,14 @@ import AdUnit from "@/components/AdUnit";
 import { menuCategories } from "@/lib/menu-data";
 
 export const metadata: Metadata = {
-  title: "Chick-fil-A Full Menu with Prices & Calories (2026)",
-  description:
-    "Complete Chick-fil-A menu — all items with prices and calories. Breakfast, sandwiches, nuggets, salads, sides, drinks, and more.",
+  title: "Full Chick-fil-A Menu 2026 — All Items with Prices & Calories",
+  description: "See every Chick-fil-A menu item with 2026 prices and calories. ✓ 85+ items ✓ 8 categories ✓ Breakfast, sandwiches, nuggets, salads, sides & drinks. Searchable list.",
+  alternates: {
+    canonical: "https://chick-fila-menus.com/menu",
+  },
   openGraph: {
-    title: "Chick-fil-A Full Menu with Prices & Calories (2026)",
-    url: "/menu",
+    title: "Full Chick-fil-A Menu 2026 — All Items with Prices & Calories",
+    url: "https://chick-fila-menus.com/menu",
   },
 };
 
@@ -23,12 +25,12 @@ export default function MenuPage() {
     "@type": "Menu",
     name: "Chick-fil-A Full Menu",
     description: "Complete Chick-fil-A menu with prices and calories.",
-    url: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu`,
+    url: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu`,
     hasMenuSection: menuCategories.map((cat) => ({
       "@type": "MenuSection",
       name: cat.name,
       description: cat.description,
-      url: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu/${cat.slug}`,
+      url: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu/${cat.slug}`,
       hasMenuItem: cat.items.map((item) => ({
         "@type": "MenuItem",
         name: item.name,

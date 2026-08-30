@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://chickfilamenu.info",
+  siteUrl: process.env.SITE_URL || "https://chick-fila-menus.com",
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,

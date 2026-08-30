@@ -74,7 +74,23 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    openGraph: { title: post.title, description: post.description, url: `/blog/${slug}` },
+    alternates: {
+      canonical: `https://chick-fila-menus.com/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url: `https://chick-fila-menus.com/blog/${slug}`,
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
   };
 }
 
@@ -817,8 +833,57 @@ export default async function BlogPostPage({
     .filter(([s]) => s !== slug)
     .slice(0, 3);
 
+  const siteUrl = "https://chick-fila-menus.com";
+
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${siteUrl}/blog/${slug}#article`,
+        headline: post.title,
+        description: post.description,
+        image: {
+          "@type": "ImageObject",
+          url: `${siteUrl}${post.image}`,
+        },
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+          "@type": "Organization",
+          name: "CFA Menu Guide",
+          url: siteUrl,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "CFA Menu Guide",
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/icon.png`,
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/blog/${slug}`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: `${siteUrl}/blog/${slug}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },

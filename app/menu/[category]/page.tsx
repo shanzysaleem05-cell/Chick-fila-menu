@@ -53,12 +53,12 @@ export default async function CategoryPage({
     "@type": "MenuSection",
     name: `Chick-fil-A ${category.name} Menu`,
     description: category.description,
-    url: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu/${category.slug}`,
+    url: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu/${category.slug}`,
     hasMenuItem: category.items.map((item) => ({
       "@type": "MenuItem",
       name: item.name,
       description: item.description,
-      url: `${process.env.SITE_URL || "https://chickfilamenu.info"}/menu/${category.slug}/${item.slug}`,
+      url: `${process.env.SITE_URL || "https://chick-fila-menus.com"}/menu/${category.slug}/${item.slug}`,
       offers: {
         "@type": "Offer",
         price: item.price,

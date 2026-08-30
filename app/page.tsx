@@ -8,9 +8,9 @@ import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Chick-fil-A Menu Prices & Calories (2026 Updated)",
-  description: "Complete Chick-fil-A menu with 2026 prices, calories & protein. Find breakfast, sandwiches, nuggets, salads & sides. Independent fan guide.",
-  keywords: "chick-fil-a menu, chick fil a prices, chick-fil-a calories, chick fil a nutrition, cfa menu 2026, chick fil a breakfast menu",
+  title: "Chick-fil-A Menu 2026: Prices, Calories & Full Item List",
+  description: "Browse the full Chick-fil-A menu with 2026 prices, calories & protein for every item. ✓ Breakfast ✓ Sandwiches ✓ Salads ✓ Sides. Updated weekly — no guesswork.",
+  keywords: "chick-fil-a menu, chick fil a prices, chick-fil-a calories, chick fil a nutrition, cfa menu 2026, chick fil a breakfast menu, chick-fil-a menu with prices",
   alternates: {
     canonical: "https://chick-fila-menus.com/",
   },
@@ -66,29 +66,29 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://www.cfamenuguide.com/#organization",
+        "@id": "https://chick-fila-menus.com/#organization",
         name: "CFA Menu Guide",
-        url: "https://www.cfamenuguide.com/",
+        url: "https://chick-fila-menus.com/",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.cfamenuguide.com/icon.png",
+          url: "https://chick-fila-menus.com/icon.png",
         },
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.cfamenuguide.com/#website",
-        url: "https://www.cfamenuguide.com/",
+        "@id": "https://chick-fila-menus.com/#website",
+        url: "https://chick-fila-menus.com/",
         name: "CFA Menu Guide",
-        publisher: { "@id": "https://www.cfamenuguide.com/#organization" },
+        publisher: { "@id": "https://chick-fila-menus.com/#organization" },
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://www.cfamenuguide.com/search?q={search_term_string}",
+          target: "https://chick-fila-menus.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string",
         },
       },
       {
         "@type": "Menu",
-        "@id": "https://www.cfamenuguide.com/#menu",
+        "@id": "https://chick-fila-menus.com/#menu",
         name: "Chick-fil-A Menu",
         hasMenuSection: menuCategories.map((cat) => ({
           "@type": "MenuSection",

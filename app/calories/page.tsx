@@ -7,16 +7,17 @@ import { getAllItems, menuCategories } from "@/lib/menu-data";
 import { getLastUpdated } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Chick-fil-A Calories (2026) — Full Nutrition Guide & Menu",
+  title: "Chick-fil-A Calories 2026: Full Nutrition for Every Menu Item",
   description:
-    "Complete Chick-fil-A calorie count for every menu item in 2026. Find nutrition info, protein, carbs, fat, and allergens for all Chick-fil-A items. Based on official nutrition data.",
+    "Full Chick-fil-A calorie count for every menu item (2026). Lowest: 0 cal (water). Highest: 1,230 cal. Find healthy options under 300 cal, keto picks and full macro breakdown.",
+  alternates: {
+    canonical: "https://chick-fila-menus.com/calories",
+  },
   openGraph: {
-    title: "Chick-fil-A Calories 2026 — Full Nutrition Guide",
-    url: "/calories",
+    title: "Chick-fil-A Calories 2026 — Nutrition for Every Item",
+    url: "https://chick-fila-menus.com/calories",
   },
 };
-
-export const revalidate = 86400;
 
 const caloriesFaqs = [
   {
@@ -45,6 +46,32 @@ export default function CaloriesPage() {
   const allItems = getAllItems();
   const lastUpdated = getLastUpdated();
 
+  const siteUrl = "https://chick-fila-menus.com";
+
+  const caloriesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        mainEntity: caloriesFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Calories & Nutrition", item: `${siteUrl}/calories` },
+        ],
+      },
+    ],
+  };
+
   // Sort by calories for insights
   const byCalories = [...allItems].sort((a, b) => a.nutrition.calories - b.nutrition.calories);
   const lowest5 = byCalories.slice(0, 5);
@@ -53,6 +80,10 @@ export default function CaloriesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caloriesJsonLd) }}
+      />
       <Breadcrumbs items={[{ label: "Calories & Nutrition", href: "/calories" }]} />
 
       <div className="mb-10">

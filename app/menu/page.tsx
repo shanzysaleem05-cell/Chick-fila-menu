@@ -66,11 +66,28 @@ export default function MenuPage() {
 
         <div className="mt-8 mb-12">
           <h1 className="font-display font-black text-4xl md:text-5xl text-[#1A1A1A] mb-4">
-            Full Menu
+            Chick-fil-A Full Menu (2026)
           </h1>
           <p className="text-[#4a4a4a] text-lg max-w-3xl">
-            Browse our complete selection of freshly prepared meals, sides, and beverages.
+            Browse our complete selection of freshly prepared meals, sides, and beverages. All items include updated 2026 prices and calorie counts.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            <Link href="/hours" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+              Check Serving Hours
+            </Link>
+            <Link href="/prices" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+              View Price List
+            </Link>
+            <Link href="/calories" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+              Nutrition Guide
+            </Link>
+            {menuCategories.map((cat) => (
+              <Link key={cat.slug} href={`#${cat.slug}`} className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+                {cat.name}
+              </Link>
+            ))}
+          </div>
         </div>
 
         <div className="space-y-24">

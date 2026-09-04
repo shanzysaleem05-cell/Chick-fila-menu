@@ -391,6 +391,45 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Popular Searches & Quick Links (SEO Interlinking) */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-[#EAE3D5]">
+        <h2 className="font-display font-black text-2xl text-[#1A1A1A] mb-6">Popular Chick-fil-A Searches</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Link href="/menu" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick fil a menu</span>
+            <span className="text-xs text-gray-500">View all items</span>
+          </Link>
+          <Link href="/hours" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick fil a hours</span>
+            <span className="text-xs text-gray-500">Open & close times</span>
+          </Link>
+          <Link href="/menu" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">CFA menu</span>
+            <span className="text-xs text-gray-500">Quick browse</span>
+          </Link>
+          <Link href="/prices" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick-fil-a menu prices</span>
+            <span className="text-xs text-gray-500">2026 price list</span>
+          </Link>
+          <Link href="/menu/breakfast" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Breakfast menu</span>
+            <span className="text-xs text-gray-500">Morning favorites</span>
+          </Link>
+          <Link href="/calories" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick fil a calories</span>
+            <span className="text-xs text-gray-500">Nutrition facts</span>
+          </Link>
+          <Link href="/menu/entrees" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chicken sandwiches</span>
+            <span className="text-xs text-gray-500">Classic & spicy</span>
+          </Link>
+          <Link href="/catering" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
+            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Catering menu</span>
+            <span className="text-xs text-gray-500">Trays & packages</span>
+          </Link>
+        </div>
+      </div>
+
       {/* FAQ Section */}
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <FAQAccordion items={homeFaqs} />

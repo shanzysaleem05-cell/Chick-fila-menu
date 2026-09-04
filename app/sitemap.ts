@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { menuCategories } from "@/lib/menu-data";
+import { cateringCategories } from "@/lib/catering-data";
 
 const siteUrl = process.env.SITE_URL || "https://chick-fila-menus.com";
 
@@ -46,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.85,
+    images: cat.image ? [`${siteUrl}${cat.image}`] : undefined,
   }));
 
   // Item detail pages
@@ -55,8 +57,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.75,
+      images: item.image ? [`${siteUrl}${item.image}`] : undefined,
     }))
   );
 
-  return [...staticPages, ...blogPages, ...categoryPages, ...itemPages];
+  // Catering category pages
+  const cateringCategoryPages: MetadataRoute.Sitemap = cateringCategories.map((cat) => ({
+    url: `${siteUrl}/catering/${cat.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+    images: cat.image ? [`${siteUrl}${cat.image}`] : undefined,
+  }));
+
+  // Catering item pages
+  const cateringItemPages: MetadataRoute.Sitemap = cateringCategories.flatMap((cat) =>
+    cat.items.map((item) => ({
+      url: `${siteUrl}/catering/${cat.slug}/${item.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      images: item.image ? [`${siteUrl}${item.image}`] : undefined,
+    }))
+  );
+
+  return [...staticPages, ...blogPages, ...categoryPages, ...itemPages, ...cateringCategoryPages, ...cateringItemPages];
 }

@@ -145,12 +145,27 @@ export default function HoursPage() {
         <h1 className="font-display font-black text-3xl md:text-4xl lg:text-5xl text-[#1A1A1A] mb-4 leading-tight max-w-4xl">
           Chick-fil-A Hours: Breakfast, Lunch & Holiday Times (Guide 2026)
         </h1>
-        <p className="text-gray-600 text-base md:text-lg max-w-4xl leading-relaxed">
+        <p className="text-gray-600 text-base md:text-lg max-w-4xl leading-relaxed mb-6">
           Chick-fil-A restaurants are generally open Monday through Saturday
           from 6:30 AM to 9:00 PM, with some locations offering later service.
           The drive-thru may remain open until 10:00 PM, while breakfast runs
           until 10:30 AM and lunch begins immediately afterward.
         </p>
+
+        <div className="flex flex-wrap gap-2">
+          <Link href="/menu" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            View Full Menu
+          </Link>
+          <Link href="/menu/breakfast" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            Breakfast Menu
+          </Link>
+          <Link href="/prices" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            Menu Prices
+          </Link>
+          <Link href="/calories" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            Calories & Nutrition
+          </Link>
+        </div>
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-12 flex gap-4 items-start">

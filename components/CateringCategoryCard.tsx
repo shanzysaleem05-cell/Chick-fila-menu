@@ -6,27 +6,30 @@ export default function CateringCategoryCard({ category }: { category: CateringC
   return (
     <Link
       href={`/catering/${category.slug}`}
-      className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-[#EAE3D5] hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      className="group flex flex-col bg-white border border-[#EAE3D5] hover:shadow-lg transition-all duration-300"
     >
-      <div className="relative aspect-[16/9] w-full bg-white overflow-hidden flex items-center justify-center p-4 border-b border-[#EAE3D5]">
+      <div className="relative aspect-[4/3] w-full bg-[#F9F7F4] overflow-hidden flex items-center justify-center p-0 border-b border-[#EAE3D5]">
         <img
           src={category.image}
           alt={`${category.name} Catering`}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="font-display font-bold text-[#1A1A1A] text-xl mb-2 group-hover:text-[#DD0033] transition-colors">
+        <h3 className="font-display font-black text-[#1A1A1A] text-xl mb-4 group-hover:text-[#DD0033] transition-colors leading-tight">
           {category.name}
         </h3>
-        <p className="text-gray-500 text-sm mb-6 flex-grow">
+        
+        {/* Divider */}
+        <hr className="border-[#EAE3D5] mb-5" />
+
+        <p className="text-[#666666] text-[15px] mb-5 flex-grow leading-relaxed">
           {category.description}
         </p>
-        <div className="mt-auto flex items-center justify-between">
-          <span className="text-[#DD0033] font-bold text-sm">View Options</span>
-          <div className="w-8 h-8 rounded-full bg-[#f4f4f4] group-hover:bg-[#DD0033] flex items-center justify-center transition-colors">
-            <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors" />
-          </div>
+
+        <div className="flex items-center justify-between text-[#DD0033] font-bold text-[15px]">
+          <span>View Options</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </div>
       </div>
     </Link>

@@ -50,7 +50,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Chick-fil-A® Chicken Biscuit",
         slug: "chicken-biscuit",
-        price: "4.65",
+        price: "$5.09-$5.79",
         nutrition: { calories: 460, protein: 23, carbs: 44, fat: 20, sodium: 1350 },
         allergens: ["Milk", "Soy", "Wheat"],
         description:
@@ -62,7 +62,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Spicy Chicken Biscuit",
         slug: "spicy-chicken-biscuit",
-        price: "4.85",
+        price: "$5.29-$5.99",
         nutrition: { calories: 450, protein: 23, carbs: 44, fat: 19, sodium: 1440 },
         allergens: ["Milk", "Soy", "Wheat"],
         description:
@@ -73,7 +73,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Chick-n-Minis® (4 ct)",
         slug: "chick-n-minis-4ct",
-        price: "4.95",
+        price: "$6.09-$6.99",
         nutrition: { calories: 360, protein: 21, carbs: 37, fat: 13, sodium: 740 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -96,7 +96,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Egg White Grill",
         slug: "egg-white-grill",
-        price: "5.25",
+        price: "$6.25-$6.99",
         nutrition: { calories: 300, protein: 26, carbs: 31, fat: 7, sodium: 970 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -119,7 +119,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Bacon, Egg & Cheese Biscuit",
         slug: "bacon-egg-cheese-biscuit",
-        price: "5.15",
+        price: "$3.79-$5.49",
         nutrition: { calories: 420, protein: 18, carbs: 40, fat: 22, sodium: 1090 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -130,7 +130,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Sausage, Egg & Cheese Biscuit",
         slug: "sausage-egg-cheese-biscuit",
-        price: "5.15",
+        price: "$3.79-$5.39",
         nutrition: { calories: 620, protein: 23, carbs: 40, fat: 40, sodium: 1240 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -174,7 +174,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Hash Brown Scramble Burrito",
         slug: "hash-brown-scramble-burrito",
-        price: "5.75",
+        price: "$6.19-$7.29",
         nutrition: { calories: 700, protein: 29, carbs: 57, fat: 39, sodium: 1310 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -185,7 +185,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Hash Brown Scramble Bowl",
         slug: "hash-brown-scramble-bowl",
-        price: "5.95",
+        price: "$6.09-$7.19",
         nutrition: { calories: 470, protein: 22, carbs: 34, fat: 28, sodium: 1120 },
         allergens: ["Milk", "Egg", "Soy"],
         description:
@@ -196,7 +196,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Buttery Biscuit",
         slug: "buttery-biscuit",
-        price: "2.15",
+        price: "$1.49-$2.19",
         nutrition: { calories: 290, protein: 5, carbs: 37, fat: 14, sodium: 670 },
         allergens: ["Milk", "Soy", "Wheat"],
         description:
@@ -207,7 +207,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Hash Browns (small)",
         slug: "hash-browns",
-        price: "2.19",
+        price: "$1.55-$2.49",
         nutrition: { calories: 270, protein: 3, carbs: 33, fat: 14, sodium: 360 },
         allergens: ["Soy"],
         description:
@@ -218,7 +218,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Berry Parfait",
         slug: "berry-parfait",
-        price: "3.99",
+        price: "$4.75-$6.19",
         nutrition: { calories: 270, protein: 5, carbs: 54, fat: 4, sodium: 95 },
         allergens: ["Milk", "Wheat"],
         description:
@@ -230,7 +230,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Fruit Cup",
         slug: "fruit-cup",
-        price: "3.49",
+        price: "$3.99-$5.19",
         nutrition: { calories: 70, protein: 1, carbs: 17, fat: 0, sodium: 5 },
         allergens: [],
         description:
@@ -251,7 +251,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Chick-fil-A® Chicken Sandwich",
         slug: "chicken-sandwich",
-        price: "4.95",
+        price: "$4.85-$7.00",
         nutrition: { calories: 420, protein: 29, carbs: 41, fat: 18, sodium: 1400 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -283,7 +283,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Chick-fil-A® Deluxe Sandwich",
         slug: "deluxe-sandwich",
-        price: "5.55",
+        price: "$5.55-$7.19",
         nutrition: { calories: 490, protein: 31, carbs: 43, fat: 22, sodium: 1450 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -295,7 +295,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Spicy Chicken Sandwich",
         slug: "spicy-chicken-sandwich",
-        price: "5.35",
+        price: "$5.25-$7.29",
         nutrition: { calories: 450, protein: 28, carbs: 41, fat: 20, sodium: 1670 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -307,7 +307,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Spicy Deluxe Sandwich",
         slug: "spicy-deluxe-sandwich",
-        price: "5.85",
+        price: "$5.95-$7.99",
         nutrition: { calories: 540, protein: 31, carbs: 43, fat: 26, sodium: 1720 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -318,7 +318,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Grilled Chicken Sandwich",
         slug: "grilled-chicken-sandwich",
-        price: "6.09",
+        price: "$6.49-$8.99",
         nutrition: { calories: 390, protein: 28, carbs: 43, fat: 11, sodium: 820 },
         allergens: ["Milk", "Soy", "Wheat"],
         description:
@@ -330,7 +330,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Grilled Chicken Club",
         slug: "grilled-chicken-club",
-        price: "7.35",
+        price: "$8.19-$9.79",
         nutrition: { calories: 520, protein: 43, carbs: 44, fat: 19, sodium: 1220 },
         allergens: ["Milk", "Soy", "Wheat"],
         description:
@@ -341,7 +341,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Honey Pepper Pimento Chicken Sandwich",
         slug: "honey-pepper-pimento-chicken-sandwich",
-        price: "6.99",
+        price: "$6.99-$8.49",
         nutrition: { calories: 600, protein: 32, carbs: 60, fat: 27, sodium: 1590 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -353,7 +353,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Chick-fil-A Cool Wrap®",
         slug: "cool-wrap",
-        price: "6.79",
+        price: "$7.79-$9.99",
         nutrition: { calories: 660, protein: 43, carbs: 54, fat: 27, sodium: 1360 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -364,7 +364,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Chick-fil-A® Nuggets (8 ct)",
         slug: "nuggets-8ct",
-        price: "5.19",
+        price: "$4.85-$6.09",
         nutrition: { calories: 250, protein: 27, carbs: 12, fat: 11, sodium: 760 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -376,7 +376,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Chick-fil-A® Nuggets (12 ct)",
         slug: "nuggets-12ct",
-        price: "6.75",
+        price: "$7.19-$8.99",
         nutrition: { calories: 380, protein: 40, carbs: 18, fat: 17, sodium: 1140 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -387,7 +387,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Chick-fil-A® Nuggets (30 ct)",
         slug: "nuggets-30ct",
-        price: "14.99",
+        price: "$17.49-$20.99",
         nutrition: { calories: 950, protein: 100, carbs: 45, fat: 43, sodium: 2850 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -398,7 +398,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Grilled Nuggets (8 ct)",
         slug: "grilled-nuggets-8ct",
-        price: "5.19",
+        price: "$5.69-$8.09",
         nutrition: { calories: 130, protein: 25, carbs: 1, fat: 3, sodium: 530 },
         allergens: ["Milk", "Soy"],
         description:
@@ -410,7 +410,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Chick-n-Strips® (4 ct)",
         slug: "chick-n-strips-4ct",
-        price: "7.35",
+        price: "$7.19-$8.99",
         nutrition: { calories: 410, protein: 36, carbs: 26, fat: 17, sodium: 1050 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -442,7 +442,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Cobb Salad",
         slug: "cobb-salad",
-        price: "8.45",
+        price: "$9.49-$12.09",
         nutrition: { calories: 830, protein: 44, carbs: 35, fat: 57, sodium: 1700 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -454,7 +454,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Spicy Southwest Salad",
         slug: "spicy-southwest-salad",
-        price: "8.45",
+        price: "$9.69-$12.49",
         nutrition: { calories: 680, protein: 35, carbs: 58, fat: 32, sodium: 1420 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -465,7 +465,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Market Salad",
         slug: "market-salad",
-        price: "8.45",
+        price: "$9.69-$12.49",
         nutrition: { calories: 550, protein: 35, carbs: 54, fat: 22, sodium: 1010 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -477,7 +477,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Side Salad",
         slug: "side-salad",
-        price: "3.99",
+        price: "$3.99-$5.29",
         nutrition: { calories: 470, protein: 22, carbs: 40, fat: 25, sodium: 910 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -510,7 +510,7 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
       {
         name: "Waffle Potato Fries® (Medium)",
         slug: "waffle-potato-fries-medium",
-        price: "2.55",
+        price: "$2.35-$3.79",
         nutrition: { calories: 420, protein: 5, carbs: 45, fat: 24, sodium: 240 },
         allergens: [],
         description:
@@ -565,7 +565,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Mac & Cheese (Medium)",
         slug: "mac-cheese-medium",
-        price: "4.65",
+        price: "$3.99-$5.29",
         nutrition: { calories: 450, protein: 18, carbs: 46, fat: 22, sodium: 980 },
         allergens: ["Milk", "Wheat"],
         description:
@@ -587,7 +587,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Chicken Noodle Soup (Cup)",
         slug: "chicken-noodle-soup-cup",
-        price: "4.29",
+        price: "$3.85-$5.19",
         nutrition: { calories: 190, protein: 11, carbs: 20, fat: 6, sodium: 900 },
         allergens: ["Soy", "Wheat"],
         description:
@@ -598,7 +598,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Chicken Noodle Soup (Bowl)",
         slug: "chicken-noodle-soup-bowl",
-        price: "5.99",
+        price: "$3.85-$5.19",
         nutrition: { calories: 320, protein: 19, carbs: 33, fat: 10, sodium: 1500 },
         allergens: ["Soy", "Wheat"],
         description:
@@ -620,7 +620,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Waffle Potato Chips",
         slug: "waffle-potato-chips",
-        price: "2.19",
+        price: "$2.09-$2.79",
         nutrition: { calories: 220, protein: 2, carbs: 28, fat: 12, sodium: 190 },
         allergens: ["Soy"],
         description:
@@ -641,7 +641,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Chocolate Chunk Cookie",
         slug: "chocolate-chunk-cookie",
-        price: "2.05",
+        price: "$1.65-$2.19",
         nutrition: { calories: 370, protein: 4, carbs: 49, fat: 19, sodium: 240 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -652,7 +652,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Chocolate Fudge Brownie",
         slug: "chocolate-fudge-brownie",
-        price: "3.09",
+        price: "$2.25-$2.99",
         nutrition: { calories: 370, protein: 5, carbs: 50, fat: 18, sodium: 160 },
         allergens: ["Milk", "Egg", "Soy", "Wheat"],
         description:
@@ -663,7 +663,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Icedream® Cone",
         slug: "icedream-cone",
-        price: "1.79",
+        price: "$1.69-$2.29",
         nutrition: { calories: 180, protein: 5, carbs: 30, fat: 5, sodium: 130 },
         allergens: ["Milk", "Wheat"],
         description:
@@ -675,7 +675,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Icedream® Cup",
         slug: "icedream-cup",
-        price: "1.85",
+        price: "$1.35-$1.99",
         nutrition: { calories: 140, protein: 4, carbs: 25, fat: 4, sodium: 110 },
         allergens: ["Milk"],
         description:
@@ -686,7 +686,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Chocolate Milkshake",
         slug: "chocolate-milkshake",
-        price: "4.19",
+        price: "$4.45-$6.09",
         nutrition: { calories: 600, protein: 15, carbs: 85, fat: 24, sodium: 370 },
         allergens: ["Milk", "Wheat"],
         description:
@@ -720,7 +720,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Cookies & Cream Milkshake",
         slug: "cookies-cream-milkshake",
-        price: "4.49",
+        price: "$4.45-$6.09",
         nutrition: { calories: 630, protein: 14, carbs: 90, fat: 25, sodium: 400 },
         allergens: ["Milk", "Wheat"],
         description:
@@ -732,7 +732,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Peach Milkshake",
         slug: "peach-milkshake",
-        price: "4.49",
+        price: "$5.49-$6.49",
         nutrition: { calories: 600, protein: 12, carbs: 87, fat: 23, sodium: 290 },
         allergens: ["Milk", "Wheat"],
         description:
@@ -743,7 +743,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Frosted Lemonade",
         slug: "frosted-lemonade",
-        price: "3.85",
+        price: "$4.99-$6.29",
         nutrition: { calories: 350, protein: 7, carbs: 62, fat: 9, sodium: 130 },
         allergens: ["Milk"],
         description:
@@ -755,7 +755,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Peach Frosted Lemonade",
         slug: "peach-frosted-lemonade",
-        price: "4.05",
+        price: "$4.99-$6.29",
         nutrition: { calories: 440, protein: 7, carbs: 80, fat: 9, sodium: 130 },
         allergens: ["Milk"],
         description:
@@ -766,7 +766,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Frosted Coffee",
         slug: "frosted-coffee",
-        price: "3.85",
+        price: "$2.19-$3.49",
         nutrition: { calories: 260, protein: 7, carbs: 44, fat: 8, sodium: 150 },
         allergens: ["Milk"],
         description:
@@ -787,7 +787,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Chick-fil-A® Lemonade (Medium)",
         slug: "lemonade-medium",
-        price: "2.95",
+        price: "$2.55-$3.79",
         nutrition: { calories: 260, protein: 0, carbs: 67, fat: 0, sodium: 25 },
         allergens: [],
         description:
@@ -799,7 +799,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Diet Lemonade (Medium)",
         slug: "diet-lemonade-medium",
-        price: "2.95",
+        price: "$2.55-$3.79",
         nutrition: { calories: 60, protein: 0, carbs: 16, fat: 0, sodium: 25 },
         allergens: [],
         description:
@@ -810,7 +810,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Sweet Tea (Medium)",
         slug: "sweet-tea-medium",
-        price: "2.35",
+        price: "$2.19-$3.29",
         nutrition: { calories: 120, protein: 0, carbs: 32, fat: 0, sodium: 10 },
         allergens: [],
         description:
@@ -822,7 +822,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Unsweetened Tea (Medium)",
         slug: "unsweetened-tea-medium",
-        price: "2.35",
+        price: "$2.19-$3.29",
         nutrition: { calories: 0, protein: 0, carbs: 0, fat: 0, sodium: 10 },
         allergens: [],
         description:
@@ -833,7 +833,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Coca-Cola® (Medium)",
         slug: "coca-cola-medium",
-        price: "2.35",
+        price: "$2.19-$3.29",
         nutrition: { calories: 170, protein: 0, carbs: 45, fat: 0, sodium: 30 },
         allergens: [],
         description: "A classic Coca-Cola served ice cold.",
@@ -843,7 +843,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Dr Pepper® (Medium)",
         slug: "dr-pepper-medium",
-        price: "2.35",
+        price: "$2.19-$3.29",
         nutrition: { calories: 170, protein: 0, carbs: 44, fat: 0, sodium: 50 },
         allergens: [],
         description: "The bold, 23-flavor taste of Dr Pepper served ice cold.",
@@ -853,7 +853,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Sunjoy® (Medium)",
         slug: "sunjoy-medium",
-        price: "2.65",
+        price: "$2.19-$3.29",
         nutrition: { calories: 240, protein: 0, carbs: 62, fat: 0, sodium: 20 },
         allergens: [],
         description:
@@ -905,7 +905,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Hot Coffee",
         slug: "hot-coffee",
-        price: "1.99",
+        price: "$2.19-$3.49",
         nutrition: { calories: 0, protein: 0, carbs: 0, fat: 0, sodium: 0 },
         allergens: [],
         description:
@@ -916,7 +916,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Iced Coffee",
         slug: "iced-coffee",
-        price: "2.79",
+        price: "$2.19-$3.49",
         nutrition: { calories: 180, protein: 3, carbs: 30, fat: 6, sodium: 85 },
         allergens: ["Milk"],
         description:
@@ -928,7 +928,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Vanilla Iced Coffee",
         slug: "vanilla-iced-coffee",
-        price: "3.29",
+        price: "$2.19-$3.49",
         nutrition: { calories: 210, protein: 3, carbs: 36, fat: 6, sodium: 85 },
         allergens: ["Milk"],
         description:
@@ -939,7 +939,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Caramel Iced Coffee",
         slug: "caramel-iced-coffee",
-        price: "3.49",
+        price: "$2.19-$3.49",
         nutrition: { calories: 260, protein: 3, carbs: 44, fat: 8, sodium: 135 },
         allergens: ["Milk"],
         description:
@@ -950,7 +950,7 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
       {
         name: "Mocha Iced Coffee",
         slug: "mocha-iced-coffee",
-        price: "3.49",
+        price: "$2.19-$3.49",
         nutrition: { calories: 200, protein: 3, carbs: 34, fat: 6, sodium: 95 },
         allergens: ["Milk"],
         description:

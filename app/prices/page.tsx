@@ -91,10 +91,23 @@ export default function PricesPage() {
 
       <div className="mb-10">
         <h1 className="section-title">Chick-fil-A Menu with Prices (2026)</h1>
-        <p className="section-subtitle">
+        <p className="section-subtitle mb-6">
           All Chick-fil-A prices in one place — sorted, searchable, and updated for 2026.
           Find the price of every item from breakfast biscuits to milkshakes.
         </p>
+        
+        <div className="flex flex-wrap gap-2 mb-6">
+          <Link href="/menu" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            View Full Menu
+          </Link>
+          <Link href="/calories" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            View Calories
+          </Link>
+          <Link href="/hours" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+            Store Hours
+          </Link>
+        </div>
+
         <p className="text-xs text-brand-gray-text mt-3">
           Last updated: {lastUpdated} · US national average estimates · Prices vary by location
         </p>

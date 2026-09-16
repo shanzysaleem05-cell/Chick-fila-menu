@@ -58,7 +58,24 @@ export const menuCategories: MenuCategory[] = [
         image: "/Chick-fil-A-Chicken-Biscuit.webp",
         popular: true,
         tags: ["breakfast", "sandwich", "biscuit"],
+        uniqueDescription: `The Chick-fil-A® Chicken Biscuit is one of the most iconic breakfast items in all of fast food. If you've never started your morning with one of these, you're genuinely missing out. At its core, this sandwich features a tender, boneless breast of chicken — the same pressure-cooked, seasoned chicken that made Chick-fil-A famous — nestled inside a flaky, golden buttermilk biscuit that's baked fresh every morning at each location.
+
+What sets this biscuit apart is the quality of every component. The chicken breast is marinated in a blend of seasonings, giving it a subtle savory flavor that pairs beautifully with the buttery, layered biscuit. Unlike many fast-food breakfast sandwiches that use processed chicken patties, Chick-fil-A uses a whole filet — you can actually taste the difference. The biscuit itself is soft on the inside and slightly crispy on the outside, with a rich butter flavor that doesn't feel greasy.
+
+At approximately 460 calories and 23 grams of protein, the Chick-fil-A Chicken Biscuit is a filling breakfast choice that gives you the energy to power through your morning. The sodium content (around 1,350mg) is on the higher side, which is worth noting if you're watching your intake, but for an occasional indulgence, it's hard to beat.
+
+Price-wise, you can expect to pay between $5.09 and $5.79 depending on your location — a reasonable price for a breakfast that will keep you satisfied for hours. It pairs wonderfully with a Chick-fil-A coffee, sweet tea, or freshly squeezed lemonade.
+
+Breakfast is only served until 10:30 AM at most Chick-fil-A locations, so make sure to set your alarm. This is the kind of breakfast that makes waking up early worth it. Countless Chick-fil-A fans cite the Chicken Biscuit as their all-time favorite menu item — and it's easy to see why.`,
+        faqs: [
+          { question: "What time does Chick-fil-A stop serving breakfast?", answer: "Chick-fil-A serves breakfast until 10:30 AM Monday through Saturday. Chick-fil-A is closed on Sundays." },
+          { question: "How many calories are in the Chick-fil-A Chicken Biscuit?", answer: "The Chick-fil-A Chicken Biscuit contains 460 calories, with 23g of protein, 44g of carbohydrates, and 20g of fat." },
+          { question: "Does the Chick-fil-A Chicken Biscuit contain gluten?", answer: "Yes, the Chicken Biscuit contains wheat and soy allergens. It is not suitable for those with gluten intolerance. Chick-fil-A does offer some gluten-free breakfast options like the Hash Brown Scramble Bowl." },
+          { question: "Can I customize the Chick-fil-A Chicken Biscuit?", answer: "Yes! You can add items like cheese, butter, or honey. You can also request no butter on the biscuit. Use the Chick-fil-A app to customize your order." },
+          { question: "Is the Chick-fil-A Chicken Biscuit the same chicken as the sandwich?", answer: "Yes! Chick-fil-A uses the same style of whole chicken filet in their breakfast biscuits as they do in their famous Chicken Sandwich." }
+        ],
       },
+
       {
         name: "Spicy Chicken Biscuit",
         slug: "spicy-chicken-biscuit",
@@ -69,6 +86,16 @@ export const menuCategories: MenuCategory[] = [
           "A spicy boneless breast of chicken, seasoned to perfection, served on a warm buttermilk biscuit.",
         image: "/Spicy-Chicken-Biscuit.webp",
         tags: ["breakfast", "spicy", "biscuit"],
+        uniqueDescription: `The Chick-fil-A Spicy Chicken Biscuit is the perfect way to start the day for those who like a kick in their morning meal. This fan-favorite features the same tender, boneless chicken breast found in the classic Chicken Biscuit, but with an added bold spice blend that delivers satisfying heat without overwhelming your palate.
+
+The spicy chicken filet is pressure-cooked and seasoned with a blend of peppers that creates a slow-building warmth — not sharp or aggressive, but a pleasant tingle that lingers in all the right ways. It's tucked inside Chick-fil-A's signature fresh-baked buttermilk biscuit, which provides a buttery, flaky counterbalance to the heat. The combination is genuinely satisfying: creamy, spicy, and hearty all at once.
+
+Nutritionally, the Spicy Chicken Biscuit comes in at 450 calories with 23 grams of protein — a solid breakfast count that will keep you fueled well into mid-morning. The sodium content is around 1,440mg, and the price ranges from $5.29 to $5.99 depending on location.
+
+If you're a spice lover, the Spicy Chicken Biscuit pairs exceptionally well with a cool, sweet drink like the Chick-fil-A Frosted Lemonade or a classic sweet tea to balance out the heat. Many fans enjoy adding a drizzle of honey on top — the sweet-heat combination is truly next-level.
+
+Remember, like all Chick-fil-A breakfast items, this is only available until 10:30 AM. Don't hesitate because of the spice level — it's well-calibrated and enjoyable for most spice tolerances.`,
+        faqs: [{"question":"How spicy is the Chick-fil-A Spicy Chicken Biscuit?","answer":"The Spicy Chicken Biscuit has a mild-to-medium heat level. It has more kick than the regular Chicken Biscuit but is not overwhelmingly hot. Most people with average spice tolerance enjoy it comfortably."},{"question":"How many calories are in the Spicy Chicken Biscuit?","answer":"The Spicy Chicken Biscuit contains 450 calories, with 23g of protein, 44g of carbohydrates, and 19g of fat."},{"question":"Is the Spicy Chicken Biscuit available all day?","answer":"No, like all Chick-fil-A breakfast items, the Spicy Chicken Biscuit is only available until 10:30 AM Monday through Saturday."},{"question":"What allergens are in the Spicy Chicken Biscuit?","answer":"The Spicy Chicken Biscuit contains Milk, Soy, and Wheat allergens. Always check with your local restaurant if you have specific dietary concerns."}],
       },
       {
         name: "Chick-n-Minis® (4 ct)",
@@ -81,6 +108,16 @@ export const menuCategories: MenuCategory[] = [
         image: "/Chick-n-Minis-(4-ct).webp",
         popular: true,
         tags: ["breakfast", "nuggets", "mini"],
+        uniqueDescription: `Chick-n-Minis® are one of those foods that instantly put a smile on your face. These tiny, bite-sized breakfast sandwiches feature miniature versions of Chick-fil-A's famous nuggets, each cradled inside a warm, pillowy dinner roll brushed with honey butter. The result is a breakfast item that's sweet, savory, and utterly addictive.
+
+The 4-count Chick-n-Minis is the perfect on-the-go breakfast option. Each piece is just a couple of bites, making them easy to eat while commuting or heading into a morning meeting. The chicken nuggets are tender and juicy — the same quality you'd expect from any Chick-fil-A chicken product. But it's the honey-butter glaze on the soft rolls that makes these truly special. The sweetness of the honey butter complements the savory chicken in a way that feels genuinely crave-worthy.
+
+The 4-count serving delivers 360 calories and an impressive 21 grams of protein — solid nutrition for a breakfast that feels like a treat. Carbs are 37 grams for a quick energy boost, with 13 grams of fat and a moderate 740mg sodium.
+
+Priced between $6.09 and $6.99, the 4-count Chick-n-Minis is excellent value for the unique experience they offer. If you need something more substantial, there's also a 10-count option available.
+
+Chick-n-Minis are consistently one of the most-ordered breakfast items at Chick-fil-A. Once you've tried them, going back to a standard breakfast sandwich feels like a downgrade.`,
+        faqs: [{"question":"What are Chick-n-Minis made of?","answer":"Chick-n-Minis are bite-sized chicken nuggets nestled inside small, warm dinner rolls brushed with honey butter. The chicken is the same quality as Chick-fil-A's regular nuggets."},{"question":"How many calories are in 4 Chick-n-Minis?","answer":"A 4-count serving of Chick-n-Minis has 360 calories, 21g of protein, 37g of carbohydrates, and 13g of fat."},{"question":"Can you get Chick-n-Minis in larger quantities?","answer":"Yes! Chick-fil-A also offers a 10-count Chick-n-Minis serving for those who want a heartier breakfast or are sharing."},{"question":"Are Chick-n-Minis available all day?","answer":"No, Chick-n-Minis are a breakfast-only item available until 10:30 AM, Monday through Saturday."}],
       },
       {
         name: "Chick-n-Minis® (10 ct)",
@@ -104,6 +141,16 @@ export const menuCategories: MenuCategory[] = [
         image: "/Egg-White-Grill.webp",
         popular: true,
         tags: ["breakfast", "healthy", "low-calorie", "grilled"],
+        uniqueDescription: `The Egg White Grill is proof that eating healthy at a fast-food restaurant doesn't mean settling for something bland or unsatisfying. This is arguably Chick-fil-A's best value meal from a nutrition standpoint, and it's a go-to for calorie-conscious breakfast seekers who still want something genuinely delicious.
+
+The sandwich features a grilled chicken breast — not fried, but grilled — along with fluffy egg whites and American cheese, all served on a toasted multigrain English muffin. The grilled chicken is lean and flavorful, seasoned with a blend that complements the clean taste of the egg whites perfectly. The multigrain muffin adds a subtle nuttiness and more fiber than a standard white biscuit.
+
+At just 300 calories with an impressive 26 grams of protein, the Egg White Grill is one of the most protein-efficient meals on the entire Chick-fil-A menu. Fat content is a very low 7 grams, and carbs are 31 grams from the multigrain muffin for sustained energy. Sodium is 970mg — moderate for a fast-food item.
+
+Priced between $6.25 and $6.99, it's slightly pricier than the biscuit options, but the superior nutrition profile makes it outstanding value for health-focused diners. Whether you're tracking macros, on a high-protein diet, or just want to feel good about your breakfast, the Egg White Grill delivers.
+
+If you're at the gym, counting calories, or just want a smart morning meal, the Egg White Grill is the clear choice. It's satisfying without the guilt — a rare feat for fast-food breakfast.`,
+        faqs: [{"question":"Is the Egg White Grill a healthy option at Chick-fil-A?","answer":"Yes! With only 300 calories and 26g of protein, the Egg White Grill is one of the healthiest items on the Chick-fil-A breakfast menu. It uses grilled (not fried) chicken and egg whites instead of whole eggs."},{"question":"What is in the Chick-fil-A Egg White Grill?","answer":"It contains a grilled chicken filet, egg whites, American cheese, served on a toasted multigrain English muffin."},{"question":"Does the Egg White Grill have gluten?","answer":"Yes, the multigrain English muffin contains wheat. If you need gluten-free options, consider the Hash Brown Scramble Bowl instead."},{"question":"How many grams of protein are in the Egg White Grill?","answer":"The Egg White Grill has an impressive 26 grams of protein, making it one of the highest protein-per-calorie breakfast items at Chick-fil-A."}],
       },
       {
         name: "Chicken, Egg & Cheese Biscuit",
@@ -181,6 +228,16 @@ export const menuCategories: MenuCategory[] = [
           "Hash browns, scrambled eggs, sausage, cheese, and Jalapeño Salsa rolled up in a warm flour tortilla.",
         image: "/Hash-Brown-Scramble-Burrito.webp",
         tags: ["breakfast", "burrito", "scramble"],
+        uniqueDescription: `The Hash Brown Scramble Burrito is Chick-fil-A's most substantial and filling breakfast option — a hearty, flavor-packed wrap that will keep you full well into the afternoon. If you're someone who needs a serious breakfast to fuel a long or demanding day, this is your order.
+
+Inside a warm, soft flour tortilla you'll find a generous helping of Chick-fil-A's crispy hash brown bites (which add an excellent crispy-soft texture), fluffy scrambled eggs, savory sausage, shredded cheese, and a drizzle of Jalapeño Salsa for a spicy kick. Every component is satisfying on its own, but together they create a breakfast that genuinely rivals the best breakfast burritos from dedicated breakfast restaurants.
+
+Nutritionally, this is the most calorie-dense breakfast item at 700 calories, with 29 grams of protein, 57 grams of carbohydrates, and 39 grams of fat. The sodium is 1,310mg. This is clearly an indulgent meal, but the combination of protein, fat, and carbs means it provides sustained energy and genuine satiety.
+
+Priced between $6.19 and $7.29, the Hash Brown Scramble Burrito offers excellent value given its size and the quality of ingredients. You can also customize it with grilled nuggets instead of sausage for a slightly lighter version.
+
+This burrito is only available during breakfast hours until 10:30 AM. If you're heading into a big day and need maximum fuel from your first meal, this is the Chick-fil-A order that delivers.`,
+        faqs: [{"question":"What is in the Chick-fil-A Hash Brown Scramble Burrito?","answer":"It contains hash brown bites, scrambled eggs, sausage, shredded cheese, and Jalapeño Salsa, all wrapped in a warm flour tortilla."},{"question":"How many calories are in the Hash Brown Scramble Burrito?","answer":"700 calories, with 29g of protein, 57g of carbs, and 39g of fat — the most calorie-dense item on the Chick-fil-A breakfast menu."},{"question":"Can I substitute the sausage in the Hash Brown Scramble Burrito?","answer":"Yes! You can substitute the sausage with grilled chicken nuggets for a slightly lighter protein option. Ask when ordering or customize through the Chick-fil-A app."},{"question":"Is the Hash Brown Scramble Burrito gluten-free?","answer":"No, the flour tortilla contains wheat. For a gluten-friendly option, try the Hash Brown Scramble Bowl instead, which swaps the tortilla for a bowl."}],
       },
       {
         name: "Hash Brown Scramble Bowl",
@@ -192,6 +249,16 @@ export const menuCategories: MenuCategory[] = [
           "Hash browns, scrambled eggs, sausage, cheese, and Jalapeño Salsa in a bowl. Gluten-free option available.",
         image: "/Hash-Brown-Scramble-Bowl.webp",
         tags: ["breakfast", "bowl", "scramble", "gluten-friendly"],
+        uniqueDescription: `The Hash Brown Scramble Bowl is a brilliant solution for those who love the flavors of the Hash Brown Scramble Burrito but want to skip the tortilla — whether for gluten-related reasons, a lower-carb preference, or simply to have a more fork-friendly breakfast experience.
+
+All the same great components are here: crispy hash brown bites, fluffy scrambled eggs, savory sausage, shredded cheese, and Jalapeño Salsa — just served in a bowl instead of wrapped in a flour tortilla. Without the tortilla, you can taste each ingredient more individually, and the crispy hash browns remain crisper since they're not trapped in a wrap.
+
+At 470 calories with 22 grams of protein, it's significantly lighter than the burrito version (700 cal) thanks to the absence of the tortilla. Carbohydrates are 34 grams, fat is 28 grams, and sodium is 1,120mg. It's priced at $6.09 to $7.19.
+
+This bowl is also a popular choice for those following lower-carb diets, as you can easily request fewer hash browns or skip them entirely to reduce the carb count further. The combination of eggs, protein, and cheese still makes for a satisfying meal.
+
+The Hash Brown Scramble Bowl is a consistently underrated item on the Chick-fil-A breakfast menu — it deserves much more attention than it typically gets. Try it once and you'll understand why it has such a devoted following among regular Chick-fil-A breakfast visitors.`,
+        faqs: [{"question":"Is the Hash Brown Scramble Bowl gluten-free?","answer":"Unlike the Burrito version, the Bowl is gluten-friendly since it doesn't include a flour tortilla. However, always confirm with your restaurant about cross-contamination risks."},{"question":"How many calories are in the Hash Brown Scramble Bowl?","answer":"470 calories, with 22g of protein, 34g of carbs, and 28g of fat — significantly lower than the Burrito version."},{"question":"What is the difference between the Scramble Burrito and the Scramble Bowl?","answer":"The Bowl contains the same filling as the Burrito (hash browns, eggs, sausage, cheese, Jalapeño Salsa) but is served in a bowl instead of a flour tortilla, making it lower in carbs and gluten-friendly."}],
       },
       {
         name: "Buttery Biscuit",
@@ -291,6 +358,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
         image: "/Chick-fil-A-Deluxe-Sandwich.webp",
         popular: true,
         tags: ["sandwich", "deluxe", "cheese"],
+        uniqueDescription: `The Chick-fil-A® Deluxe Sandwich takes the beloved original and elevates it with fresh additions that transform a classic into a more complete, restaurant-quality meal. For those who want more than just chicken and pickles, the Deluxe is the natural upgrade.
+
+The Deluxe Sandwich features the same crispy, pressure-cooked chicken filet from the original, but adds green leaf lettuce, a ripe tomato slice, and American cheese. These additions dramatically change the eating experience. The lettuce adds fresh crunch, the tomato provides juicy acidity, and the cheese contributes creamy meltiness that ties everything together. Combined with the buttered toasted bun and dill pickles, the Deluxe is a genuinely satisfying, well-rounded sandwich.
+
+At 490 calories with 28 grams of protein, the Deluxe gives you more food for slightly more money. The added cheese and toppings bring carbs to 41 grams and fat to 23 grams. Sodium is approximately 1,130mg. Priced between $5.55 and $7.19.
+
+The Deluxe is also a great canvas for customization. Adding Honey Mustard, Buffalo, or Chick-fil-A Sauce takes it to another level.
+
+If you find the original Chicken Sandwich a bit minimal, the Deluxe is exactly what you need. It's the same great chicken with enough additional toppings to make it feel like a full, satisfying restaurant meal.`,
+        faqs: [{"question":"What's the difference between the Chick-fil-A Chicken Sandwich and the Deluxe?","answer":"The Deluxe Sandwich adds green leaf lettuce, tomato, and American cheese to the original chicken sandwich. The chicken, bun, and pickles remain the same."},{"question":"How many calories are in the Chick-fil-A Deluxe Sandwich?","answer":"490 calories, with 28g of protein, 41g of carbs, and 23g of fat."},{"question":"Can I add or remove toppings on the Deluxe Sandwich?","answer":"Yes! You can customize through the Chick-fil-A app or by requesting modifications at the counter. Add extra sauce, swap cheese types, or remove any topping."}],
       },
       {
         name: "Spicy Chicken Sandwich",
@@ -303,6 +380,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
         image: "/Spicy-Chicken-Sandwich.webp",
         popular: true,
         tags: ["spicy", "sandwich"],
+        uniqueDescription: `The Spicy Chicken Sandwich is the bold, fiery sibling of Chick-fil-A's classic original — and for a large segment of fans, it's actually the preferred version. This sandwich has developed its own devoted following and regularly tops polls of fan-favorite Chick-fil-A items.
+
+The foundation is the same as the original: a whole boneless breast of chicken, pressure-cooked in 100% refined peanut oil. But the spicy version uses a special spice blend incorporated directly into the chicken before cooking, resulting in heat that permeates the meat rather than just coating the surface. This creates a more authentic, deeper spicy experience. It's served on a toasted, buttered bun with two dill pickle chips.
+
+The heat level is genuinely spicy by fast-food standards — real kick, especially compared to other chains' mild 'spicy' offerings. However, it's not tongue-scorching. It's the kind of heat that builds pleasantly with each bite and pairs beautifully with a creamy sauce or cold drink.
+
+Nutritionally: 450 calories, 27 grams of protein, 41 grams of carbs, and 19 grams of fat. Sodium is around 1,370mg. Prices range from $5.25 to $7.29.
+
+A particularly popular combination is the Spicy Sandwich paired with Chick-fil-A's Honey Mustard sauce, which provides a sweet-tangy balance to the heat. The contrast is genuinely exceptional. If you haven't tried this combination, make it your next order.`,
+        faqs: [{"question":"How spicy is the Chick-fil-A Spicy Chicken Sandwich?","answer":"The Spicy Chicken Sandwich is genuinely spicy by fast-food standards — medium-hot. The spice is built into the marinade so heat is consistent throughout the chicken."},{"question":"What's the difference between the Spicy and original Chicken Sandwich?","answer":"The difference is the seasoning blend. The spicy version has a pepper-based spice blend that creates real heat. The bun, pickles, and cooking method are identical."},{"question":"What sauce goes best with the Spicy Chicken Sandwich?","answer":"Honey Mustard is the fan-favorite pairing because the sweetness and creaminess balance the heat perfectly. Chick-fil-A Sauce is also excellent."},{"question":"How many calories are in the Spicy Chicken Sandwich?","answer":"450 calories, with 27g of protein, 41g of carbs, and 19g of fat."}],
       },
       {
         name: "Spicy Deluxe Sandwich",
@@ -314,6 +401,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
           "Spicy chicken with Colby-Jack cheese, lettuce, tomato, and pickles on a toasted, buttered bun.",
         image: "/Spicy-Deluxe-Sandwich.webp",
         tags: ["spicy", "sandwich", "deluxe"],
+        uniqueDescription: `The Spicy Deluxe Sandwich is where Chick-fil-A's signature heat meets fresh, vibrant toppings — creating what many fans consider the ultimate Chick-fil-A sandwich experience. If you love the kick of the Spicy Chicken Sandwich but want something more complete and satisfying, this is your answer.
+
+The sandwich features Chick-fil-A's specially-seasoned spicy chicken filet — marinated in a signature blend of peppers and pressure-cooked in refined peanut oil — topped with green leaf lettuce, a fresh tomato slice, and American cheese. Served on a toasted, butter-brushed bun with dill pickle chips. The contrast between the fiery chicken and the cool, crisp lettuce and juicy tomato is outstanding. The cheese adds creamy mildness that rounds out the heat beautifully.
+
+With 540 calories, 29 grams of protein, 41 grams of carbohydrates, and 25 grams of fat, the Spicy Deluxe is the most substantial of Chick-fil-A's classic sandwich lineup. Sodium is around 1,250mg. Priced at $5.95 to $7.99.
+
+For spice enthusiasts, this is arguably the best value on the menu. The toppings help manage the heat while making the sandwich more balanced. Pair it with a cool Frosted Lemonade for a combination that's genuinely memorable.
+
+The Spicy Deluxe is also a fantastic base for customization — adding Honey Mustard or Chick-fil-A Sauce creates complex, layered flavors that make each bite different from the last.`,
+        faqs: [{"question":"What is in the Chick-fil-A Spicy Deluxe Sandwich?","answer":"The Spicy Deluxe has a spicy crispy chicken filet, American cheese, green leaf lettuce, tomato, and dill pickles on a toasted, buttered bun."},{"question":"How spicy is the Spicy Deluxe Sandwich?","answer":"It has a genuine medium-to-hot spice level. The toppings (lettuce, tomato, cheese) help temper the heat slightly compared to eating the spicy chicken alone."},{"question":"How many calories are in the Spicy Deluxe?","answer":"540 calories, 29g of protein, 41g of carbs, and 25g of fat."}],
       },
       {
         name: "Grilled Chicken Sandwich",
@@ -360,6 +457,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
           "Sliced grilled chicken breast nestled in a flaxseed flour flatbread with lettuce, red cabbage, carrots, and Colby-Jack cheese.",
         image: "/Chick-fil-A-Cool-Wrap.webp",
         tags: ["wrap", "grilled", "healthy"],
+        uniqueDescription: `The Chick-fil-A Cool Wrap® is one of the chain's most underrated menu items — a substantial, satisfying wrap that delivers a full meal's worth of nutrition in a format that's easy to eat on the go. If you typically overlook the Cool Wrap in favor of a sandwich, it's time to reconsider.
+
+The Cool Wrap features sliced, grilled chicken breast wrapped inside a flaxseed flour flatbread (which gives it a subtly nutty flavor and a boost of fiber) along with green leaf lettuce, a blend of shredded red cabbage and carrot, and Monterey Jack and cheddar cheeses. The flatbread itself is notable — it's not a standard flour tortilla but denser, chewier, and more flavorful, adding real character to every bite.
+
+With approximately 660 calories, 43 grams of protein, 52 grams of carbohydrates, and 26 grams of fat, the Cool Wrap is one of the most protein-dense items on the Chick-fil-A menu. Sodium is around 1,350mg. Priced at $7.79 to $9.99.
+
+The recommended pairing is Zesty Apple Cider Vinaigrette or Avocado Lime Ranch dressing, served on the side for dipping. The Cool Wrap is also available in a Spicy version at some locations.
+
+For busy days when you need to eat on the move without sacrificing quality or nutrition, the Cool Wrap is the ideal Chick-fil-A order. It's complete, balanced, and genuinely delicious — the kind of meal that makes you feel good about your choice.`,
+        faqs: [{"question":"What is in the Chick-fil-A Cool Wrap?","answer":"The Cool Wrap contains sliced grilled chicken, green leaf lettuce, red cabbage and carrot blend, Monterey Jack and cheddar cheeses, all wrapped in a flaxseed flatbread."},{"question":"How many calories are in the Chick-fil-A Cool Wrap?","answer":"The Cool Wrap contains approximately 660 calories, with 43g of protein, 52g of carbs, and 26g of fat."},{"question":"Is the Cool Wrap healthy?","answer":"It's one of the higher-protein options with 43g of protein. The flaxseed flatbread adds fiber. It's a solid choice for those looking for a protein-rich meal."},{"question":"What dressing goes best with the Cool Wrap?","answer":"Zesty Apple Cider Vinaigrette and Avocado Lime Ranch are both excellent. Request dressing on the side for better portion control."}],
       },
       {
         name: "Chick-fil-A® Nuggets (8 ct)",
@@ -372,6 +479,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
         image: "/Chick-fil-A-Nuggets-(8-ct).webp",
         popular: true,
         tags: ["nuggets", "finger food", "kids"],
+        uniqueDescription: `Chick-fil-A Nuggets are one of the most beloved fast-food items in America — and for very good reason. The 8-count is the perfect single-serving size, whether as a meal with a side or a snack. These aren't ordinary nuggets: Chick-fil-A uses whole, boneless pieces of chicken breast — not reformed or processed chicken — seasoned and coated in a seasoned flour dredge, then pressure-cooked to golden-brown perfection.
+
+The quality difference compared to other fast-food nuggets is immediately apparent. The coating is thin and crispy, never thick or doughy, and the chicken inside is genuinely juicy and flavorful. Each nugget is a different shape because they're cut from real chicken breast — exactly as it should be.
+
+The 8-count nuggets contain 250 calories and an impressive 28 grams of protein, making them one of the best protein-to-calorie options in fast food. Total fat is 11 grams, carbs are 11 grams, and sodium is around 980mg. Priced at $4.85 to $6.09.
+
+Pairing matters with nuggets. The Chick-fil-A Sauce is the iconic choice — a creamy blend of honey mustard and barbecue that's almost as famous as the nuggets themselves. Polynesian Sauce, Buffalo Sauce, and Honey Mustard are also excellent options.
+
+The 8-count is popular for kids' meals and a go-to for anyone on a high-protein diet. It's versatile, portable, and consistently excellent — the kind of item that never disappoints.`,
+        faqs: [{"question":"Are Chick-fil-A Nuggets made from real chicken?","answer":"Yes! Chick-fil-A Nuggets are made from whole pieces of boneless chicken breast, not processed or reformed chicken. The irregular shape of each piece confirms they're hand-cut from real chicken."},{"question":"How many calories in Chick-fil-A 8-count Nuggets?","answer":"250 calories, 28g of protein, 11g of carbs, and 11g of fat."},{"question":"What is the best sauce for Chick-fil-A Nuggets?","answer":"Chick-fil-A Sauce is the fan-favorite iconic pairing. Polynesian Sauce and Honey Mustard are also very popular. It really comes down to personal preference!"},{"question":"Are Chick-fil-A Nuggets gluten-free?","answer":"No, the standard nuggets contain wheat in their coating. Chick-fil-A does offer Grilled Nuggets as a gluten-free and lower-calorie alternative."},{"question":"How much do 8-count Chick-fil-A Nuggets cost?","answer":"Prices typically range from $4.85 to $6.09 depending on location."}],
       },
       {
         name: "Chick-fil-A® Nuggets (12 ct)",
@@ -383,6 +500,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
           "Twelve bite-sized pieces of boneless chicken breast, seasoned, breaded, and pressure-cooked to perfection.",
         image: "/Chick-fil-A-Nuggets-(12-ct).webp",
         tags: ["nuggets", "sharing"],
+        uniqueDescription: `The 12-count Chick-fil-A Nuggets are the meal-sized version of the chain's most iconic menu item — perfect when the 8-count just won't cut it. Whether you're extra hungry, sharing with someone, or simply know that Chick-fil-A Nuggets are worth going all in on, the 12-count delivers in every way.
+
+Everything that makes the 8-count nuggets exceptional applies here in greater quantity: whole boneless chicken breast pieces, seasoned with Chick-fil-A's signature blend, coated in a thin, crispy dredge, and pressure-cooked in refined peanut oil to golden-brown perfection.
+
+Nutritionally, the 12-count contains 380 calories and an outstanding 42 grams of protein — one of the single best high-protein meals available in fast food, period. Fat content is 17 grams, carbs are 16 grams, and sodium is approximately 1,470mg.
+
+Priced between $7.19 and $8.99 depending on location, the 12-count is excellent value considering both quality and protein content. Pair with a Kale Crunch Side or Fruit Cup to add fiber and freshness, creating a legitimately solid balanced meal.
+
+The 12-count is popular for office lunches, families, and anyone following a protein-forward eating plan. With Chick-fil-A's wide range of dipping sauces, you can keep the experience varied and exciting even if nuggets are your regular order.`,
+        faqs: [{"question":"How many calories are in 12 Chick-fil-A Nuggets?","answer":"The 12-count Nuggets contain 380 calories, 42g of protein, 16g of carbs, and 17g of fat."},{"question":"How much do 12 Chick-fil-A Nuggets cost?","answer":"Prices range from $7.19 to $8.99 depending on your location."},{"question":"Is the 12-count Nuggets a good option for a high-protein diet?","answer":"Absolutely! With 42 grams of protein and only 380 calories, the 12-count nuggets are one of the best protein-per-calorie fast-food options available."}],
       },
       {
         name: "Chick-fil-A® Nuggets (30 ct)",
@@ -394,6 +521,12 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
           "Thirty bite-sized nuggets — perfect for sharing or game day gatherings.",
         image: "/Chick-fil-A-Nuggets-(30-ct).webp",
         tags: ["nuggets", "sharing", "party"],
+        uniqueDescription: "The 30-count Chick-fil-A Nuggets are the ultimate shareable — perfect for parties, group events, family dinners, or whenever you need a crowd-pleasing centerpiece. This massive order delivers the same exceptional quality you get from a single-serving nugget, just multiplied thirty times over.\n\nThirty whole, boneless pieces of chicken breast, each individually seasoned, coated in Chick-fil-A's signature thin, crispy dredge, and pressure-cooked in 100% refined peanut oil. The result is a generous platter of golden, juicy nuggets that disappear remarkably fast in any group setting.\n\nAt approximately 950 calories for the full 30-count, this is clearly meant for sharing. The protein content is outstanding — around 105 grams — making it an excellent option for athletic teams, fitness groups, or anyone trying to feed a crowd while keeping protein high.\n\nPriced between $17.49 and $20.99, the 30-count represents the best per-nugget value on the Chick-fil-A menu. Order several sauces alongside — Chick-fil-A Sauce, Honey Mustard, Polynesian, Buffalo, and Garden Herb Ranch are all excellent group choices.\n\nWhen ordering for a group, pair the 30-count nuggets with multiple large Waffle Fry orders, a couple of Mac & Cheese sides, and a variety of dipping sauces for the ultimate Chick-fil-A spread that will impress everyone.",
+        faqs: [
+          { question: "How many people does a 30-count Chick-fil-A Nuggets serve?", answer: "A 30-count typically serves 3 to 5 people as a main course. With sides, it can comfortably feed a group of 6 or more." },
+          { question: "How much do 30-count Chick-fil-A Nuggets cost?", answer: "Prices range from $17.49 to $20.99 depending on your location, making it the best per-nugget value on the menu." },
+          { question: "Can I order 30-count nuggets for a party?", answer: "Absolutely! The 30-count nuggets are one of Chick-fil-A's most popular choices for group events. For larger gatherings, check out Chick-fil-A's catering trays." },
+        ],
       },
       {
         name: "Grilled Nuggets (8 ct)",
@@ -406,6 +539,16 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
         image: "/Grilled-Nuggets-(8-ct).webp",
         popular: true,
         tags: ["nuggets", "grilled", "healthy", "low-calorie", "high-protein"],
+        uniqueDescription: `For those who love Chick-fil-A's nuggets but want a lighter, cleaner option, the Grilled Nuggets are an outstanding alternative that has converted many die-hard fried nugget fans. These are not a compromise — they're genuinely excellent in their own right.
+
+The Grilled Nuggets use the same whole, boneless chicken breast pieces as the original fried nuggets, but instead of being coated and pressure-fried, they're marinated in a citrus herb blend and grilled. The result is a juicy, flavorful nugget with distinct grill marks and a clean, savory taste profile that's very different from the fried version but equally satisfying.
+
+The 8-count Grilled Nuggets contain just 130 calories with an impressive 25 grams of protein — one of the most macronutrient-efficient foods available in fast food, period. Fat is only 3 grams, carbs are just 1 gram, and sodium is approximately 730mg. They're naturally gluten-free, making them accessible to those with gluten sensitivity.
+
+Priced at $5.69 to $8.09, they're slightly pricier per piece than fried nuggets, but the nutrition profile justifies the cost for health-conscious diners.
+
+Pair the grilled nuggets with Honey Mustard or Zesty Buffalo Sauce for excellent flavor without significant added calories. They're also a popular protein addition to Chick-fil-A salads.`,
+        faqs: [{"question":"How many calories are in Chick-fil-A Grilled Nuggets (8 count)?","answer":"Only 130 calories! The 8-count Grilled Nuggets have 25g of protein, just 1g of carbs, and 3g of fat — making them one of the lowest-calorie, highest-protein options in fast food."},{"question":"Are Chick-fil-A Grilled Nuggets gluten-free?","answer":"Yes! The Grilled Nuggets are gluten-free. Always confirm with your local restaurant regarding cross-contamination if you have celiac disease."},{"question":"How do Grilled Nuggets compare to fried nuggets in taste?","answer":"The grilled nuggets have a completely different but equally delicious profile. They're marinated in a citrus-herb blend with a juicy, savory, clean flavor. The fried version has a crispy coating. Both are excellent — it depends on preference."},{"question":"Are Grilled Nuggets available all day?","answer":"Yes, Grilled Nuggets are available from 10:30 AM onward during regular menu hours."}],
       },
       {
         name: "Chick-n-Strips® (4 ct)",
@@ -473,6 +616,24 @@ When comparing the classic sandwich to the Spicy Chicken Sandwich, the original 
         image: "/Market-Salad.webp",
         popular: true,
         tags: ["salad", "healthy", "fresh", "low-calorie"],
+        uniqueDescription: `The Market Salad is Chick-fil-A's flagship healthy option — a genuinely impressive fast-food salad that could compete with entries from dedicated salad bars. If you've been skeptical about ordering a salad from a chicken sandwich chain, the Market Salad will change your perspective.
+
+The salad features a base of green leaf lettuce, romaine, baby kale, and red cabbage. On top sits grilled or fried chicken breast, sliced strawberries, blueberries, mandarin orange segments, and crumbled blue cheese. It's finished with toasted almonds for crunch and comes with your choice of dressing, with Zesty Apple Cider Vinaigrette being the recommended pairing.
+
+With grilled chicken, the Market Salad contains approximately 340 calories (with vinaigrette), 28 grams of protein, 29 grams of carbohydrates, and 13 grams of fat. Fiber content is high thanks to the variety of vegetables and fruits. Sodium is around 1,050mg.
+
+Priced at $9.69 to slug: "market-salad",
+        price: "$9.69-$12.49",
+        nutrition: { calories: 550, protein: 35, carbs: 54, fat: 22, sodium: 1010 },
+        allergens: ["Milk", "Egg", "Soy", "Wheat"],
+        description:
+          "Fresh apple and berry toppings on mixed greens with grilled chicken, blue cheese crumbles, and granola oat crunch.",
+        image: "/Market-Salad.webp",
+        popular: true,
+        tags: ["salad", "healthy", "fresh", "low-calorie"],2.49, it's one of the pricier menu items, but the portion size and quality of ingredients justify the cost. You're getting restaurant-quality produce assembled with genuine care.
+
+The combination of sweet fruit, savory chicken, sharp blue cheese, and crunchy almonds creates a genuinely complex and satisfying flavor profile. This is a salad you won't feel disappointed about — it's actually something to look forward to.`,
+        faqs: [{"question":"What is in the Chick-fil-A Market Salad?","answer":"The Market Salad contains green leaf lettuce, romaine, baby kale, red cabbage, grilled or fried chicken, strawberries, blueberries, mandarin oranges, crumbled blue cheese, and toasted almonds."},{"question":"How many calories are in the Chick-fil-A Market Salad?","answer":"With grilled chicken and Zesty Apple Cider Vinaigrette, approximately 340-550 calories depending on the dressing used."},{"question":"What is the best dressing for the Market Salad?","answer":"Chick-fil-A recommends the Zesty Apple Cider Vinaigrette, which complements the sweet fruits and savory chicken beautifully."},{"question":"Can I get the Market Salad with fried chicken instead of grilled?","answer":"Yes! You can request fried (crispy) chicken instead of grilled. Note this will add additional calories to the meal."}],
       },
       {
         name: "Side Salad",
@@ -572,6 +733,16 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
           "The medium serving of Chick-fil-A's rich and creamy mac & cheese.",
         image: "/Mac-&-Cheese-(Medium).webp",
         tags: ["mac cheese", "side"],
+        uniqueDescription: `When Chick-fil-A added Mac & Cheese to their permanent menu, it was genuinely big news — and after trying it, it's easy to see why. This is not your average drive-through mac and cheese. This is a rich, indulgent, multi-cheese side dish that can hold its own against sit-down restaurant versions.
+
+The Mac & Cheese is made with a blend of cheeses including cheddar, parmesan, and romano, creating a sauce that's deeply flavorful, sharp, and creamy without being heavy. The pasta is cooked to the right consistency: tender but not mushy. The whole thing is finished in the oven with a slightly browned, cheese-crusted top that adds wonderful textural contrast.
+
+A medium serving contains 450 calories, 18 grams of protein, 46 grams of carbohydrates, and 22 grams of fat. Sodium is around 980mg. Priced between $3.99 and $5.29.
+
+Mac & Cheese pairs particularly well with Grilled Nuggets or Grilled Chicken Sandwich if you want to balance an indulgent side with a lighter protein. It's also a guaranteed crowd-pleaser for kids and anyone who considers mac and cheese a comfort food staple.
+
+Note: Mac & Cheese contains dairy and wheat allergens, so it's not suitable for those with lactose intolerance or gluten sensitivity. For everyone else, it's one of the most satisfying sides Chick-fil-A has to offer.`,
+        faqs: [{"question":"What cheeses are in Chick-fil-A Mac & Cheese?","answer":"Chick-fil-A's Mac & Cheese features a blend of cheddar, parmesan, and romano cheeses, creating a rich, multi-dimensional cheese sauce."},{"question":"How many calories are in Chick-fil-A Mac & Cheese (medium)?","answer":"450 calories, 18g of protein, 46g of carbs, and 22g of fat."},{"question":"Is Chick-fil-A Mac & Cheese gluten-free?","answer":"No, the Mac & Cheese contains wheat pasta and dairy. It's not suitable for those with gluten or dairy allergies."},{"question":"Is Mac & Cheese available at all Chick-fil-A locations?","answer":"Mac & Cheese is available at most US Chick-fil-A locations, though availability can vary. Check the Chick-fil-A app for your local menu."}],
       },
       {
         name: "Kale Crunch Side",
@@ -694,6 +865,16 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
         image: "/Chocolate-Milkshake.webp",
         popular: true,
         tags: ["milkshake", "dessert", "chocolate"],
+        uniqueDescription: `The Chick-fil-A Chocolate Milkshake is a nostalgic, indulgent treat made the right way — with real Icedream® vanilla soft serve blended with rich chocolate syrup, topped with whipped cream. This is a thick, creamy, genuinely satisfying milkshake that delivers every single time.
+
+What distinguishes this milkshake is the quality of the Icedream base. Unlike fast-food ice cream products that are often thin or overly sweet, Chick-fil-A's Icedream has a clean, dairy-forward taste with a texture that's creamy but not gummy. The chocolate blending is substantial — you get a deep chocolate flavor, not a wimpy hint of it.
+
+The milkshake is incredibly thick and must be consumed through a straw — and you'll want to take your time with it. It's the kind of treat that makes the entire meal feel special.
+
+Nutritionally, the Chocolate Milkshake contains approximately 590 calories, 15 grams of protein, 85 grams of carbohydrates, and 24 grams of fat. It's an obvious indulgence, but a well-worth-it occasional one. Sodium is around 370mg. Prices range from $4.45 to $6.09.
+
+The milkshake lineup also includes Cookies & Cream and Peach (seasonal) varieties. For pure chocolate satisfaction, the classic Chocolate Milkshake is hard to beat. Pair it with a Chicken Sandwich meal for the ultimate Chick-fil-A experience.`,
+        faqs: [{"question":"What is Chick-fil-A's milkshake made with?","answer":"Chick-fil-A milkshakes are made with their signature Icedream® vanilla soft-serve blended with flavored syrups, topped with whipped cream."},{"question":"How many calories are in a Chick-fil-A Chocolate Milkshake?","answer":"Approximately 590 calories for a standard size, with 15g of protein, 85g of carbs, and 24g of fat."},{"question":"What milkshake flavors does Chick-fil-A have?","answer":"Regular flavors include Chocolate, Cookies & Cream, and Vanilla. Peach Milkshake is a popular seasonal flavor available during summer."},{"question":"Is the Chick-fil-A milkshake available year-round?","answer":"Chocolate and Cookies & Cream milkshakes are available year-round. The Peach Milkshake is seasonal, typically available in summer months."}],
       },
       {
         name: "Vanilla Milkshake",
@@ -751,6 +932,16 @@ Nutritionally, a medium order contains 420 calories, 45g of carbohydrates, and 2
         image: "/Frosted-Lemonade.webp",
         popular: true,
         tags: ["frosted", "lemonade", "dessert", "seasonal"],
+        uniqueDescription: `If there's one Chick-fil-A menu item that has developed a cult-like following beyond even the chicken sandwich, it might be the Frosted Lemonade. This legendary drink is deceptively simple in concept — hand-squeezed lemonade blended with Icedream® vanilla soft serve — but the result is something completely unique and addictive.
+
+The balance is the key. The lemonade provides a bright, tart, citrusy punch, while the Icedream adds creaminess and sweetness. Blended together, the two elements don't just combine — they transform into something greater than the sum of their parts. It's simultaneously refreshing and indulgent, tangy and sweet, cold and creamy. It makes hot summer days significantly more bearable.
+
+A standard Frosted Lemonade contains approximately 350 calories and 7 grams of protein. Carbohydrates are around 62 grams, mostly from natural sugars in the lemon and soft serve. Fat is approximately 9 grams and sodium is 130mg. Prices range from $4.35 to $6.09.
+
+The Frosted Lemonade is also available in a Peach variety — a seasonal favorite that adds luscious, fruity sweetness to the already-excellent original. For the best experience, drink it through a straw and enjoy it before it melts.
+
+This is the drink that turns first-time Chick-fil-A visitors into regulars. It's genuinely one of the most unique and enjoyable beverages in all of fast food.`,
+        faqs: [{"question":"What is Chick-fil-A Frosted Lemonade made of?","answer":"Frosted Lemonade is made by blending Chick-fil-A's hand-squeezed lemonade with their signature Icedream® vanilla soft-serve ice cream."},{"question":"How many calories are in a Frosted Lemonade?","answer":"Approximately 350 calories for a standard serving, with 7g of protein, 62g of carbs, and 9g of fat."},{"question":"Is there a Peach Frosted Lemonade?","answer":"Yes! The Peach Frosted Lemonade adds real peach flavoring to the classic recipe. It's a seasonal menu item typically available in summer months."},{"question":"Is Chick-fil-A's lemonade hand-squeezed?","answer":"Yes! Chick-fil-A prides itself on using hand-squeezed lemonade made fresh at each restaurant, giving it a noticeably fresh, authentic flavor."}],
       },
       {
         name: "Peach Frosted Lemonade",

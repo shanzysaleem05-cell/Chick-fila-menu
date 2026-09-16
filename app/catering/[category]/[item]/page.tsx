@@ -84,9 +84,25 @@ export default async function CateringItemPage({
 
           {/* Content */}
           <article className="text-gray-700 max-w-none mb-12 leading-relaxed space-y-4">
-            <p className="leading-relaxed text-lg">
-              {item.uniqueDescription || item.description}
-            </p>
+            {item.uniqueDescription ? (
+              item.uniqueDescription.split("\n\n").map((paragraph, idx) => (
+                <p key={idx} className="leading-relaxed text-lg">
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <>
+                <p className="leading-relaxed text-lg">{item.description}</p>
+                <p className="leading-relaxed text-lg">
+                  Catering for a crowd? The {item.name} is a fantastic choice from our {category.name} menu. 
+                  Whether you&apos;re planning a corporate event, a birthday party, or a family gathering, it provides that authentic Chick-fil-A flavor scaled up for your entire group.
+                </p>
+                <p className="leading-relaxed text-lg">
+                  Available in multiple sizes to accommodate your guest count, this item starts at approximately ${item.sizes[0]?.priceFrom.toFixed(2)}. 
+                  Be sure to pair it with our signature sauces, sides, and sweet tea to complete the ultimate catering spread.
+                </p>
+              </>
+            )}
           </article>
 
           {/* Sizing Table */}
@@ -121,11 +137,25 @@ export default async function CateringItemPage({
           <AdUnit type="responsive" />
 
           {/* FAQs */}
-          {item.faqs && item.faqs.length > 0 && (
-            <div className="mt-12">
-              <FAQAccordion items={item.faqs} title={`${item.name} FAQs`} />
-            </div>
-          )}
+          <div className="mt-12">
+            <FAQAccordion 
+              items={item.faqs && item.faqs.length > 0 ? item.faqs : [
+                {
+                  question: `How many people does the ${item.name} serve?`,
+                  answer: `The ${item.name} is available in multiple sizes. ${item.sizes.map(s => `The ${s.label} serves approximately ${s.servesApprox}`).join('; ')}.`
+                },
+                {
+                  question: `How far in advance should I order the ${item.name}?`,
+                  answer: "We recommend placing catering orders at least 24 hours in advance to ensure availability, though some locations may accommodate same-day orders depending on volume."
+                },
+                {
+                  question: `Are sauces included with the ${item.name}?`,
+                  answer: "Most hot catering trays come with your choice of 8oz dipping sauces. Plates, napkins, and serving utensils are generally provided upon request."
+                }
+              ]} 
+              title={`${item.name} FAQs`} 
+            />
+          </div>
         </div>
 
         {/* Right Sidebar */}

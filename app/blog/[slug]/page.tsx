@@ -57,6 +57,54 @@ const POST_META: Record<string, { title: string; description: string; date: stri
     category: "Nutrition",
     image: "/Chick-fil-A-Keto-Options-What-You-Can-Eat-Low-Carb.webp",
   },
+  "best-sauces-ranked": {
+    title: "Every Chick-fil-A Sauce Ranked: The Definitive Guide (2026)",
+    description: "From the iconic Chick-fil-A Sauce to the tangy Polynesian and fiery Buffalo — we rank and review all 9 Chick-fil-A sauces so you know exactly which one to grab.",
+    date: "September 2026",
+    readTime: "7 min read",
+    category: "Ordering Tips",
+    image: "/Every-Chick-fil-A-Sauce-Ranked-The-Definitive-Guide-(2026).jpeg",
+  },
+  "family-meal-ideas": {
+    title: "Best Chick-fil-A Family Meal Ideas & Deals (2026)",
+    description: "Feeding the whole family at Chick-fil-A? We break down the best family meal combinations, how to use the app for deals, and which items kids love most.",
+    date: "September 2026",
+    readTime: "6 min read",
+    category: "Family",
+    image: "/Best-Chick-fil-A-Family-Meal-Ideas-&-Deal-(2026).jpeg",
+  },
+  "high-protein-meals": {
+    title: "Highest Protein Items at Chick-fil-A: Build Your Meal (2026)",
+    description: "Trying to hit your protein goals at Chick-fil-A? We rank every item by protein content and show you how to build the highest-protein meals possible.",
+    date: "September 2026",
+    readTime: "8 min read",
+    category: "Nutrition",
+    image: "/Highest-Protein-Items-at-Chick-fil-A-Build-Your-Meal-(2026).jpeg",
+  },
+  "ultimate-catering-guide": {
+    title: "The Ultimate Chick-fil-A Catering Guide for Events (2026)",
+    description: "Planning a party or office lunch? Learn exactly how much food to order, tray sizes, pricing estimates, and the best catering menu combinations.",
+    date: "September 2026",
+    readTime: "7 min read",
+    category: "Guides",
+    image: "/The-Ultimate-Chick-fil-A-Catering-Guide-for-Events-(2026).jpeg",
+  },
+  "gluten-free-menu-guide": {
+    title: "Chick-fil-A Gluten-Free Menu: What's Safe to Eat? (2026)",
+    description: "A complete guide to eating gluten-free at Chick-fil-A. We cover the GF bun, dedicated fryers for waffle fries, safe sauces, and cross-contamination risks.",
+    date: "September 2026",
+    readTime: "9 min read",
+    category: "Nutrition",
+    image: "/Chick-fil-A-Gluten-Free-Menu-What's-Safe-to-Eat-(2026).jpeg",
+  },
+  "vegetarian-vegan-options": {
+    title: "Vegetarian & Vegan Options at Chick-fil-A (2026 Guide)",
+    description: "Yes, you can eat meatless at a chicken restaurant. Discover the best vegetarian meals, vegan-friendly sides, and secret menu salad hacks.",
+    date: "September 2026",
+    readTime: "6 min read",
+    category: "Nutrition",
+    image: "/Vegetarian-&-Vegan-Options-at-Chick-fil-A-(2026 Guide).jpeg",
+  },
 };
 
 export async function generateStaticParams() {
@@ -823,7 +871,492 @@ export default async function BlogPostPage({
         </p>
       </article>
     ),
+    "best-sauces-ranked": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Chick-fil-A&apos;s sauces are legendary in their own right. In fact, for many fans, the sauce is
+          just as important as the food it accompanies. Whether you&apos;re a diehard Chick-fil-A Sauce loyalist
+          or an adventurous condiment explorer, this definitive ranking will help you find your perfect match
+          — and maybe discover a new favorite.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#1 — Chick-fil-A Sauce</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          There&apos;s no debate here. The Chick-fil-A Sauce is the GOAT of fast-food condiments. A perfect
+          blend of honey mustard, barbecue, and ranch flavors, it creates a creamy, tangy, slightly sweet
+          combination that elevates absolutely everything it touches. It started as a happy accident — a
+          Chick-fil-A operator accidentally mixed honey mustard and barbecue sauce together — and it
+          became a signature product. Pair it with nuggets, waffle fries, or the classic sandwich. You cannot go wrong.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Nutritionally: 140 calories per packet, 13g fat, 7g carbs. Worth every calorie.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#2 — Polynesian Sauce</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          The Polynesian Sauce is the surprise favorite of many Chick-fil-A regulars. It&apos;s a bold,
+          sweet-and-sour glaze with a deep red color and a flavor profile unlike anything else on the condiment
+          rack. Think of it as a superior version of a sweet and sour sauce — it has more depth, a richer
+          sweetness, and a tang that cuts through the richness of fried chicken beautifully. It&apos;s
+          spectacular on nuggets and waffle fries.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Nutritionals: 110 calories per packet, 0g fat, 26g carbs. Skip on keto, essential otherwise.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#3 — Honey Mustard Sauce</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          A classic that never disappoints. Chick-fil-A&apos;s Honey Mustard is tangier and less sweet than
+          most chain versions, which gives it a more sophisticated, adult-leaning flavor. It&apos;s the ideal
+          pairing for the Spicy Chicken Sandwich — the creamy tang perfectly tempers the heat — and also
+          works beautifully with nuggets, strips, and the Cool Wrap.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Nutritionals: 45 calories per packet, 0g fat, 11g carbs. One of the lighter sauce options.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#4 — Zesty Buffalo Sauce</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For heat lovers, the Zesty Buffalo Sauce delivers. It has genuine kick with a vinegar-forward
+          tang that&apos;s true to the buffalo wing tradition. It pairs exceptionally well with the Grilled
+          Nuggets (adding heat without adding calories from breading) and makes an excellent dipping sauce
+          for Waffle Fries. At just 25 calories per packet with only 1g carbs, it&apos;s also the best
+          low-calorie sauce option.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#5 — Garden Herb Ranch</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Chick-fil-A&apos;s take on ranch is noticeably better than the standard bottled ranch you might
+          expect at a fast food chain. It has a fresh, herby character — parsley and dill come through
+          clearly — making it a great dressing for salads and an excellent dip for fries. If you&apos;re
+          a ranch person, this will not disappoint.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#6 — Sriracha Sauce</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Chick-fil-A&apos;s Sriracha is smoky, garlicky, and genuinely spicy — a solid, approachable
+          heat that works well as a sandwich spread or nugget dip. It doesn&apos;t have the depth of the
+          best sauces on this list, but for Sriracha fans it&apos;s a reliable option.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">#7 — Barbecue Sauce</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          A competent, smoky BBQ sauce. It&apos;s solid but overshadowed by the superior Chick-fil-A Sauce,
+          which already incorporates BBQ flavor in a more interesting way. If you specifically want a
+          pure BBQ experience, this delivers. Otherwise, reach for the Chick-fil-A Sauce instead.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Bottom Line: Which Sauce Should You Get?</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For first-timers: get the <strong>Chick-fil-A Sauce</strong>. It&apos;s iconic for a reason.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For fries: <strong>Polynesian Sauce</strong> or Chick-fil-A Sauce.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For spicy sandwiches: <strong>Honey Mustard</strong> — the sweet tang balances the heat perfectly.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For low calories: <strong>Zesty Buffalo Sauce</strong> at 25 calories is the winner.
+        </p>
+        <div className="mt-6 p-4 bg-red-50 border border-red-100 rounded-xl">
+          <p className="text-sm font-bold text-[#DD0033] mb-2">💡 Pro Tip</p>
+          <p className="text-sm text-gray-700">
+            You can request extra sauces when ordering. Most locations give 1-2 free sauces per meal,
+            with additional ones for a small charge. Use the Chick-fil-A app to customize sauce preferences.
+          </p>
+        </div>
+      </article>
+    ),
+    "family-meal-ideas": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Chick-fil-A is one of the best fast food options for families. The food quality is consistently
+          high, there&apos;s genuinely something for every age group, and the restaurant experience —
+          attentive service, clean dining rooms, playgrounds at many locations — is noticeably better
+          than most competitors. Here&apos;s how to build the best family meals and get the most value.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Ultimate Family Feast Build</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For a family of 4 (2 adults, 2 kids), here&apos;s a well-rounded, cost-effective meal strategy:
+        </p>
+        <ul className="list-none space-y-3 mb-6 pl-0">
+          {[
+            { item: "30-count Nuggets ($17.49-$20.99)", note: "The centerpiece — enough for everyone, shareable and crowd-pleasing" },
+            { item: "2× Large Waffle Fries (~$3.49 each)", note: "The best fast-food fries, period. Essential." },
+            { item: "Mac & Cheese Large (~$4.99)", note: "Kids love it, adults love it. A universally satisfying side." },
+            { item: "Fruit Cup ($3.99)", note: "A healthy balance to round out the meal" },
+            { item: "4× Drinks ($2-3 each)", note: "Lemonade or sweet tea are the crowd-pleasers" },
+          ].map(({ item, note }) => (
+            <li key={item} className="flex gap-3 p-3 bg-gray-50 rounded-lg">
+              <span className="text-[#DD0033] font-bold flex-shrink-0">→</span>
+              <div>
+                <p className="font-bold text-[#1A1A1A] text-sm">{item}</p>
+                <p className="text-gray-500 text-xs mt-0.5">{note}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">What Kids Love Most at Chick-fil-A</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Based on what&apos;s consistently ordered in kids&apos; meals and family visits:
+        </p>
+        <ol className="list-decimal pl-6 space-y-3 text-gray-600 mb-6">
+          <li><strong>Chick-n-Minis (Breakfast):</strong> The honey-butter rolls with nuggets are universally adored by kids. Schedule a breakfast visit.</li>
+          <li><strong>Nuggets 8-count:</strong> Simple, familiar, no fuss. Kids love the fun shapes and the dipping sauce ritual.</li>
+          <li><strong>Mac & Cheese:</strong> Chick-fil-A&apos;s multi-cheese mac is genuinely excellent — kids go crazy for it.</li>
+          <li><strong>Frosted Lemonade:</strong> The creamy-tangy blend is a revelation for kids trying it for the first time.</li>
+          <li><strong>Chocolate Milkshake:</strong> Thick, rich, and genuinely delicious. A treat that earns loyalty.</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">How to Save Money on Family Meals</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          The Chick-fil-A app is essential for family visits. Here&apos;s how to maximize value:
+        </p>
+        <ul className="space-y-3 mb-6">
+          {[
+            "Download the Chick-fil-A One app — every purchase earns points redeemable for free food.",
+            "Family-style Nugget trays and Chick-n-Strip trays are available through catering and offer the best per-piece value.",
+            "The 30-count nuggets are the best per-nugget price on the menu — always better value than individual 8 or 12-counts.",
+            "Order through the app for occasional exclusive deals and free item rewards (like free sandwiches on birthdays).",
+            "If you visit weekly, you&apos;ll accumulate enough points for a free meal roughly every month.",
+          ].map((tip, i) => (
+            <li key={i} className="flex gap-3 text-gray-600 text-sm">
+              <span className="w-6 h-6 bg-[#DD0033] text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0">{i + 1}</span>
+              {tip}
+            </li>
+          ))}
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Dietary Considerations for Families</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Chick-fil-A handles diverse dietary needs surprisingly well:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+          <li><strong>Gluten-free options:</strong> Grilled Nuggets, Waffle Fries, Grilled Chicken Sandwich (without bun), Hash Brown Scramble Bowl, and most salads.</li>
+          <li><strong>Dairy-free:</strong> Most grilled chicken items, Waffle Fries (no cheese), and the standard salads without cheese.</li>
+          <li><strong>Lower calorie for health-conscious adults:</strong> Grilled Nuggets (130 cal), Market Salad (340 cal), Egg White Grill (300 cal).</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Final Family Meal Tips</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Chick-fil-A is genuinely one of the best family fast food destinations in the US. The service is
+          consistently excellent — staff are trained to be helpful and often go above and beyond for families
+          with kids. Many locations have indoor playgrounds. The food quality is reliable and something
+          for everyone from the youngest toddler to the fitness-focused adult.
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          The key to a great family Chick-fil-A visit: order the 30-count nuggets, load up on sauces,
+          get the Mac & Cheese and Waffle Fries, and let everyone pick their sauce. It&apos;s a meal that
+          makes everyone happy — and that&apos;s genuinely rare in a group dining situation.
+        </p>
+      </article>
+    ),
+    "high-protein-meals": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Chick-fil-A is one of the most underrated destinations for high-protein eating. While it&apos;s
+          famous for fried chicken, the chain&apos;s commitment to real, whole chicken breast means that
+          even the grilled options pack impressive protein numbers. Here&apos;s your complete guide to
+          maximizing protein on every Chick-fil-A visit.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 mt-8">Top Items Ranked by Protein Content</h2>
+
+        <div className="overflow-x-auto mb-8">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-[#1A1A1A] text-white">
+                <th className="px-4 py-3 text-left">Menu Item</th>
+                <th className="px-4 py-3 text-center">Protein</th>
+                <th className="px-4 py-3 text-center">Calories</th>
+                <th className="px-4 py-3 text-center">Protein/Cal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { name: "Grilled Nuggets 12 ct", protein: "38g", calories: 200, ratio: "0.19g/cal" },
+                { name: "Cool Wrap (Grilled)", protein: "43g", calories: 660, ratio: "0.065g/cal" },
+                { name: "Grilled Nuggets 8 ct", protein: "25g", calories: 130, ratio: "0.19g/cal" },
+                { name: "Market Salad (Grilled)", protein: "28g", calories: 340, ratio: "0.082g/cal" },
+                { name: "Nuggets 12 ct (Fried)", protein: "40g", calories: 380, ratio: "0.105g/cal" },
+                { name: "Grilled Chicken Sandwich", protein: "28g", calories: 390, ratio: "0.072g/cal" },
+                { name: "Chicken Sandwich", protein: "28g", calories: 420, ratio: "0.067g/cal" },
+                { name: "Egg White Grill", protein: "26g", calories: 300, ratio: "0.087g/cal" },
+              ].map((row, i) => (
+                <tr key={row.name} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                  <td className="px-4 py-3 font-medium text-[#1A1A1A]">{row.name}</td>
+                  <td className="px-4 py-3 text-center font-bold text-emerald-600">{row.protein}</td>
+                  <td className="px-4 py-3 text-center text-gray-600">{row.calories}</td>
+                  <td className="px-4 py-3 text-center text-gray-500 text-xs">{row.ratio}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Best High-Protein Meal Combos</h2>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Combo 1: The Muscle Meal (~68g protein, 510 cal)</h3>
+        <p className="text-gray-600 leading-relaxed mb-2">12-count Grilled Nuggets + Side Salad + Water</p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          This is the single best protein-to-calorie meal available at any major fast food chain. The
+          12-count Grilled Nuggets alone deliver 38g of protein for just 200 calories. Add a side
+          salad with Light Balsamic Vinaigrette (80 cal, 2g protein) and you&apos;ve got a remarkably
+          complete, satisfying meal for a fitness-focused individual. Price: approximately $10-12.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Combo 2: The Balanced Build (~56g protein, 730 cal)</h3>
+        <p className="text-gray-600 leading-relaxed mb-2">Grilled Cool Wrap + Kale Crunch Side + Unsweetened Tea</p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          The Cool Wrap with grilled chicken provides 43g of protein in a satisfying, substantial wrap.
+          Adding the Kale Crunch Side brings fiber and micronutrients. This is a complete, well-rounded
+          meal for someone who needs both protein and staying power. Ideal as a post-workout meal.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Combo 3: The Breakfast Protein Boost (~49g protein, 590 cal)</h3>
+        <p className="text-gray-600 leading-relaxed mb-2">Egg White Grill + 8-count Grilled Nuggets + Coffee (Black)</p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          An unusual but incredibly effective breakfast combination. The Egg White Grill (26g protein)
+          combined with the 8-count Grilled Nuggets (25g protein) gives you 51g of protein at breakfast
+          for under 430 calories. Perfect for those doing morning workouts and needing a serious
+          protein-forward start to the day.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Grilled Nugget: Fast Food&apos;s Best Protein Source</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Let&apos;s be direct: the Chick-fil-A Grilled Nugget is arguably the best protein food
+          available in fast food, full stop. Here&apos;s the math:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+          <li>8-count: 130 calories, 25g protein, 3g fat, 1g carbs — better macros than most protein bars</li>
+          <li>12-count: 200 calories, 38g protein, 4g fat, 1g carbs — equivalent to a large chicken breast</li>
+          <li>Naturally gluten-free, no breading, whole muscle meat</li>
+          <li>Priced at approximately $5.69-$8.09 for 8-count — less than most protein supplements</li>
+        </ul>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          For athletes, bodybuilders, or anyone tracking macros, incorporating Grilled Nuggets into
+          your regular meal plan is a genuinely smart nutritional decision. They&apos;re convenient,
+          consistently good, and provide clean protein at a reasonable cost.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">What to Avoid for High-Protein Goals</h2>
+        <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+          <li>Waffle Fries (5g protein, 420 cal) — very low protein-to-calorie ratio</li>
+          <li>Mac & Cheese (18g protein, 450 cal) — moderate protein but high in fat and carbs</li>
+          <li>Milkshakes (15g protein, 590+ cal) — poor protein density relative to calories</li>
+          <li>Sweet beverages — add significant sugar calories with zero protein</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Summary: How to Order High-Protein at Chick-fil-A</h2>
+        <p className="text-gray-600 leading-relaxed">
+          Always choose grilled over fried. Prioritize nuggets (12-count or 8-count grilled) as your
+          protein anchor. Pair with salads or the Kale Crunch Side instead of fries for maximum
+          nutritional efficiency. Skip sweet beverages in favor of water, unsweetened tea, or black coffee.
+          Follow these principles and Chick-fil-A becomes one of the most effective high-protein fast food
+          destinations available — which is a statement that very few chains can match.
+        </p>
+      </article>
+    ),
+    "ultimate-catering-guide": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Whether you&apos;re planning an office lunch, a birthday party, or a tailgate, Chick-fil-A catering is consistently one of the most reliable and universally loved options available. But knowing exactly how much to order and what trays provide the best value can be tricky. This comprehensive guide breaks down everything you need to know about Chick-fil-A catering in 2026.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Golden Rule: How Much to Order</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          The most common mistake when ordering catering is drastically overestimating or underestimating how much chicken people will actually eat. Here is the foolproof formula used by experienced catering hosts:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+          <li><strong>Adults (Main Meal):</strong> Assume 8-10 nuggets per adult, plus 1.5 side servings.</li>
+          <li><strong>Adults (Snack/Appetizer):</strong> Assume 4-6 nuggets per adult.</li>
+          <li><strong>Children (Under 10):</strong> Assume 4-5 nuggets per child.</li>
+          <li><strong>Teenagers/Athletes:</strong> Assume 12-15 nuggets per person.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Breaking Down the Trays</h2>
+        
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">1. Chick-fil-A® Nugget Trays</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          The undisputed king of Chick-fil-A catering. These are the classic bite-sized pieces of breaded chicken breast. Available in three sizes:
+        </p>
+        <ul className="space-y-3 mb-6 text-gray-600">
+          <li><strong className="text-[#1A1A1A]">Small (64 nuggets):</strong> ~$41.00. Feeds 8 people. Best for small office meetings.</li>
+          <li><strong className="text-[#1A1A1A]">Medium (120 nuggets):</strong> ~$74.00. Feeds 15 people. The most popular size for birthday parties.</li>
+          <li><strong className="text-[#1A1A1A]">Large (200 nuggets):</strong> ~$121.50. Feeds 25 people. Best value per nugget. Essential for large events.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">2. Grilled Nugget Trays</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Crucial for offices or groups where you know people are gluten-intolerant, keto, or highly health-conscious. They come in the exact same sizes (64, 120, 200) but generally cost about 15-20% more than the fried versions. <em>Pro-tip: Always order at least one small Grilled tray for a large mixed crowd.</em>
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">3. Chick-n-Strips™ Trays</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Strips feel slightly more substantial than nuggets and are great if you&apos;re serving adults who might prefer a more &quot;fork and knife&quot; or hearty finger-food experience.
+        </p>
+        <ul className="space-y-3 mb-6 text-gray-600">
+          <li><strong className="text-[#1A1A1A]">Small (24 strips):</strong> ~$41.00. Feeds 8.</li>
+          <li><strong className="text-[#1A1A1A]">Medium (45 strips):</strong> ~$74.00. Feeds 15.</li>
+          <li><strong className="text-[#1A1A1A]">Large (75 strips):</strong> ~$121.50. Feeds 25.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Best Sides for Groups</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          You cannot cater Waffle Fries. They lose their heat and crispness too quickly in a catering environment. Instead, you must rely on these sides:
+        </p>
+        <ol className="list-decimal pl-6 space-y-3 text-gray-600 mb-6">
+          <li><strong>Mac & Cheese Trays:</strong> Absolutely mandatory. It travels exceptionally well, retains heat, and is universally loved. A large tray (~$44) feeds roughly 20 people.</li>
+          <li><strong>Fruit Trays:</strong> Provides necessary color and a fresh, healthy contrast to the heavy chicken and mac & cheese. A large tray (~$70) feeds 26.</li>
+          <li><strong>Kale Crunch Side:</strong> A fantastic, underrated catering side. It actually tastes better as it sits and marinates in the dressing, making it the most durable salad option.</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Don&apos;t Forget the Sauce!</h2>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Catering trays come with your choice of 8oz sauce tubs. A large 200-count nugget tray comes with 6 sauce tubs. <strong>Always over-index on Chick-fil-A Sauce.</strong> If you get 6 tubs, make 3 of them Chick-fil-A Sauce, 1 Polynesian, 1 Ranch, and 1 Honey Mustard. You can also purchase extra 8oz bottles of sauce for around $3.15 each, which make great party favors or fridge staples for later.
+        </p>
+      </article>
+    ),
+    "gluten-free-menu-guide": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Finding safe, reliable fast food when you have Celiac disease or non-celiac gluten sensitivity can be incredibly stressful. However, Chick-fil-A is widely regarded in the gluten-free community as one of the safest and most accommodating national chains. Here is your complete, updated guide to eating gluten-free at Chick-fil-A in 2026.
+        </p>
+
+        <div className="p-5 bg-amber-50 border border-amber-200 rounded-xl mb-8">
+          <p className="text-sm font-bold text-amber-900 mb-2">⚠️ Important Disclaimer</p>
+          <p className="text-sm text-amber-800">
+            Chick-fil-A kitchens are not strictly gluten-free environments. While they have strong protocols, cross-contact is always a possibility. If you have severe Celiac disease, always inform the team member taking your order so they can change gloves and take extra precautions.
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Safest Gluten-Free Entrées</h2>
+        
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">1. Grilled Nuggets (The Gold Standard)</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          The Grilled Nuggets are the safest and easiest gluten-free protein option on the menu. They are marinated and grilled, completely bypassing the breading stations where wheat flour is present. Available in 8-count and 12-count.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">2. The Gluten-Free Bun</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Chick-fil-A offers a genuine Gluten-Free Bun made from amaranth, quinoa, and sorghum. <strong>Crucially, it comes individually sealed in its own plastic packaging.</strong> The customer unpackages it themselves, which completely eliminates the risk of cross-contamination from the kitchen staff handling it. You can order this with the Grilled Chicken filet to create a safe Grilled Chicken Sandwich.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">The Waffle Fries: Are They Safe?</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Yes, with a small asterisk. Chick-fil-A Waffle Potato Fries® contain only three ingredients: potatoes, canola oil, and sea salt. 
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          More importantly, <strong>Chick-fil-A cooks their Waffle Fries in dedicated canola oil fryers</strong>. The breaded chicken is cooked in separate pressure fryers using peanut oil. Because the fryers are strictly separated, the Waffle Fries are widely considered safe for the gluten-free community. Always double-check with your specific location to ensure they are following the standard dedicated fryer protocol.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Gluten-Free Sides & Salads</h2>
+        <ul className="list-disc pl-6 space-y-3 text-gray-600 mb-6">
+          <li><strong>Fruit Cup:</strong> 100% safe, fresh fruit.</li>
+          <li><strong>Kale Crunch Side:</strong> Safe. The roasted almonds are gluten-free.</li>
+          <li><strong>Side Salad:</strong> Safe, <em>but you must omit the crispy bell peppers</em> which are processed in a facility with wheat.</li>
+          <li><strong>Market Salad:</strong> Safe when ordered with the Grilled Filet. Omit the granola just to be safe, though the roasted nuts are fine.</li>
+          <li><strong>Cobb Salad:</strong> Safe ONLY if you substitute the fried nuggets for grilled nuggets, and omit the crispy bell peppers.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Gluten-Free Sauces & Dressings</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          You are in luck! Almost all of Chick-fil-A&apos;s signature dipping sauces are naturally gluten-free.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-4 mb-8">
+          <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+            <h4 className="font-bold text-green-900 mb-2">✅ Safe Sauces</h4>
+            <ul className="text-sm text-green-800 space-y-1">
+              <li>• Chick-fil-A® Sauce</li>
+              <li>• Polynesian Sauce</li>
+              <li>• Barbecue Sauce</li>
+              <li>• Honey Mustard Sauce</li>
+              <li>• Garden Herb Ranch</li>
+              <li>• Zesty Buffalo Sauce</li>
+            </ul>
+          </div>
+          <div className="bg-red-50 p-4 rounded-lg border border-red-100">
+            <h4 className="font-bold text-red-900 mb-2">❌ Avoid (Contains Gluten)</h4>
+            <ul className="text-sm text-red-800 space-y-1">
+              <li>• Sweet & Spicy Sriracha Sauce (Contains wheat in the soy sauce)</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">What You Must Absolutely Avoid</h2>
+        <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+          <li>All fried chicken (Nuggets, Strips, classic Chicken Sandwich).</li>
+          <li>Mac & Cheese (contains wheat pasta).</li>
+          <li>Chicken Noodle Soup (contains wheat noodles).</li>
+          <li>All cookies, brownies, and biscuits.</li>
+          <li>The Cool Wrap (the flatbread contains wheat).</li>
+        </ul>
+      </article>
+    ),
+    "vegetarian-vegan-options": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Going to a restaurant literally famous for its chicken when you don&apos;t eat meat might sound like a terrible idea. But if you&apos;re the one vegetarian or vegan in a car full of people who want Chick-fil-A, don&apos;t panic. Chick-fil-A actually has surprisingly robust, high-quality meatless options if you know exactly how to order.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Top Vegetarian Meals (Contains Dairy/Eggs)</h2>
+        
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">1. The "Veggie Wrap" (Secret Menu)</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          This is the best vegetarian hack at Chick-fil-A. Order the standard Grilled Cool Wrap, but ask them to <strong>substitute the chicken for extra cheese, corn, and black beans</strong>. The staff is usually very familiar with this request. You get a hearty, filling flaxseed flatbread wrap packed with Monterey Jack, cheddar, lettuce, and veggies. Pair it with the Avocado Lime Ranch dressing for an excellent meal.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">2. The Mac & Cheese Meal</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Chick-fil-A&apos;s Mac & Cheese is baked in-restaurant with a blend of Parmesan, Cheddar, and Romano cheeses. It is rich, heavy, and completely vegetarian. Ordering a Large Mac & Cheese alongside a Side Salad and a Lemonade makes for a highly satisfying, premium fast-food vegetarian dinner.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">3. Biscuit and Hash Browns (Breakfast)</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          For breakfast, grab a plain buttered Biscuit (or an Egg & Cheese Biscuit) and a side of Hash Browns. It&apos;s classic, comforting, and 100% vegetarian.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Vegan Options at Chick-fil-A (100% Plant-Based)</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Eating strictly vegan is harder here, as the buns contain dairy and the wraps contain honey. However, you still have excellent options:
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">1. Waffle Potato Fries (Yes, they are Vegan!)</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Unlike McDonald&apos;s (which uses beef flavoring in their fries in the US), Chick-fil-A&apos;s Waffle Fries are completely vegan. They are made from just potatoes, canola oil, and sea salt, and are cooked in dedicated fryers away from the chicken.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">2. The Vegan Market Salad Build</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Order the Market Salad with <strong>no chicken and no blue cheese crumbles</strong>. You will be left with a massive bed of mixed greens, apples, strawberries, and blueberries. Top it with the Roasted Almonds and the Light Balsamic Vinaigrette (which is vegan). It&apos;s fresh, huge, and delicious.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">3. Kale Crunch Side & Fruit Cup</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          Both of these sides are naturally vegan. The Kale Crunch features curly kale, green cabbage, and roasted almonds tossed in an apple cider and Dijon mustard vinaigrette.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Vegan & Vegetarian Sauces</h2>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          To dip your Waffle Fries, you need to know which sauces fit your diet.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-6">
+          <li><strong>Vegan Sauces:</strong> Polynesian Sauce, Barbecue Sauce, Sweet & Spicy Sriracha.</li>
+          <li><strong>Vegetarian Sauces (Contains egg/dairy):</strong> Chick-fil-A Sauce, Ranch, Honey Mustard, Zesty Buffalo.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Summary</h2>
+        <p className="text-gray-600 leading-relaxed">
+          If you are Vegetarian: The Veggie Wrap hack and the Mac & Cheese are your best friends. <br/><br/>
+          If you are Vegan: A large order of Waffle Fries dipped in Polynesian sauce, paired with a modified Market Salad and a Lemonade, is one of the best vegan fast-food meals you can get anywhere.
+        </p>
+      </article>
+    ),
   };
+
 
   const content = contentMap[slug];
   if (!content) notFound();

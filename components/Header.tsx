@@ -63,8 +63,7 @@ export default function Header() {
           
           {/* Nav (Desktop) */}
           <nav className="hidden md:flex items-center gap-7 font-bold text-[#00587C] text-[0.95rem]">
-            <Link href="/menu" className="hover:text-[#DD0033] transition-colors">Menu</Link>
-            <Link href="/prices" className="hover:text-[#DD0033] transition-colors">Prices</Link>
+            <Link href="/menu" className="hover:text-[#DD0033] transition-colors">Menu & Prices</Link>
             <Link href="/catering" className="hover:text-[#DD0033] transition-colors">Catering</Link>
             <Link href="/calories" className="hover:text-[#DD0033] transition-colors">Calories & Nutrition</Link>
             <Link href="/blog" className="hover:text-[#DD0033] transition-colors">Blog</Link>
@@ -85,9 +84,8 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-200 md:hidden flex flex-col py-2 px-4 z-50">
-          <Link href="/menu" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Menu</Link>
-          <Link href="/prices" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Prices</Link>
-          <Link href="/catering" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Catering</Link>
+            <Link href="/menu" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Menu & Prices</Link>
+            <Link href="/catering" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Catering</Link>
           <Link href="/calories" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Calories & Nutrition</Link>
           <Link href="/blog" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Blog</Link>
           <Link href="/hours" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Hours</Link>

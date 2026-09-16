@@ -114,6 +114,46 @@ export default function CateringLandingPage() {
                     </div>
                   )}
                 </div>
+
+                {/* Category Table */}
+                {category.items.length > 0 && (
+                  <div className="mt-10 overflow-x-auto border border-[#EAE3D5] rounded-xl shadow-sm">
+                    <table className="w-full text-sm text-left">
+                      <thead className="bg-[#F5F5F5] border-b border-[#EAE3D5]">
+                        <tr>
+                          <th className="px-4 py-3 font-bold text-[#1A1A1A]">Item Name</th>
+                          <th className="px-4 py-3 font-bold text-[#1A1A1A]">Size / Option</th>
+                          <th className="px-4 py-3 font-bold text-[#1A1A1A]">Serves Approx.</th>
+                          <th className="px-4 py-3 font-bold text-[#1A1A1A]">Starting Price</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#EAE3D5]">
+                        {category.items.flatMap((item, itemIdx) =>
+                          item.sizes.map((size, sizeIdx) => (
+                            <tr
+                              key={`${item.slug}-${size.label}`}
+                              className={itemIdx % 2 === 0 ? "bg-white" : "bg-[#FCFAF5]"}
+                            >
+                              {sizeIdx === 0 && (
+                                <td
+                                  className="px-4 py-3 font-bold text-[#1A1A1A] border-r border-[#EAE3D5] border-dashed"
+                                  rowSpan={item.sizes.length}
+                                >
+                                  {item.name}
+                                </td>
+                              )}
+                              <td className="px-4 py-3 text-gray-700">{size.label}</td>
+                              <td className="px-4 py-3 text-gray-600">{size.servesApprox}</td>
+                              <td className="px-4 py-3 font-semibold text-[#DD0033]">
+                                ${size.priceFrom.toFixed(2)}
+                              </td>
+                            </tr>
+                          ))
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
 
               {/* Mid-Content Ad after the 3rd category */}

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const footerLinks = {
+export const FOOTER_LINKS = {
   Menu: [
-    { label: "Full Menu", href: "/menu" },
+    { label: "Full Menu & Prices", href: "/menu" },
     { label: "Breakfast", href: "/menu/breakfast" },
     { label: "Entrées", href: "/menu/entrees" },
     { label: "Salads", href: "/menu/salads" },
@@ -11,8 +11,7 @@ const footerLinks = {
     { label: "Beverages", href: "/menu/beverages" },
     { label: "Sauces", href: "/menu/sauces" },
   ],
-  "Nutrition Info": [
-    { label: "Menu with Prices", href: "/prices" },
+  Guides: [
     { label: "Calories Guide", href: "/calories" },
     { label: "Healthiest Items", href: "/blog/healthiest-items" },
     { label: "Breakfast Calories", href: "/menu/breakfast" },
@@ -51,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Link Columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
+          {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
               <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">
                 {title}

@@ -19,11 +19,20 @@ export default function AdUnit({ type = "responsive", className = "" }: AdUnitPr
   }
 
   return (
-    <div className={`${baseClasses} ${className}`} aria-label="Advertisement Space">
-      {/* 
-        NOTE TO DEVELOPER: 
-        Replace this div entirely or inject the Google AdSense <ins> tag inside.
-      */}
+    <div className={`${baseClasses} ${className}`} aria-hidden="true">
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block", textAlign: "center" }}
+        data-ad-client="ca-pub-4953411501541980"
+        data-ad-slot={type === "leaderboard" ? "1234567890" : type === "rectangle" ? "0987654321" : "1122334455"} // Replace slots with actual AdSense ad unit IDs later
+        data-ad-format={type === "responsive" ? "auto" : undefined}
+        data-full-width-responsive={type === "responsive" ? "true" : "false"}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: "(adsbygoogle = window.adsbygoogle || []).push({});",
+        }}
+      />
     </div>
   );
 }

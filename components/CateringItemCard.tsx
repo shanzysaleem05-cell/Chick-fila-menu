@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
@@ -18,10 +19,12 @@ export default function CateringItemCard({ item, categorySlug }: { item: Caterin
       
       {/* Image Container */}
       <Link href={`/catering/${categorySlug}/${item.slug}`} className="group relative w-full bg-[#F9F7F4] overflow-hidden flex items-center justify-center p-0 aspect-[4/3] border-b border-[#EAE3D5] block">
-        <img
+        <Image
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
         />
       </Link>
       

@@ -1492,7 +1492,7 @@ export default async function BlogPostPage({
                 <Link
                   key={relSlug}
                   href={`/blog/${relSlug}`}
-                  className="block p-3 rounded-xl hover:bg-[#FCFAF5] border border-transparent hover:border-[#EAE3D5] transition-all group"
+                  className="block p-3 rounded-xl hover:bg-[#FAF7F2] border border-transparent hover:border-[#EAE3D5] transition-all group"
                 >
                   <span className="text-xs font-bold text-[#DD0033] uppercase tracking-wider">{relPost.category}</span>
                   <p className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#DD0033] mt-1 leading-snug">{relPost.title}</p>
@@ -1518,7 +1518,7 @@ export default async function BlogPostPage({
                 <Link
                   key={href}
                   href={href}
-                  className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FCFAF5] text-sm text-gray-600 hover:text-[#DD0033] transition-colors"
+                  className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FAF7F2] text-sm text-gray-600 hover:text-[#DD0033] transition-colors"
                 >
                   <span>{label}</span>
                   <ArrowRight className="w-3.5 h-3.5" />

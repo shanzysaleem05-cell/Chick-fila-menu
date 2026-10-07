@@ -111,7 +111,7 @@ export default async function CateringItemPage({
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-[#FCFAF5] border-b border-[#EAE3D5] text-sm text-gray-600 uppercase tracking-wider">
+                  <tr className="bg-[#FAF7F2] border-b border-[#EAE3D5] text-sm text-gray-600 uppercase tracking-wider">
                     <th className="py-4 px-6 font-bold text-[#1A1A1A]">Size</th>
                     <th className="py-4 px-6 font-bold text-[#1A1A1A]">Serves Approx.</th>
                     <th className="py-4 px-6 font-bold text-[#1A1A1A]">Starting Price</th>

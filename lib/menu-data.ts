@@ -1070,7 +1070,7 @@ This is the drink that turns first-time Chick-fil-A visitors into regulars. It's
         nutrition: { calories: 90, protein: 8, carbs: 11, fat: 2, sodium: 100 },
         allergens: ["Milk"],
         description: "Cold 1% milk — a wholesome, classic beverage.",
-        image: "/1%-Milk.webp",
+        image: "/1-Percent-Milk.webp",
         tags: ["beverage", "milk", "kids"],
       },
       {

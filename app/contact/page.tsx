@@ -13,7 +13,7 @@ export default function ContactPage() {
       <div className="mt-6">
         <h1 className="section-title mb-4">Contact Us</h1>
         <p className="text-brand-gray-text mb-8">
-          Have a correction, suggestion, or question? Fill out the form below and
+          Have a correction, suggestion, or question? Fill out the form below or email us directly at <strong>admin@cfamenuguide.com</strong> and
           we&apos;ll get back to you as soon as possible.
         </p>
         <form className="space-y-5">

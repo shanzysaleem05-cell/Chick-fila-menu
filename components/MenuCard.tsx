@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import type { MenuItem } from "@/lib/menu-data";
@@ -14,11 +15,13 @@ export default function MenuCard({ item, categorySlug }: MenuCardProps) {
       className="group flex flex-col bg-white border border-[#EAE3D5] hover:shadow-lg transition-all duration-300"
     >
       {/* Image Container */}
-      <div className="w-full bg-[#F9F7F4] overflow-hidden flex items-center justify-center p-0 aspect-[4/3] border-b border-[#EAE3D5]">
-        <img
+      <div className="w-full bg-[#F9F7F4] overflow-hidden flex items-center justify-center p-0 aspect-[4/3] border-b border-[#EAE3D5] relative">
+        <Image
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
 

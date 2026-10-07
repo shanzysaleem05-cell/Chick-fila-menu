@@ -182,7 +182,7 @@ export default function RewardsPage() {
                 How to Earn Rewards Points
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-[#FCFAF5] border border-[#EAE3D5] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                <div className="bg-[#FAF7F2] border border-[#EAE3D5] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
                   <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
                     <Smartphone className="w-8 h-8 text-[#DD0033]" />
                   </div>
@@ -195,7 +195,7 @@ export default function RewardsPage() {
                     eligible.
                   </p>
                 </div>
-                <div className="bg-[#FCFAF5] border border-[#EAE3D5] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                <div className="bg-[#FAF7F2] border border-[#EAE3D5] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
                   <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
                     <Star className="w-8 h-8 text-[#DD0033]" />
                   </div>
@@ -207,7 +207,7 @@ export default function RewardsPage() {
                     order is completed, points are added to the account.
                   </p>
                 </div>
-                <div className="bg-[#FCFAF5] border border-[#EAE3D5] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                <div className="bg-[#FAF7F2] border border-[#EAE3D5] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
                   <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
                     <Gift className="w-8 h-8 text-[#DD0033]" />
                   </div>
@@ -326,7 +326,7 @@ export default function RewardsPage() {
             <div className="sticky top-28 space-y-6">
               <AdUnit type="rectangle" />
 
-              <div className="bg-[#FCFAF5] rounded-2xl p-6 border border-[#EAE3D5]">
+              <div className="bg-[#FAF7F2] rounded-2xl p-6 border border-[#EAE3D5]">
                 <h3 className="font-display font-bold text-xl text-[#1A1A1A] mb-4">
                   Quick Links
                 </h3>

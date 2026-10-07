@@ -20,7 +20,7 @@ export default function CateringSteps() {
   ];
 
   return (
-    <div className="bg-[#FCFAF5] py-16 border-y border-[#EAE3D5]">
+    <div className="bg-[#FAF7F2] py-16 border-y border-[#EAE3D5]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-display font-bold text-3xl text-[#1A1A1A] mb-12">
           How Chick-fil-A Catering Works

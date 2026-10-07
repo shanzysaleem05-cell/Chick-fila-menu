@@ -224,15 +224,6 @@ export default async function CategoryPage({
             </Link>
           </div>
         </div>
-
-        {/* Disclaimer */}
-        <div className="mt-10 p-5 bg-amber-50 border border-amber-200 rounded-2xl">
-          <p className="text-sm text-amber-800">
-            <strong>⚠️ Disclaimer:</strong> Prices shown are US national average estimates.
-            Actual prices vary by location. This site is not affiliated with Chick-fil-A, Inc.{" "}
-            <Link href="/disclaimer" className="underline">Read full disclaimer</Link>.
-          </p>
-        </div>
       </div>
     </>
   );

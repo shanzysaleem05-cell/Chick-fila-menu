@@ -159,7 +159,7 @@ export default function HoursPage() {
           <Link href="/menu/breakfast" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
             Breakfast Menu
           </Link>
-          <Link href="/prices" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
+          <Link href="/menu" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
             Menu Prices
           </Link>
           <Link href="/calories" className="text-sm font-semibold bg-[#F5F5F5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-gray-200">
@@ -196,7 +196,7 @@ export default function HoursPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
-                <tr className="bg-[#FCFAF5] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
+                <tr className="bg-[#FAF7F2] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
                   <th className="py-4 px-4 font-bold text-[#1A1A1A] whitespace-nowrap">
                     Day
                   </th>
@@ -272,7 +272,7 @@ export default function HoursPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[300px]">
               <thead>
-                <tr className="bg-[#FCFAF5] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
+                <tr className="bg-[#FAF7F2] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
                   <th className="py-4 px-4 font-bold text-[#1A1A1A] whitespace-nowrap">
                     Day
                   </th>
@@ -316,7 +316,7 @@ export default function HoursPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[300px]">
               <thead>
-                <tr className="bg-[#FCFAF5] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
+                <tr className="bg-[#FAF7F2] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
                   <th className="py-4 px-4 font-bold text-[#1A1A1A] whitespace-nowrap">
                     Service
                   </th>
@@ -379,7 +379,7 @@ export default function HoursPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
-                <tr className="bg-[#FCFAF5] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
+                <tr className="bg-[#FAF7F2] border-b border-[#EAE3D5] text-xs text-gray-600 uppercase tracking-wider">
                   <th className="py-4 px-4 font-bold text-[#1A1A1A] whitespace-nowrap">
                     Holiday
                   </th>
@@ -588,7 +588,7 @@ export default function HoursPage() {
         <FAQAccordion items={hoursFaqs} />
       </div>
 
-      <div className="mt-16 bg-[#FCFAF5] rounded-2xl p-8 border border-[#EAE3D5] text-center">
+      <div className="mt-16 bg-[#FAF7F2] rounded-2xl p-8 border border-[#EAE3D5] text-center">
         <h2 className="font-display font-bold text-2xl text-[#1A1A1A] mb-4">
           Final Thoughts
         </h2>

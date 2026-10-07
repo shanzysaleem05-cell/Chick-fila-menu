@@ -1,107 +1,198 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Search, Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
+  const router = useRouter();
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push('/menu');
+    }
+  };
+
   return (
-    <header className="w-full bg-white z-50 border-b border-gray-200 shadow-sm relative">
-      {/* Top Bar */}
-      <div className="border-b border-gray-100 hidden sm:block">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-between text-[0.8rem] font-medium text-[#666666]">
-          <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-[#DD0033] cursor-pointer transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/disclaimer" className="hover:text-[#DD0033] cursor-pointer transition-colors">
-              Disclaimer
-            </Link>
-            <Link href="/dmca" className="hover:text-[#DD0033] cursor-pointer transition-colors">
-              DMCA
-            </Link>
+    <header className="w-full bg-[#FAF7F2] z-50 relative flex flex-col font-sans border-b border-[#E8DFD0]">
+      {/* Tier 1: Top Bar (Desktop Only) */}
+      <div className="hidden lg:block border-b border-[#E8DFD0] bg-[#FAF7F2]">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-8 flex items-center justify-between text-[10px] font-bold text-[#8C8279] uppercase tracking-[0.15em]">
+          <div>
+            INDEPENDENT GUIDE &middot; NOT AFFILIATED WITH CHICK-FIL-A
           </div>
-          <div className="flex items-center gap-8">
-            <Link href="/contact" className="hover:text-[#DD0033] cursor-pointer transition-colors">
-              Contact Us
-            </Link>
-            <Search className="w-4 h-4 cursor-pointer hover:text-[#DD0033] transition-colors" />
+          <div className="flex items-center gap-4">
+            <Link href="/about" className="hover:text-[#C8102E] transition-colors">ABOUT</Link>
+            <span>&middot;</span>
+            <Link href="/blog" className="hover:text-[#C8102E] transition-colors">BLOG</Link>
+            <span>&middot;</span>
+            <Link href="/recipes" className="hover:text-[#C8102E] transition-colors">RECIPES</Link>
+            <span>&middot;</span>
+            <Link href="/coupons" className="hover:text-[#C8102E] transition-colors">DEALS</Link>
+            <span>&middot;</span>
+            <Link href="/contact" className="hover:text-[#C8102E] transition-colors">CONTACT</Link>
           </div>
         </div>
       </div>
 
-      {/* Main Bar */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-4 lg:gap-10">
+      {/* Tier 2: Main Logo, Search, and Action Buttons */}
+      <div className="border-b border-[#E8DFD0] bg-[#FAF7F2]">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between gap-4 md:gap-8">
           
-          {/* Hamburger Menu Toggle (Mobile Only) */}
+          {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden p-2 -ml-2 text-gray-700 hover:text-[#DD0033]"
+            className="lg:hidden p-2 -ml-2 text-[#2B1B15] hover:text-[#C8102E]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
 
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 group">
-            <img 
-              src="/apple-touch-icon.png" 
-              alt="CFA Menu Guide Logo" 
-              className="w-11 h-11 sm:w-12 sm:h-12 transform group-hover:scale-105 transition-transform duration-300 rounded-xl"
-            />
+          {/* Logo Area */}
+          <Link href="/" className="flex items-center gap-3 shrink-0 group">
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image 
+                src="/apple-touch-icon.png" 
+                alt="Logo"
+                fill
+                sizes="56px"
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="hidden sm:flex flex-col">
+              <span className="font-display font-black text-xl md:text-2xl text-[#C8102E] leading-none tracking-tight">
+                CFA MENU
+              </span>
+              <span className="font-display font-bold text-sm text-[#1A1A1A] leading-none tracking-widest mt-1">
+                GUIDE USA
+              </span>
+            </div>
           </Link>
-          
-          {/* Nav (Desktop) */}
-          <nav className="hidden md:flex items-center gap-7 font-bold text-[#00587C] text-[0.95rem]">
-            <Link href="/menu" className="hover:text-[#DD0033] transition-colors">Menu & Prices</Link>
-            <Link href="/catering" className="hover:text-[#DD0033] transition-colors">Catering</Link>
-            <Link href="/calories" className="hover:text-[#DD0033] transition-colors">Calories & Nutrition</Link>
-            <Link href="/blog" className="hover:text-[#DD0033] transition-colors">Blog</Link>
-            <span className="text-gray-300 font-light">|</span>
-            <Link href="/hours" className="hover:text-[#DD0033] transition-colors">Hours</Link>
-          </nav>
-        </div>
 
-        {/* Order Now */}
-        <Link 
-          href="/coupons" 
-          className="bg-[#DD0033] hover:bg-[#B8002A] !text-white text-[#ffffff] font-bold text-sm px-5 py-2.5 sm:px-7 sm:py-3 rounded-full transition-colors shadow-sm"
+          {/* Centered Search Bar (Desktop Only) */}
+          <form 
+            onSubmit={handleSearch}
+            className="hidden lg:flex flex-grow max-w-3xl items-center bg-[#F0EBE0] rounded-full h-12 px-4 border border-transparent focus-within:border-[#C8102E] focus-within:bg-white transition-all shadow-inner"
+          >
+            <Search className="w-5 h-5 text-[#8C8279] mr-3 shrink-0" />
+            <input 
+              type="text" 
+              placeholder="Search menus, nutrition, locations..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="flex-grow bg-transparent border-none outline-none text-sm text-[#1A1A1A] placeholder-[#8C8279]"
+            />
+            <button 
+              type="submit"
+              className="bg-[#C8102E] hover:bg-[#A80020] w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-colors ml-2"
+            >
+              <Search className="w-4 h-4 text-white" />
+            </button>
+          </form>
+
+          {/* Right Action Buttons */}
+          <div className="flex items-center gap-3 shrink-0">
+            <Link 
+              href="/coupons"
+              className="hidden sm:flex items-center justify-center px-6 py-2.5 rounded-full border border-[#D5CEC4] hover:bg-[#F0EBE0] !text-[#1A1A1A] text-[11px] font-bold uppercase tracking-widest transition-colors"
+            >
+              DEALS
+            </Link>
+            <Link 
+              href="/menu"
+              className="flex items-center justify-center px-5 py-2.5 md:px-7 md:py-3 rounded-full bg-[#C8102E] hover:bg-[#A80020] !text-white text-[11px] md:text-xs font-bold uppercase tracking-widest transition-colors shadow-sm"
+            >
+              FULL MENU
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Tier 3: Navigation Links (Desktop Only) */}
+      <div className="hidden lg:flex justify-center bg-[#FAF7F2]">
+        <nav className="max-w-[1400px] w-full px-8 h-14 flex items-center justify-center gap-10">
+          <Link href="/menu" className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors">
+            MENU & PRICES <ChevronDown className="w-3.5 h-3.5 text-[#8C8279]" />
+          </Link>
+          <Link href="/calories" className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors">
+            NUTRITION <ChevronDown className="w-3.5 h-3.5 text-[#8C8279]" />
+          </Link>
+          <Link href="/catering" className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors">
+            CATERING <ChevronDown className="w-3.5 h-3.5 text-[#8C8279]" />
+          </Link>
+          <Link href="/blog" className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors">
+            BLOGS <ChevronDown className="w-3.5 h-3.5 text-[#8C8279]" />
+          </Link>
+          <Link href="/hours" className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors">
+            HOURS
+          </Link>
+          <Link href="/coupons" className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors">
+            DEALS
+          </Link>
+          <div className="flex items-center gap-1.5 text-[#2B1B15] hover:text-[#C8102E] text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer group relative">
+            MORE <ChevronDown className="w-3.5 h-3.5 text-[#8C8279]" />
+          </div>
+        </nav>
+      </div>
+
+      {/* Mobile Search Bar (Visible only on Mobile) */}
+      <div className="lg:hidden px-4 py-3 bg-[#FAF7F2] border-t border-[#E8DFD0]">
+        <form 
+          onSubmit={handleSearch}
+          className="flex flex-grow w-full items-center bg-[#F0EBE0] rounded-full h-11 px-4 border border-transparent focus-within:border-[#C8102E] focus-within:bg-white transition-all shadow-inner"
         >
-          Coupons Code
-        </Link>
+          <Search className="w-4 h-4 text-[#8C8279] mr-2 shrink-0" />
+          <input 
+            type="text" 
+            placeholder="Search menus, nutrition..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="flex-grow bg-transparent border-none outline-none text-sm text-[#1A1A1A] placeholder-[#8C8279]"
+          />
+        </form>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-200 md:hidden flex flex-col py-2 px-4 z-50">
-            <Link href="/menu" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Menu & Prices</Link>
-            <Link href="/catering" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Catering</Link>
-          <Link href="/calories" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Calories & Nutrition</Link>
-          <Link href="/blog" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Blog</Link>
-          <Link href="/hours" className="py-3 border-b border-gray-100 font-bold text-[#00587C] hover:text-[#DD0033]">Hours</Link>
-          <div className="py-4 flex flex-col gap-3">
-            <Link href="/privacy-policy" className="flex items-center gap-2 text-sm font-medium text-gray-600">
-              Privacy Policy
+        <div className="absolute top-full left-0 w-full h-screen bg-[#FAF7F2] shadow-xl md:hidden flex flex-col py-2 z-[60] overflow-y-auto">
+          <div className="px-6 flex flex-col">
+            <Link href="/menu" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider flex justify-between items-center">
+              Menu & Prices <ChevronDown className="w-5 h-5 text-[#8C8279] -rotate-90" />
             </Link>
-            <Link href="/disclaimer" className="flex items-center gap-2 text-sm font-medium text-gray-600">
-              Disclaimer
+            <Link href="/calories" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider flex justify-between items-center">
+              Nutrition <ChevronDown className="w-5 h-5 text-[#8C8279] -rotate-90" />
             </Link>
-            <Link href="/dmca" className="flex items-center gap-2 text-sm font-medium text-gray-600">
-              DMCA
+            <Link href="/catering" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider flex justify-between items-center">
+              Catering <ChevronDown className="w-5 h-5 text-[#8C8279] -rotate-90" />
             </Link>
-            <Link href="/contact" className="flex items-center gap-2 text-sm font-medium text-gray-600">
-              Contact Us
+            <Link href="/blog" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider flex justify-between items-center">
+              Blogs <ChevronDown className="w-5 h-5 text-[#8C8279] -rotate-90" />
             </Link>
+            <Link href="/hours" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider">
+              Hours
+            </Link>
+            <Link href="/recipes" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider">
+              Recipes
+            </Link>
+            <Link href="/coupons" className="py-4 border-b border-[#E8DFD0] font-bold text-[#2B1B15] hover:text-[#C8102E] text-lg uppercase tracking-wider">
+              Deals
+            </Link>
+          </div>
+          <div className="mt-8 px-6 pb-32 flex flex-col gap-4 bg-[#F0EBE0] py-6">
+            <Link href="/about" className="text-sm font-bold text-[#594E48] tracking-widest uppercase">About</Link>
+            <Link href="/privacy-policy" className="text-sm font-bold text-[#594E48] tracking-widest uppercase">Privacy Policy</Link>
+            <Link href="/disclaimer" className="text-sm font-bold text-[#594E48] tracking-widest uppercase">Disclaimer</Link>
+            <Link href="/contact" className="text-sm font-bold text-[#594E48] tracking-widest uppercase">Contact Us</Link>
           </div>
         </div>
       )}

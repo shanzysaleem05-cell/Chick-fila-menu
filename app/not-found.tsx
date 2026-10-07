@@ -22,7 +22,7 @@ export default function NotFound() {
         <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
           <Link href="/menu/breakfast" className="text-brand-red hover:underline">Breakfast</Link>
           <Link href="/menu/entrees" className="text-brand-red hover:underline">Entrées</Link>
-          <Link href="/prices" className="text-brand-red hover:underline">Prices</Link>
+          <Link href="/menu" className="text-brand-red hover:underline">Prices</Link>
           <Link href="/calories" className="text-brand-red hover:underline">Calories</Link>
         </div>
       </div>

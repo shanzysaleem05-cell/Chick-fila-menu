@@ -132,7 +132,7 @@ export default function CateringLandingPage() {
                           item.sizes.map((size, sizeIdx) => (
                             <tr
                               key={`${item.slug}-${size.label}`}
-                              className={itemIdx % 2 === 0 ? "bg-white" : "bg-[#FCFAF5]"}
+                              className={itemIdx % 2 === 0 ? "bg-white" : "bg-[#FAF7F2]"}
                             >
                               {sizeIdx === 0 && (
                                 <td

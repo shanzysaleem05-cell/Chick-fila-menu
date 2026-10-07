@@ -307,7 +307,7 @@ export default async function ItemPage({
                       Complete Chick-fil-A Breakfast Guide
                     </Link>
                   )}
-                  <Link href="/prices" className="flex items-center gap-2 text-sm text-[#DD0033] hover:underline font-medium">
+                  <Link href="/menu" className="flex items-center gap-2 text-sm text-[#DD0033] hover:underline font-medium">
                     <ArrowRight className="w-4 h-4 flex-shrink-0" />
                     View All Chick-fil-A Prices
                   </Link>
@@ -520,20 +520,6 @@ export default async function ItemPage({
                 </div>
               </div>
             )}
-
-            {/* Disclaimer */}
-            <div className="p-5 bg-gray-50 border border-gray-200 rounded-2xl text-center">
-              <p className="text-xs text-gray-500 leading-relaxed">
-                <strong>Disclaimer:</strong> Prices are US national average estimates and may vary by location.
-                Nutrition data is sourced from official public nutrition pages. This site is independently operated
-                and is not affiliated with, endorsed by, or sponsored by Chick-fil-A, Inc. All trademarks belong to
-                their respective owners.{" "}
-                <Link href="/disclaimer" className="text-[#DD0033] hover:underline">
-                  Read our full disclaimer
-                </Link>
-                .
-              </p>
-            </div>
           </div>
 
           {/* ── SIDEBAR ── */}
@@ -648,7 +634,7 @@ export default async function ItemPage({
               </h3>
               <div className="space-y-2">
                 {[
-                  { href: "/prices", label: "Chick-fil-A Prices" },
+                  { href: "/menu", label: "Chick-fil-A Prices" },
                   { href: "/calories", label: "Calories & Nutrition" },
                   { href: "/blog/healthiest-items", label: "Healthiest Menu Items" },
                   { href: "/blog/keto-friendly-options", label: "Keto-Friendly Options" },

@@ -1,438 +1,458 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Utensils, Tag, MapPin, Clock, Search, Check } from "lucide-react";
+import { Clock, User, ArrowRight, Award, Heart, Utensils, Coffee, Sun } from "lucide-react";
 import { menuCategories } from "@/lib/menu-data";
 import MenuTable from "@/components/MenuTable";
-import MenuCard from "@/components/MenuCard";
 import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
+import ByTheNumbers from "@/components/ByTheNumbers";
 
 export const metadata: Metadata = {
   title: "Chick-fil-A Menu 2026: Prices, Calories & Full Item List",
-  description: "Browse the full Chick-fil-A menu with 2026 prices, calories & protein for every item. ✓ Breakfast ✓ Sandwiches ✓ Salads ✓ Sides. Updated weekly — no guesswork.",
-  keywords: "chick-fil-a menu, chick fil a prices, chick-fil-a calories, chick fil a nutrition, cfa menu 2026, chick fil a breakfast menu, chick-fil-a menu with prices",
+  description: "Browse the full Chick-fil-A menu with 2026 prices, calories & protein for every item. Updated weekly.",
+  keywords: "chick-fil-a menu, chick fil a prices, chick-fil-a calories, cfa menu 2026",
   alternates: {
     canonical: "https://chick-fila-menus.com/",
   },
   openGraph: {
     title: "Chick-fil-A Menu Prices & Calories (2026)",
-    description: "Complete Chick-fil-A menu breakdown — prices, calories, protein for every item including breakfast and entrées.",
+    description: "Complete Chick-fil-A menu breakdown - prices, calories, protein.",
     type: "website",
     url: "https://chick-fila-menus.com/",
-    images: [
-      {
-        url: "/Spicy-Deluxe-Sandwich.webp",
-        width: 1200,
-        height: 630,
-        alt: "Chick-fil-A Menu Guide 2026",
-      },
-    ],
+    images: [{ url: "/Spicy-Deluxe-Sandwich.webp", width: 1200, height: 630 }],
   },
 };
 
 export const revalidate = 86400;
 
+const recentBlogs = [
+  {
+    slug: "healthiest-items",
+    title: "10 Healthiest Items on the Chick-fil-A Menu (2026)",
+    description: "Looking to eat healthy at Chick-fil-A? We've ranked the 10 best low-calorie options.",
+    category: "Nutrition",
+    readTime: "6 min read",
+    image: "/10-Healthiest-Items-on-the-Chick-fil-A-Menu-(2026).webp",
+  },
+  {
+    slug: "breakfast-guide",
+    title: "Chick-fil-A Breakfast Hours & Best Breakfast Items",
+    description: "Everything you need to know about Chick-fil-A breakfast - hours, menu items, calories.",
+    category: "Breakfast",
+    readTime: "5 min read",
+    image: "/Chick-fil-A-Breakfast-Hours-&-Best-Breakfast-Items-(2026).webp",
+  },
+  {
+    slug: "cheapest-ways-to-order",
+    title: "How to Order Chick-fil-A the Cheapest Way",
+    description: "Get the most value out of every Chick-fil-A visit - tips on meal combos and deals.",
+    category: "Ordering Tips",
+    readTime: "4 min read",
+    image: "/How-to-Order-Chick-fil-A-the-Cheapest-Way.webp",
+  },
+];
+
 const homeFaqs = [
   {
     question: "What is the cheapest menu item at Chick-fil-A?",
-    answer:
-      "The cheapest menu item at Chick-fil-A is typically a side like the Hash Browns ($1.85) or a Buttered Biscuit ($2.15) for breakfast. Prices can vary slightly by location.",
+    answer: "The cheapest menu item at Chick-fil-A is typically a side like the Hash Browns ($1.85) or a Buttered Biscuit ($2.15).",
   },
   {
     question: "What time does Chick-fil-A stop serving breakfast?",
-    answer:
-      "Chick-fil-A stops serving breakfast at exactly 10:30 AM every Monday through Saturday. The menu immediately switches to lunch items after this cutoff.",
+    answer: "Chick-fil-A stops serving breakfast at exactly 10:30 AM every Monday through Saturday.",
   },
   {
     question: "Does Chick-fil-A have any grilled or low-calorie options?",
-    answer:
-      "Yes, Chick-fil-A offers several healthy choices. The Grilled Chicken Sandwich, 8-count Grilled Nuggets (only 130 calories), and the Market Salad are popular low-calorie items.",
+    answer: "Yes, Chick-fil-A offers several healthy choices like the Grilled Chicken Sandwich and Market Salad.",
   },
   {
     question: "What is the most popular Chick-fil-A sandwich?",
-    answer:
-      "The classic Chick-fil-A Chicken Sandwich is their signature and most popular menu item, featuring a hand-breaded chicken breast on a toasted bun with dill pickle chips.",
-  },
-  {
-    question: "How much is the 30-count Chick-fil-A nuggets?",
-    answer:
-      "The 30-count Chick-fil-A nuggets platter typically costs around $21.50 depending on the location, making it a great value choice for feeding a group.",
+    answer: "The classic Chick-fil-A Chicken Sandwich is their signature and most popular menu item.",
   },
 ];
 
 export default function HomePage() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://chick-fila-menus.com/#organization",
-        name: "CFA Menu Guide",
-        url: "https://chick-fila-menus.com/",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://chick-fila-menus.com/icon.png",
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://chick-fila-menus.com/#website",
-        url: "https://chick-fila-menus.com/",
-        name: "CFA Menu Guide",
-        publisher: { "@id": "https://chick-fila-menus.com/#organization" },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: "https://chick-fila-menus.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string",
-        },
-      },
-      {
-        "@type": "Menu",
-        "@id": "https://chick-fila-menus.com/#menu",
-        name: "Chick-fil-A Menu",
-        hasMenuSection: menuCategories.map((cat) => ({
-          "@type": "MenuSection",
-          name: cat.name,
-          hasMenuItem: cat.items.map((item) => ({
-            "@type": "MenuItem",
-            name: item.name,
-            description:
-              item.description || `Delicious ${item.name} from Chick-fil-A.`,
-            offers: {
-              "@type": "Offer",
-              price: item.price,
-              priceCurrency: "USD",
-            },
-            nutrition: {
-              "@type": "NutritionInformation",
-              calories: `${item.nutrition?.calories || 0} calories`,
-            },
-          })),
-        })),
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: homeFaqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
-    ],
-  };
+  const allItems = menuCategories.flatMap((cat) =>
+    cat.items.map((item) => ({ ...item, category: cat }))
+  );
+
+  const popularSlugs = [
+    "spicy-chicken-sandwich",
+    "hash-browns",
+    "chocolate-milkshake"
+  ];
+  const popularItems = popularSlugs
+    .map(slug => allItems.find(i => i.slug === slug))
+    .filter(Boolean) as typeof allItems;
 
   return (
-    <div className="bg-[#FCFAF5] min-h-screen pb-20">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+    <div className="bg-[#FAF7F2] min-h-screen pb-20 text-[#2B1B15]">
       {/* Hero Section */}
-      <div className="bg-white border-b border-[#EAE3D5]">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6">
-            {/* Left Content */}
-            <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-              <p className="text-[#DD0031] font-bold text-[0.9rem] tracking-wide mb-3 uppercase">
-                Return of the fan faves
-              </p>
-              <h1 className="font-display font-black text-4xl md:text-5xl mb-8 tracking-tight text-[#DD0031] leading-[1.1] capitalize">
-                Chick-fil-A menu <br />
-                and prices 2026
-              </h1>
-
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                <Link
-                  href="/menu"
-                  className="flex flex-col items-center justify-center gap-2 bg-white border border-[#f0f0f0] rounded-2xl w-24 h-24 shadow-sm hover:shadow-md hover:border-[#DD0031] transition-all group"
-                >
-                  <Utensils
-                    className="w-7 h-7 text-[#DD0031] group-hover:-translate-y-1 transition-transform"
-                    strokeWidth={1.5}
-                  />
-                  <span className="text-[#DD0031] font-bold text-[0.75rem] text-center leading-tight">
-                    View
-                    <br />
-                    Full Menu
-                  </span>
-                </Link>
-                <Link
-                  href="/coupons"
-                  className="flex flex-col items-center justify-center gap-2 bg-white border border-[#f0f0f0] rounded-2xl w-24 h-24 shadow-sm hover:shadow-md hover:border-[#DD0031] transition-all group"
-                >
-                  <Tag
-                    className="w-7 h-7 text-[#DD0031] group-hover:-translate-y-1 transition-transform"
-                    strokeWidth={1.5}
-                  />
-                  <span className="text-[#DD0031] font-bold text-[0.75rem] text-center leading-tight">
-                    View
-                    <br />
-                    Coupons
-                  </span>
-                </Link>
-                <Link
-                  href="/hours"
-                  className="flex flex-col items-center justify-center gap-2 bg-white border border-[#f0f0f0] rounded-2xl w-24 h-24 shadow-sm hover:shadow-md hover:border-[#DD0031] transition-all group"
-                >
-                  <Clock
-                    className="w-7 h-7 text-[#DD0031] group-hover:-translate-y-1 transition-transform"
-                    strokeWidth={1.5}
-                  />
-                  <span className="text-[#DD0031] font-bold text-[0.75rem] text-center leading-tight">
-                    View
-                    <br />
-                    Hours
-                  </span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Content - Single Image */}
-            <div className="hidden md:flex flex-1 w-full max-w-lg lg:max-w-[550px] items-center justify-center mt-10 lg:mt-0">
-              <img
-                src="/Spicy-Deluxe-Sandwich.webp"
-                alt="Chick-fil-A Meal"
-                className="w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Info Section */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-4">
-        {/* Top Info Bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-white border border-[#EAE3D5] rounded-xl overflow-hidden mb-8 shadow-sm">
-          <div className="flex items-center gap-3 p-4 border-b sm:border-b-0 sm:border-r border-[#EAE3D5]">
-            <Utensils className="w-5 h-5 text-[#DD0031]" />
-            <span className="font-bold text-[#1A1A1A] text-sm">
-              85+ menu items
-            </span>
-          </div>
-          <div className="flex items-center gap-3 p-4 border-b lg:border-b-0 lg:border-r border-[#EAE3D5]">
-            <Search className="w-5 h-5 text-[#DD0031]" />
-            <span className="font-bold text-[#1A1A1A] text-sm">
-              8 categories
-            </span>
-          </div>
-          <div className="flex items-center gap-3 p-4 border-b sm:border-b-0 sm:border-r border-[#EAE3D5]">
-            <Clock className="w-5 h-5 text-[#DD0031]" />
-            <span className="font-bold text-[#1A1A1A] text-sm">
-              Breakfast is morning only
-            </span>
-          </div>
-          <div className="flex items-center gap-3 p-4">
-            <MapPin className="w-5 h-5 text-[#DD0031]" />
-            <span className="font-bold text-[#1A1A1A] text-sm">
-              Prices vary by location
-            </span>
-          </div>
-        </div>
-
-        {/* Info Content */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-          <div className="flex-1 space-y-5 text-gray-700 leading-relaxed">
-            <p>
-              Looking for <strong>Chick-fil-A menu prices 2026</strong>?
-              Chick-fil-A's cheapest meal is the Buttery Biscuit at $2.15, while
-              premium items like the Cobb Salad can cost up to $10.00+.
+      <div className="bg-[#FAF7F2]">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+          <div className="max-w-3xl text-left">
+            <h1 className="font-display font-black text-4xl md:text-5xl lg:text-7xl mb-6 tracking-tight text-[#1A1A1A] leading-[1.1]">
+              Chick-fil-A Menu <br className="hidden md:block" />
+              And Prices 2026
+            </h1>
+            <p className="text-[#594E48] text-base md:text-xl mb-10 max-w-2xl">
+              Browse the full Chick-fil-A menu with 2026 prices, calories & nutrition. Fast, accurate, and completely updated.
             </p>
-            <p>
-              This independent, fan-run menu guide gives you the full breakdown
-              of prices, calories, and macros for every item. We carefully track
-              the latest updates so you don't have to guess before you order.
-            </p>
-            <p className="text-sm text-gray-500">
-              Since Chick-fil-A does not publish a single national price list,
-              keep in mind that local franchise costs can vary slightly.
-              Chick-fil-A explains how to find the exact local price in its{" "}
-              <a
-                href="https://www.chick-fil-a.com/customer-support"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#DD0031] font-bold hover:underline"
+            
+            <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-4">
+              <Link
+                href="/menu"
+                className="bg-[#C8102E] hover:bg-[#A80020] !text-white font-bold py-3.5 px-10 rounded-full transition-colors shadow-md w-full sm:w-auto text-center md:text-lg"
               >
-                official pricing help
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className="w-full lg:w-[400px] bg-white border border-[#EAE3D5] rounded-2xl p-6 shadow-sm">
-            <h3 className="font-display font-black text-2xl text-[#1A1A1A] mb-5">
-              Before you order
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-[#DD0031] flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-gray-700">
-                  Choose a restaurant before comparing prices.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-[#DD0031] flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-gray-700">
-                  Delivery menus can cost more than pickup.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-[#DD0031] flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-gray-700">
-                  Breakfast availability ends during the morning.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-[#DD0031] flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-gray-700">
-                  Seasonal items can sell out early.
-                </span>
-              </li>
-            </ul>
+                View Full Menu
+              </Link>
+              <Link
+                href="/coupons"
+                className="bg-transparent border-2 border-[#C8102E] !text-[#C8102E] hover:bg-[#C8102E] hover:!text-white font-bold py-3.5 px-10 rounded-full transition-colors w-full sm:w-auto text-center md:text-lg"
+              >
+                View Coupons
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Below Hero Ad */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mt-4 mb-12">
         <AdUnit type="leaderboard" />
       </div>
 
-      {/* Main Content Area */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="space-y-24">
-          {menuCategories.map((category, index) => {
-            const itemsWithCat = category.items.map((item) => ({
-              ...item,
-              category,
-            }));
+      {/* Popular Items / Nutrition Guide Promo */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex items-center gap-2 mb-6">
+          <h2 className="font-display font-black text-3xl text-[#1A1A1A]">Popular Options</h2>
+          <div className="h-[2px] flex-grow bg-[#EADCC8] ml-4"></div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Dark Promo Box */}
+          <div className="bg-[#2C1914] text-white p-8 rounded-2xl flex-shrink-0 lg:w-[350px] flex flex-col justify-center">
+            <h3 className="font-display font-black text-3xl mb-4 leading-tight !text-white" style={{ color: 'white' }}>
+              Chick-fil-A Nutrition Guide
+            </h3>
+            <p className="text-gray-300 mb-8 text-sm leading-relaxed">
+              Find out exactly what's in your favorite meals. We track calories, protein, and allergens so you can order with confidence.
+            </p>
+            <Link href="/calories" className="bg-[#C8102E] hover:bg-[#A80020] text-white text-center font-bold py-3 px-6 rounded-full transition-colors self-start">
+              View Nutrition
+            </Link>
+          </div>
+
+          {/* Popular Items Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 flex-grow">
+            {popularItems.map((item) => (
+              <Link 
+                key={item.slug} 
+                href={`/menu/${item.category.slug}/${item.slug}`}
+                className="bg-white rounded-2xl p-4 shadow-sm border border-[#E8DFD0] hover:shadow-md transition-shadow flex flex-col group"
+              >
+                <div className="relative aspect-[4/3] w-full bg-[#FAF7F2] rounded-xl overflow-hidden mb-3">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply"
+                  />
+                </div>
+                <h4 className="font-bold text-[#1A1A1A] leading-tight mb-2 flex-grow group-hover:text-[#C8102E] transition-colors">{item.name}</h4>
+                <div className="flex items-center justify-between mt-auto pt-2 border-t border-[#F0EBE0]">
+                  <span className="font-bold text-[#C8102E]">{item.price}</span>
+                  <span className="text-xs font-semibold text-gray-500">{item.nutrition.calories} cal</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* The Chick-fil-A Promise Section */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="text-center mb-12">
+          <h2 className="font-display font-black text-3xl md:text-4xl text-[#1A1A1A] mb-4">The Chick-fil-A Difference</h2>
+          <p className="text-[#594E48] max-w-2xl mx-auto text-base md:text-lg">
+            Discover what makes the Chick-fil-A experience truly unique, from our freshly prepared food to our legendary customer service.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-3xl p-8 border border-[#E8DFD0] text-center hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-[#F9E6E9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Utensils className="w-8 h-8 text-[#C8102E]" />
+            </div>
+            <h3 className="font-display font-bold text-xl text-[#1A1A1A] mb-3">Fresh Ingredients</h3>
+            <p className="text-[#594E48] text-sm leading-relaxed">
+              Our chicken is 100% real, whole, boneless breast of chicken that has never been ground or separated. Freshly breaded in our kitchens every day.
+            </p>
+          </div>
+          <div className="bg-white rounded-3xl p-8 border border-[#E8DFD0] text-center hover:shadow-lg transition-shadow transform md:-translate-y-4 shadow-sm">
+            <div className="w-16 h-16 bg-[#F9E6E9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Award className="w-8 h-8 text-[#C8102E]" />
+            </div>
+            <h3 className="font-display font-bold text-xl text-[#1A1A1A] mb-3">Original Recipe</h3>
+            <p className="text-[#594E48] text-sm leading-relaxed">
+              Created by Truett Cathy in 1964, our signature chicken sandwich has been made the exact same way for over 50 years. A true classic.
+            </p>
+          </div>
+          <div className="bg-white rounded-3xl p-8 border border-[#E8DFD0] text-center hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-[#F9E6E9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Heart className="w-8 h-8 text-[#C8102E]" />
+            </div>
+            <h3 className="font-display font-bold text-xl text-[#1A1A1A] mb-3">Legendary Service</h3>
+            <p className="text-[#594E48] text-sm leading-relaxed">
+              "My pleasure." We believe in serving communities and treating every guest with honor, dignity, and respect inside and outside our restaurants.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Explore by Category Section */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        {/* Header */}
+        <div className="mb-8">
+          <p className="text-[#C8102E] italic font-semibold mb-2 text-lg">Explore</p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#E8DFD0] pb-6">
+            <div>
+              <h2 className="font-display font-black text-4xl text-[#1A1A1A] mb-3">
+                The Chick-fil-A Menu by Category
+              </h2>
+              <p className="text-[#594E48] text-sm md:text-base">
+                {menuCategories.length} sections, {allItems.length} items tracked, with current national price ranges.
+              </p>
+            </div>
+            <Link 
+              href="/menu"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#D5CEC4] text-[#2B1B15] text-xs font-bold uppercase tracking-wider hover:bg-[#EAE3D5] transition-colors shrink-0"
+            >
+              THE FULL MENU <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Categories Grid/Scroll */}
+        <div className="flex overflow-x-auto pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 scrollbar-hide">
+          {menuCategories.map((cat) => {
+            const prices = cat.items.flatMap(i => {
+              const match = i.price.match(/\$?(\d+\.\d{2})/g);
+              return match ? match.map(m => parseFloat(m.replace('$', ''))) : [];
+            });
+            const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
+            const maxPrice = prices.length > 0 ? Math.max(...prices) : 0;
+            const priceString = prices.length > 0 ? `$${minPrice.toFixed(2)}-$${maxPrice.toFixed(2)}` : "Prices vary";
 
             return (
-              <div key={category.slug}>
-                <div id={category.slug} className="scroll-mt-28">
-                  {/* Category Header */}
-                  <div className="text-center mb-12 flex flex-col items-center">
-                    <div className="flex items-center justify-center gap-4 mb-3">
-                      <div className="w-8 h-[1px] bg-[#C5A059]"></div>
-                      <span className="text-[#C5A059] font-bold text-xs uppercase tracking-widest">
-                        {category.name}
-                      </span>
-                      <div className="w-8 h-[1px] bg-[#C5A059]"></div>
-                    </div>
-                    <h2 className="font-display font-black text-[#1A1A1A] text-4xl mb-4">
-                      {category.name}
-                    </h2>
-
-                    {/* AIO / Quick Answer Paragraph */}
-                    <p className="text-gray-700 font-medium text-sm max-w-2xl mx-auto mb-3 bg-white p-3 border-l-4 border-[#DD0031] rounded-r-lg shadow-sm">
-                      <strong>Quick Answer:</strong>{" "}
-                      {category.name === "Breakfast"
-                        ? "Chick-fil-A's breakfast is served from 6:30 AM to 10:30 AM. The cheapest breakfast item is the Hash Browns at $1.85, and the highest calorie item is the Hash Brown Scramble Burrito."
-                        : category.name === "Entrées"
-                          ? "Chick-fil-A's main entrées feature the classic Chicken Sandwich ($5.59) and nuggets. The cheapest entrée option is the 5-count nuggets."
-                          : category.name === "Salads"
-                            ? "Chick-fil-A offers three main salads made fresh daily. The Cobb Salad is the most popular, while the Market Salad is the healthiest option at 550 calories."
-                            : category.name === "Sides"
-                              ? "Popular Chick-fil-A sides include Waffle Potato Fries and Mac & Cheese. The Kale Crunch Side is the healthiest choice with only 170 calories."
-                              : category.name === "Treats"
-                                ? "Chick-fil-A treats include hand-spun milkshakes, Icedream cones, and cookies. The Icedream cone is the lowest-calorie treat at 180 calories."
-                                : category.name === "Beverages"
-                                  ? "Beverage options include Sunjoy, freshly brewed iced tea, and squeezed lemonade. A small iced tea is the most affordable drink at $1.99."
-                                  : category.name === "Coffee"
-                                    ? "Chick-fil-A serves specialty grade coffee, including cold brew and iced coffee. The standard hot coffee has 0 calories and costs around $2.19."
-                                    : "Chick-fil-A offers a variety of signature sauces for free with your meal. The original Chick-fil-A Sauce and Polynesian Sauce are the top fan favorites."}
-                    </p>
-
-                    {category.description && (
-                      <p className="text-gray-500 text-sm max-w-2xl mx-auto leading-relaxed">
-                        {category.description}
-                      </p>
-                    )}
-
-                    <Link
-                      href={`/menu/${category.slug}`}
-                      className="text-[#DD0031] font-bold hover:underline inline-flex items-center gap-1 mt-3"
-                    >
-                      Explore the full {category.name} Menu <span>&rarr;</span>
-                    </Link>
-                  </div>
-
-                  {/* Item Cards Grid */}
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-                    {category.items.map((item) => (
-                      <MenuCard
-                        key={item.slug}
-                        item={item}
-                        categorySlug={category.slug}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Category Data Table */}
-                  <div className="bg-white rounded-2xl shadow-sm border border-[#EAE3D5] overflow-hidden">
-                    <div className="p-5 bg-[#FCFAF5] border-b border-[#EAE3D5]">
-                      <h3 className="font-display font-bold text-xl text-[#1A1A1A]">
-                        {category.name} Nutrition & Prices
-                      </h3>
-                    </div>
-                    <div className="p-1">
-                      <MenuTable items={itemsWithCat} headerColor="dark" />
-                    </div>
+              <Link
+                key={cat.slug}
+                href={`/menu/${cat.slug}`}
+                className="flex-shrink-0 w-[260px] sm:w-auto bg-[#F0EBE0] border border-[#E8DFD0] rounded-2xl overflow-hidden group hover:shadow-lg transition-all flex flex-col"
+              >
+                <div className="relative h-[180px] w-full bg-white border-b border-[#E8DFD0] flex items-center justify-center p-6">
+                  <Image 
+                    src={cat.image || "/Spicy-Deluxe-Sandwich.webp"} 
+                    alt={cat.name} 
+                    fill 
+                    sizes="(max-width: 768px) 260px, 25vw"
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" 
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-display font-bold text-lg text-[#1A1A1A] mb-3 group-hover:text-[#C8102E] transition-colors">
+                    {cat.name}
+                  </h3>
+                  <p className="text-xs text-[#594E48] line-clamp-3 mb-6 leading-relaxed flex-grow">
+                    {cat.description || `Browse all the delicious items in the ${cat.name} category.`}
+                  </p>
+                  <div className="mt-auto">
+                    <p className="font-bold text-[#C8102E] text-base mb-1">{priceString}</p>
+                    <p className="text-[0.7rem] text-[#8C8279] uppercase font-bold tracking-wider">{cat.items.length} items</p>
                   </div>
                 </div>
-
-                {/* In-Feed Ad after the second category */}
-                {index === 1 && <AdUnit type="responsive" />}
-              </div>
-            );
+              </Link>
+            )
           })}
         </div>
       </div>
 
-      {/* Popular Searches & Quick Links (SEO Interlinking) */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-[#EAE3D5]">
-        <h2 className="font-display font-black text-2xl text-[#1A1A1A] mb-6">Popular Chick-fil-A Searches</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Link href="/menu" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick fil a menu</span>
-            <span className="text-xs text-gray-500">View all items</span>
-          </Link>
-          <Link href="/hours" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick fil a hours</span>
-            <span className="text-xs text-gray-500">Open & close times</span>
-          </Link>
-          <Link href="/menu" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">CFA menu</span>
-            <span className="text-xs text-gray-500">Quick browse</span>
-          </Link>
-          <Link href="/prices" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick-fil-a menu prices</span>
-            <span className="text-xs text-gray-500">2026 price list</span>
-          </Link>
-          <Link href="/menu/breakfast" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Breakfast menu</span>
-            <span className="text-xs text-gray-500">Morning favorites</span>
-          </Link>
-          <Link href="/calories" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chick fil a calories</span>
-            <span className="text-xs text-gray-500">Nutrition facts</span>
-          </Link>
-          <Link href="/menu/entrees" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Chicken sandwiches</span>
-            <span className="text-xs text-gray-500">Classic & spicy</span>
-          </Link>
-          <Link href="/catering" className="p-4 bg-white border border-[#EAE3D5] rounded-xl hover:border-[#DD0031] hover:shadow-sm transition-all group">
-            <span className="block font-bold text-[#1A1A1A] group-hover:text-[#DD0031]">Catering menu</span>
-            <span className="text-xs text-gray-500">Trays & packages</span>
-          </Link>
+      {/* Breakfast Spotlight Section */}
+      <div className="bg-white border-y border-[#E8DFD0] py-16 mb-16">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="bg-[#FFF8E7] p-2.5 rounded-xl border border-[#FDEBBE]">
+                  <Sun className="w-6 h-6 text-[#D99A29]" />
+                </div>
+                <h2 className="font-display font-black text-3xl md:text-4xl text-[#1A1A1A]">Breakfast Spotlight</h2>
+              </div>
+              <p className="text-[#594E48] text-base md:text-lg max-w-2xl">
+                Start your morning right. Breakfast is served daily from 6:30 AM to 10:30 AM at participating locations.
+              </p>
+            </div>
+            <Link 
+              href="/menu/breakfast"
+              className="bg-[#FAF7F2] border border-[#E8DFD0] hover:bg-[#EAE3D5] text-[#2B1B15] font-bold py-2.5 px-6 rounded-full transition-colors text-sm whitespace-nowrap self-start md:self-auto"
+            >
+              View Full Breakfast
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {allItems.filter(item => item.category.slug === 'breakfast').slice(0, 4).map(item => (
+              <Link 
+                key={item.slug} 
+                href={`/menu/breakfast/${item.slug}`}
+                className="bg-[#FAF7F2] rounded-2xl p-5 border border-[#E8DFD0] hover:shadow-md transition-shadow group flex flex-col"
+              >
+                <div className="relative aspect-square w-full bg-white rounded-xl overflow-hidden mb-4 border border-[#F0EBE0]">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <h4 className="font-bold text-[#1A1A1A] text-lg leading-tight mb-2 flex-grow group-hover:text-[#C8102E] transition-colors">{item.name}</h4>
+                <div className="flex items-center justify-between pt-3 border-t border-[#EAE3D5] mt-auto">
+                  <span className="font-bold text-[#C8102E]">{item.price}</span>
+                  <span className="text-xs font-semibold text-gray-500 bg-white px-2 py-1 rounded-md border border-[#EAE3D5]">{item.nutrition.calories} cal</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <FAQAccordion items={homeFaqs} />
+      {/* Catering & Events Promo */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="bg-[#1A1A1A] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center border border-[#333]">
+          <div className="p-10 md:p-14 md:w-1/2 flex flex-col justify-center">
+            <h2 className="font-display font-black text-3xl md:text-5xl !text-white mb-4 leading-tight">
+              Catering for <br className="hidden md:block"/> Any Occasion
+            </h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-md leading-relaxed">
+              From party trays to boxed meals, make your next event a success with Chick-fil-A Catering. Available for pickup or delivery.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link 
+                href="/catering"
+                className="bg-[#C8102E] hover:bg-[#A80020] !text-white font-bold py-3 px-8 rounded-full transition-colors"
+              >
+                Explore Catering
+              </Link>
+              <Link 
+                href="/menu"
+                className="bg-transparent border-2 border-white !text-white hover:bg-white hover:!text-[#1A1A1A] font-bold py-3 px-8 rounded-full transition-colors"
+              >
+                View Menu
+              </Link>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[400px] bg-[#2B1B15]">
+            {/* We can use a generic catering image or fallback to a known large item */}
+            <Image
+              src="/Chick-fil-A-Nuggets-(30-ct).webp"
+              alt="Chick-fil-A Catering Tray"
+              fill
+              className="object-cover opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Full Menu Prices Table */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex items-center gap-2 mb-6">
+          <h2 className="font-display font-black text-3xl text-[#1A1A1A]">Chick-fil-A Menu Prices</h2>
+          <div className="h-[2px] flex-grow bg-[#EADCC8] ml-4"></div>
+        </div>
+        <div className="bg-white rounded-2xl shadow-sm border border-[#E8DFD0] overflow-hidden p-1">
+          <MenuTable items={allItems} showCategory={true} showSearch={true} />
+        </div>
+      </div>
+
+      {/* By The Numbers & Home FAQs */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <ByTheNumbers />
+        
+        <div className="mt-20">
+          <FAQAccordion 
+            kicker="Good to Know"
+            title="Chick-fil-A Menu & Prices, FAQ"
+            description="Straight answers to the questions readers ask most, built from the same data as the tables above."
+            items={[
+              {
+                question: "What are Chick-fil-A's menu prices in 2026?",
+                answer: "Chick-fil-A's sampled menu prices in 2026 range from around $2.15 for drinks or basic sides, up to $119.50 for large catering platters. Prices reflect sampled observations and may vary slightly by franchise."
+              },
+              {
+                question: "What is the lowest-priced item on the Chick-fil-A menu?",
+                answer: "Items like the Chocolate Chunk Cookie or small soft drinks are among the lowest-priced options on the menu, typically averaging under $2.50 depending on the location."
+              },
+              {
+                question: "When does Chick-fil-A stop serving breakfast?",
+                answer: "Chick-fil-A normally stops serving breakfast at 10:30 AM. After this time, the restaurants switch to their standard lunch and dinner menus."
+              },
+              {
+                question: "Does Chick-fil-A offer any vegetarian options?",
+                answer: "While famous for chicken, you can enjoy several vegetarian-friendly options like the Waffle Potato Fries, Mac & Cheese, Fruit Cup, side salads, and breakfast biscuits (without meat)."
+              }
+            ]}
+          />
+        </div>
+      </div>
+
+      {/* Latest Blogs Section */}
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="font-display font-black text-3xl text-[#1A1A1A]">Latest Blogs</h2>
+          <Link href="/blog" className="text-[#C8102E] font-bold text-sm hover:underline hidden sm:block">
+            View All
+          </Link>
+        </div>
+        
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {recentBlogs.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DFD0] hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+            >
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 flex flex-col flex-1">
+                <span className="text-[#C8102E] text-xs font-bold uppercase tracking-wider mb-2">
+                  {post.category}
+                </span>
+                <h3 className="font-display font-bold text-lg text-[#1A1A1A] mb-2 leading-tight group-hover:text-[#C8102E] transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2 flex-grow">
+                  {post.description}
+                </p>
+                <div className="flex items-center gap-4 text-xs font-semibold text-gray-500 pt-3 border-t border-[#F0EBE0]">
+                  <div className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{post.readTime}</div>
+                  <div className="flex items-center gap-1"><User className="w-3.5 h-3.5" />Admin</div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <FAQAccordion items={homeFaqs} title="Frequently Asked Questions" />
       </div>
     </div>
   );

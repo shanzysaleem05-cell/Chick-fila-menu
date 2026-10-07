@@ -95,7 +95,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", backgroundColor: "#fff", color: "#1A1A1A" }}>
+      <head>
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4953411501541980" 
+          crossOrigin="anonymous"
+        ></script>
+      </head>
+      <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", backgroundColor: "#FAF7F2", color: "#2B1B15" }}>
         <Header />
         <main id="main-content">{children}</main>
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">

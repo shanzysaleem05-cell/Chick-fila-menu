@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { CateringCategory } from "@/lib/catering-data";
@@ -9,10 +10,12 @@ export default function CateringCategoryCard({ category }: { category: CateringC
       className="group flex flex-col bg-white border border-[#EAE3D5] hover:shadow-lg transition-all duration-300"
     >
       <div className="relative aspect-[4/3] w-full bg-[#F9F7F4] overflow-hidden flex items-center justify-center p-0 border-b border-[#EAE3D5]">
-        <img
+        <Image
           src={category.image}
           alt={`${category.name} Catering`}
-          className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">

@@ -91,7 +91,7 @@ export default function MenuPage() {
           
           <div className="mt-4 flex flex-wrap gap-2">
             {menuCategories.map((cat) => (
-              <Link key={cat.slug} href={`#${cat.slug}`} className="text-sm font-semibold bg-[#FCFAF5] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-[#EAE3D5]">
+              <Link key={cat.slug} href={`#${cat.slug}`} className="text-sm font-semibold bg-[#FAF7F2] px-4 py-2 rounded-full hover:bg-[#EAE3D5] text-[#1A1A1A] transition-colors border border-[#EAE3D5]">
                 {cat.name}
               </Link>
             ))}
@@ -132,10 +132,43 @@ export default function MenuPage() {
                 <div className="mt-6 sm:hidden">
                   <Link 
                     href={`/menu/${category.slug}`}
-                    className="inline-flex w-full justify-center items-center gap-1 bg-[#FCFAF5] border border-[#EAE3D5] text-[#1A1A1A] font-semibold py-3 rounded-xl hover:bg-[#EAE3D5] transition-colors"
+                    className="inline-flex w-full justify-center items-center gap-1 bg-[#FAF7F2] border border-[#EAE3D5] text-[#1A1A1A] font-semibold py-3 rounded-xl hover:bg-[#EAE3D5] transition-colors"
                   >
                     View All {category.name}
                   </Link>
+                </div>
+
+                {/* Category-Specific Nutrition Table */}
+                <div className="mt-10 bg-white rounded-2xl shadow-sm border border-[#E8DFD0] overflow-hidden">
+                  <div className="bg-[#2C1914] text-white px-6 py-4 flex items-center justify-between">
+                    <h3 className="font-display font-bold text-lg m-0" style={{ color: 'white' }}>
+                      {category.name} Nutrition Details
+                    </h3>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse min-w-[600px]">
+                      <thead>
+                        <tr className="bg-[#FAF7F2] border-b border-[#E8DFD0] text-xs text-[#594E48] uppercase tracking-wider">
+                          <th className="p-4 font-bold">Item Name</th>
+                          <th className="p-4 font-bold">Calories</th>
+                          <th className="p-4 font-bold">Protein</th>
+                          <th className="p-4 font-bold">Carbs</th>
+                          <th className="p-4 font-bold">Fat</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#E8DFD0]">
+                        {category.items.map(item => (
+                          <tr key={item.slug} className="hover:bg-[#FAF7F2] transition-colors">
+                            <td className="p-4 text-sm font-semibold text-[#1A1A1A]">{item.name}</td>
+                            <td className="p-4 text-sm text-[#C8102E] font-medium">{item.nutrition.calories}</td>
+                            <td className="p-4 text-sm text-[#594E48]">{item.nutrition.protein ? `${item.nutrition.protein}g` : '-'}</td>
+                            <td className="p-4 text-sm text-[#594E48]">{item.nutrition.carbs ? `${item.nutrition.carbs}g` : '-'}</td>
+                            <td className="p-4 text-sm text-[#594E48]">{item.nutrition.fat ? `${item.nutrition.fat}g` : '-'}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
               
@@ -163,20 +196,6 @@ export default function MenuPage() {
           <div className="bg-white rounded-3xl shadow-sm border border-[#EAE3D5] p-1 overflow-hidden">
             <MenuTable items={allItemsWithCategory} />
           </div>
-        </div>
-
-        {/* Disclaimer */}
-        <div className="mt-20 p-6 bg-amber-50 border border-amber-200 rounded-3xl max-w-4xl mx-auto">
-          <p className="text-sm text-amber-800 leading-relaxed text-center">
-            <strong>⚠️ Price Disclaimer:</strong> Prices shown are US national
-            average estimates based on delivery platform data. Actual Chick-fil-A
-            prices vary by location, franchise owner, and may change at any time.
-            Always confirm current prices at your local restaurant.{" "}
-            <Link href="/disclaimer" className="underline font-medium hover:text-amber-900">
-              Read full disclaimer
-            </Link>
-            .
-          </p>
         </div>
       </div>
     </>

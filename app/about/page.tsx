@@ -72,7 +72,7 @@ export default function AboutPage() {
         </div>
 
         {/* Author Card */}
-        <div className="flex items-start gap-5 p-5 bg-[#FCFAF5] rounded-xl border border-[#EAE3D5]">
+        <div className="flex items-start gap-5 p-5 bg-[#FAF7F2] rounded-xl border border-[#EAE3D5]">
           <div className="w-16 h-16 rounded-full bg-[#DD0033] flex items-center justify-center flex-shrink-0">
             <span className="text-white font-display font-black text-xl">CFA</span>
           </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
               desc: "Operating hours by day, breakfast cutoff times, and holiday closing schedules.",
             },
           ].map((item) => (
-            <div key={item.title} className="flex gap-3 p-4 bg-[#FCFAF5] rounded-xl border border-[#EAE3D5]">
+            <div key={item.title} className="flex gap-3 p-4 bg-[#FAF7F2] rounded-xl border border-[#EAE3D5]">
               <div className="w-2 h-2 rounded-full bg-[#DD0033] mt-2 flex-shrink-0" />
               <div>
                 <h3 className="font-bold text-[#1A1A1A] text-sm mb-1">{item.title}</h3>

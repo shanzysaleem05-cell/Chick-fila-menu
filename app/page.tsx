@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, User, ArrowRight, Award, Heart, Utensils, Coffee, Sun } from "lucide-react";
+import { Clock, User, ArrowRight, Award, Heart, Utensils, Coffee, Sun, ClipboardList, ChevronDown } from "lucide-react";
 import { menuCategories } from "@/lib/menu-data";
 import MenuTable from "@/components/MenuTable";
 import AdUnit from "@/components/AdUnit";
@@ -88,42 +88,76 @@ export default function HomePage() {
 
   return (
     <div className="bg-[#FAF7F2] min-h-screen pb-20 text-[#2B1B15]">
-      {/* Hero Section */}
-      <div className="bg-[#FAF7F2]">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-          <div className="max-w-3xl text-left">
-            <h1 className="font-display font-black text-4xl md:text-5xl lg:text-7xl mb-6 tracking-tight text-[#1A1A1A] leading-[1.1]">
-              Chick-fil-A Menu <br className="hidden md:block" />
-              And Prices 2026
+      {/* Hero Section (Wendy's-style Card Layout - Compact) */}
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-4 sm:pb-6">
+        <div className="bg-[#EFE7DA] border border-[#DECDB8] rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12 items-stretch">
+          
+          {/* Left Column: Information & CTAs */}
+          <div className="lg:col-span-7 p-5 sm:p-7 md:p-8 lg:py-6 lg:px-8 xl:py-7 xl:px-10 flex flex-col justify-center">
+            {/* Meta / Badge Line */}
+            <div className="flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-wider text-[#943828] uppercase mb-2 sm:mb-2.5">
+              <span className="w-2 h-2 rounded-full bg-[#C8102E] shrink-0" />
+              <span>PRICE GUIDE &bull; DATA COLLECTED OCTOBER 2026</span>
+            </div>
+
+            {/* Main Headline (Compact single-line on desktop) */}
+            <h1 className="font-serif font-bold text-2xl sm:text-3xl lg:text-[28px] xl:text-[32px] text-[#1E140F] leading-tight tracking-tight mb-2 sm:mb-3">
+              Chick-fil-A Menu Prices, <span className="text-[#C8102E]">2026</span>
             </h1>
-            <p className="text-[#594E48] text-base md:text-xl mb-10 max-w-2xl">
-              Browse the full Chick-fil-A menu with 2026 prices, calories & nutrition. Fast, accurate, and completely updated.
+
+            {/* Description */}
+            <p className="text-[#45372E] text-xs sm:text-[13px] md:text-sm leading-relaxed mb-2 sm:mb-2.5 max-w-xl font-normal">
+              An independent Chick-fil-A menu and price guide featuring current menu items, sampled prices, published nutrition information, value deals, and practical ordering tips.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-4">
+
+            {/* Disclaimer */}
+            <p className="text-[10px] sm:text-[11px] text-[#7F7065] leading-normal mb-4 sm:mb-5 max-w-lg">
+              Prices and promotional availability are determined locally by independent franchisees and may vary by restaurant.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <Link
                 href="/menu"
-                className="bg-[#C8102E] hover:bg-[#A80020] !text-white font-bold py-3.5 px-10 rounded-full transition-colors shadow-md w-full sm:w-auto text-center md:text-lg"
+                className="inline-flex items-center justify-center gap-2 bg-[#C8102E] hover:bg-[#A30C23] !text-white font-bold text-[11px] sm:text-xs tracking-wider uppercase px-4 sm:px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-200"
               >
-                View Full Menu
+                <ClipboardList className="w-3.5 h-3.5 shrink-0" />
+                <span>FULL 2026 MENU &amp; PRICES</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
               </Link>
-              <Link
-                href="/coupons"
-                className="bg-transparent border-2 border-[#C8102E] !text-[#C8102E] hover:bg-[#C8102E] hover:!text-white font-bold py-3.5 px-10 rounded-full transition-colors w-full sm:w-auto text-center md:text-lg"
+              <a
+                href="#categories"
+                className="inline-flex items-center justify-center gap-1.5 bg-[#F6F0E5] hover:bg-[#EAE0D1] text-[#2B1B15] border border-[#D5C3AE] font-bold text-[11px] sm:text-xs tracking-wider uppercase px-4 sm:px-5 py-2.5 rounded-full shadow-sm hover:border-[#BFAF9C] transition-all duration-200"
               >
-                View Coupons
-              </Link>
+                <span>BROWSE BY CATEGORY</span>
+                <ChevronDown className="w-3.5 h-3.5 shrink-0" />
+              </a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mt-4 mb-12">
+          {/* Right Column: Hero Food Photography */}
+          <div className="lg:col-span-5 relative h-[220px] sm:h-[260px] lg:h-full min-h-[220px] sm:min-h-[260px] lg:min-h-[280px] w-full overflow-hidden bg-[#E8DEC9]">
+            <Image
+              src="/chick-fil-a-hero-sandwich.jpg"
+              alt="Chick-fil-A Deluxe Chicken Sandwich and Waffle Fries"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-10">
         <AdUnit type="leaderboard" />
       </div>
 
       {/* Popular Items / Nutrition Guide Promo */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="mb-1">
+          <p className="font-serif italic font-semibold text-2xl text-[#C8102E]">Featured</p>
+        </div>
         <div className="flex items-center gap-2 mb-6">
           <h2 className="font-display font-black text-3xl text-[#1A1A1A]">Popular Options</h2>
           <div className="h-[2px] flex-grow bg-[#EADCC8] ml-4"></div>
@@ -211,7 +245,7 @@ export default function HomePage() {
       </div>
 
       {/* Explore by Category Section */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div id="categories" className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16 scroll-mt-24">
         {/* Header */}
         <div className="mb-8">
           <p className="text-[#C8102E] italic font-semibold mb-2 text-lg">Explore</p>

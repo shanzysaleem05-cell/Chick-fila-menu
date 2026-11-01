@@ -97,7 +97,7 @@ export default function HomePage() {
             {/* Meta / Badge Line */}
             <div className="flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-wider text-[#943828] uppercase mb-2 sm:mb-2.5">
               <span className="w-2 h-2 rounded-full bg-[#C8102E] shrink-0" />
-              <span>PRICE GUIDE &bull; DATA COLLECTED OCTOBER 2026</span>
+              <span>PRICE GUIDE &bull; DATA COLLECTED NOVEMBER 2026</span>
             </div>
 
             {/* Main Headline (Compact single-line on desktop) */}

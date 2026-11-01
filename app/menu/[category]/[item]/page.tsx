@@ -581,7 +581,12 @@ export default async function ItemPage({
             </div>
 
             {/* Sidebar Ad */}
-            <AdUnit type="rectangle" />
+            <div className="hidden lg:block">
+              <AdUnit type="big-skyscraper" />
+            </div>
+            <div className="block lg:hidden">
+              <AdUnit type="square" />
+            </div>
 
             {/* Popular from Other Categories */}
             {popularFromOtherCats.length > 0 && (

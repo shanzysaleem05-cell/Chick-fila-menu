@@ -127,6 +127,9 @@ export default async function CategoryPage({
                 View nutrition & allergens
               </Link>
             </nav>
+            <div className="hidden lg:block mt-8 sticky top-24">
+              <AdUnit type="skyscraper" />
+            </div>
           </div>
 
           {/* Main Content Area */}

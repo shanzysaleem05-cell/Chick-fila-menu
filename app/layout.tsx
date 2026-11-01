@@ -96,6 +96,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        {/* RevBid Ad Network Header Script */}
+        <script 
+          async 
+          src="https://revbid.net/sites/23503/revbid.js"
+        ></script>
+        {/* Google AdSense Script */}
         <script 
           async 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4953411501541980" 

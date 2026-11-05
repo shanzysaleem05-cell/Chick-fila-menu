@@ -134,7 +134,7 @@ export default function HoursPage() {
         ]}
       />
 
-      <AdUnit type="leaderboard" />
+      <AdUnit type="leaderboard" id="revbid-hours-top" />
 
       {/* Hero Section */}
       <div className="mt-8 mb-12">
@@ -252,7 +252,7 @@ export default function HoursPage() {
           different schedules.
         </p>
 
-        <AdUnit type="responsive" />
+        <AdUnit type="leaderboard" id="revbid-hours-mid" />
 
         <h2 className="font-display font-bold text-3xl mt-12 mb-4">
           Chick-fil-A Breakfast Hours
@@ -363,7 +363,7 @@ export default function HoursPage() {
           service.
         </p>
 
-        <AdUnit type="rectangle" />
+        <AdUnit type="square" id="revbid-hours-bottom" />
 
         <h2 className="font-display font-bold text-3xl mt-12 mb-4">
           Chick-fil-A Holiday Hours

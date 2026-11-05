@@ -68,7 +68,7 @@ export default function CouponsPage() {
           />
 
           <div className="mt-8 mb-12">
-            <AdUnit type="leaderboard" />
+            <AdUnit type="leaderboard" id="revbid-coupons-top" />
           </div>
 
           {/* Page Header */}
@@ -226,7 +226,7 @@ export default function CouponsPage() {
               </div>
 
               <div className="pt-4">
-                <AdUnit type="responsive" />
+                <AdUnit type="leaderboard" id="revbid-coupons-mid" />
               </div>
 
               {/* FAQs using global component */}

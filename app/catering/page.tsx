@@ -63,7 +63,7 @@ export default function CateringLandingPage() {
           ]}
         />
 
-        <AdUnit type="leaderboard" />
+        <AdUnit type="leaderboard" id="revbid-catering-top" />
 
         <div className="mt-8 mb-12">
           <h1 className="font-display font-black text-4xl md:text-5xl text-[#1A1A1A] mb-4">
@@ -157,7 +157,7 @@ export default function CateringLandingPage() {
               </div>
 
               {/* Mid-Content Ad after the 3rd category */}
-              {index === 2 && <AdUnit type="responsive" />}
+              {index === 2 && <AdUnit type="leaderboard" id="revbid-catering-mid" />}
             </div>
           ))}
         </div>

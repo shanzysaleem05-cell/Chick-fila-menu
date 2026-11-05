@@ -64,7 +64,7 @@ export default async function CateringItemPage({
         ]}
       />
 
-      <AdUnit type="leaderboard" />
+      <AdUnit type="leaderboard" id="revbid-catring-item-top" />
 
       <div className="flex flex-col lg:flex-row gap-10 mt-8">
         {/* Main Content Area */}
@@ -134,7 +134,7 @@ export default async function CateringItemPage({
             </div>
           </div>
 
-          <AdUnit type="responsive" />
+          <AdUnit type="leaderboard" id="revbid-catring-item-mid" />
 
           {/* FAQs */}
           <div className="mt-12">
@@ -200,7 +200,7 @@ export default async function CateringItemPage({
             </div>
           </div>
 
-          <AdUnit type="rectangle" />
+          <AdUnit type="square" id="revbid-catring-item-bottom" />
         </div>
       </div>
     </div>

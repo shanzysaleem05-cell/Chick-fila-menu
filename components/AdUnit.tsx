@@ -9,6 +9,7 @@ export type AdPlacementType =
   | "skyscraper"
   | "big-skyscraper"
   | "mobile"
+  | "footer"
   | "responsive";
 
 interface AdUnitProps {
@@ -22,91 +23,124 @@ export default function AdUnit({
   id,
   className = "",
 }: AdUnitProps) {
-  // 1. Mobile Banner (300x100)
+  // 1. Mobile Banner (300x100 / 320x50)
   if (type === "mobile") {
+    const elId = id || "revbid-mobile-3755";
     return (
-      <div className={`flex justify-center my-4 overflow-hidden w-full ${className}`}>
+      <aside
+        aria-label="Advertisement"
+        className={`flex justify-center items-center my-4 overflow-hidden w-full ${className}`}
+      >
         <div
           data-placement-id="revbid-mobile"
-          id={id || "revbid-mobile-3755"}
+          id={elId}
           style={{ minWidth: "300px", minHeight: "100px", textAlign: "center" }}
         />
-      </div>
+      </aside>
     );
   }
 
-  // 2. Square / MPU (300x250)
+  // 2. Square / MPU (300x250, 336x280) - Best for In-Content and Mobile
   if (type === "square" || type === "rectangle") {
+    const elId = id || "revbid-square-16362";
     return (
-      <div className={`flex justify-center my-6 overflow-hidden w-full ${className}`}>
+      <aside
+        aria-label="Advertisement"
+        className={`flex justify-center items-center my-6 overflow-hidden w-full ${className}`}
+      >
         <div
           data-placement-id="revbid-square"
-          id={id || "revbid-square-16362"}
+          id={elId}
           style={{ minWidth: "300px", minHeight: "250px", textAlign: "center" }}
         />
-      </div>
+      </aside>
     );
   }
 
-  // 3. Large Skyscraper / Half-page (300x600)
+  // 3. Large Skyscraper / Half-page (300x600) - Highest CPM
   if (type === "big-skyscraper") {
+    const elId = id || "revbid-big-skyscraper-5316";
     return (
-      <div className={`flex justify-center my-6 overflow-hidden w-full ${className}`}>
+      <aside
+        aria-label="Advertisement"
+        className={`flex justify-center items-center my-6 overflow-hidden w-full ${className}`}
+      >
         <div
           data-placement-id="revbid-big-skyscraper"
-          id={id || "revbid-big-skyscraper-5316"}
-          style={{ minWidth: "120px", minHeight: "600px", textAlign: "center" }}
+          id={elId}
+          style={{ minWidth: "160px", minHeight: "600px", textAlign: "center" }}
         />
-      </div>
+      </aside>
     );
   }
 
-  // 4. Skyscraper (160x600)
+  // 4. Skyscraper (160x600 / 120x600)
   if (type === "skyscraper") {
+    const elId = id || "revbid-skyscraper-3254";
     return (
-      <div className={`flex justify-center my-6 overflow-hidden w-full ${className}`}>
+      <aside
+        aria-label="Advertisement"
+        className={`flex justify-center items-center my-6 overflow-hidden w-full ${className}`}
+      >
         <div
           data-placement-id="revbid-skyscraper"
-          id={id || "revbid-skyscraper-3254"}
+          id={elId}
           style={{ minWidth: "120px", minHeight: "600px", textAlign: "center" }}
         />
-      </div>
+      </aside>
     );
   }
 
-  // 5. Explicit Big Leaderboard / Billboard
+  // 5. Billboard / Big Leaderboard (970x250 / 728x90)
   if (type === "big-leaderboard" || type === "billboard") {
+    const elId = id || "revbid-big-leaderboard-6270";
     return (
-      <div className={`flex justify-center my-6 overflow-hidden w-full ${className}`}>
+      <aside
+        aria-label="Advertisement"
+        className={`flex justify-center items-center my-6 overflow-hidden w-full ${className}`}
+      >
         <div
           data-placement-id="revbid-big-leaderboard"
-          id={id || "revbid-big-leaderboard-6270"}
-          style={{ minWidth: "468px", minHeight: "60px", textAlign: "center" }}
+          id={elId}
+          style={{ minWidth: "320px", minHeight: "90px", textAlign: "center" }}
         />
-      </div>
+      </aside>
     );
   }
 
-  // 6. Responsive / Leaderboard:
-  // Shows Billboard on desktop/tablet, and Mobile Banner on phone screens for seamless responsive fit
+  // 6. Sticky Footer Anchor
+  if (type === "footer") {
+    const elId = id || "revbid-footer-anchor";
+    return (
+      <aside
+        aria-label="Advertisement"
+        className={`w-full flex justify-center items-center ${className}`}
+      >
+        <div
+          data-placement-id="revbid-footer"
+          id={elId}
+          style={{ minWidth: "320px", minHeight: "50px", textAlign: "center" }}
+        />
+      </aside>
+    );
+  }
+
+  // 7. Responsive Leaderboard:
+  // Universal single-container placement that handles 970x250, 728x90 on desktop, and 320x50/320x100 on mobile
+  // WITHOUT hiding any duplicate divs that ruin viewability!
+  const elId = id || (type === "leaderboard" ? "revbid-leaderboard-main" : "revbid-big-leaderboard-6270");
+  const placementId = type === "leaderboard" ? "revbid-leaderboard" : "revbid-big-leaderboard";
+
   return (
-    <div className={`flex flex-col items-center justify-center my-6 overflow-hidden w-full ${className}`}>
-      {/* Desktop & Tablet Viewport */}
-      <div className="hidden sm:block">
-        <div
-          data-placement-id="revbid-big-leaderboard"
-          id={id || "revbid-big-leaderboard-6270"}
-          style={{ minWidth: "468px", minHeight: "60px", textAlign: "center" }}
-        />
-      </div>
-      {/* Mobile Viewport */}
-      <div className="block sm:hidden">
-        <div
-          data-placement-id="revbid-mobile"
-          id={id ? `${id}-mobile` : "revbid-mobile-3755"}
-          style={{ minWidth: "300px", minHeight: "100px", textAlign: "center" }}
-        />
-      </div>
-    </div>
+    <aside
+      aria-label="Advertisement"
+      className={`flex justify-center items-center my-6 overflow-hidden w-full ${className}`}
+    >
+      <div
+        data-placement-id={placementId}
+        id={elId}
+        style={{ minWidth: "300px", minHeight: "90px", textAlign: "center" }}
+      />
+    </aside>
   );
 }

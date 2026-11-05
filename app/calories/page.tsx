@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import MenuTable from "@/components/MenuTable";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 import { getAllItems, menuCategories } from "@/lib/menu-data";
 import { getLastUpdated } from "@/lib/utils";
@@ -85,6 +86,7 @@ export default function CaloriesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caloriesJsonLd) }}
       />
       <Breadcrumbs items={[{ label: "Calories & Nutrition", href: "/calories" }]} />
+      <AdUnit type="leaderboard" id="revbid-cal-top" className="my-6" />
 
       <div className="mb-10">
         <h1 className="section-title">Chick-fil-A Calories &amp; Nutrition (2026)</h1>
@@ -186,6 +188,8 @@ export default function CaloriesPage() {
           ))}
         </div>
       </div>
+
+      <AdUnit type="leaderboard" id="revbid-cal-mid" className="my-8" />
 
       {/* Full Table */}
       <h2 className="font-display font-bold text-2xl mb-5">Full Chick-fil-A Nutrition Table</h2>

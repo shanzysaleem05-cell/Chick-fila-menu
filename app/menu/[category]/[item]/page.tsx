@@ -252,7 +252,7 @@ export default async function ItemPage({
             </div>
 
             {/* Ad */}
-            <AdUnit type="leaderboard" />
+            <AdUnit type="leaderboard" id="revbid-item-mid" />
 
             {/* Full Description */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -483,7 +483,7 @@ export default async function ItemPage({
             </div>
 
             {/* Bottom Ad */}
-            <AdUnit type="leaderboard" />
+            <AdUnit type="leaderboard" id="revbid-item-bottom" />
 
             {/* Related Items */}
             {relatedItems.length > 0 && (
@@ -581,11 +581,8 @@ export default async function ItemPage({
             </div>
 
             {/* Sidebar Ad */}
-            <div className="hidden lg:block">
-              <AdUnit type="big-skyscraper" />
-            </div>
-            <div className="block lg:hidden">
-              <AdUnit type="square" />
+            <div className="w-full flex justify-center bg-white p-4 rounded-2xl border border-gray-200 shadow-sm text-center">
+              <AdUnit type="square" id="revbid-item-sidebar-sq" />
             </div>
 
             {/* Popular from Other Categories */}

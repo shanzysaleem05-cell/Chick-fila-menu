@@ -128,7 +128,7 @@ export default async function CategoryPage({
               </Link>
             </nav>
             <div className="hidden lg:block mt-8 sticky top-24">
-              <AdUnit type="skyscraper" />
+              <AdUnit type="big-skyscraper" id="revbid-cat-sidebar" />
             </div>
           </div>
 
@@ -194,7 +194,7 @@ export default async function CategoryPage({
             </div>
 
             {/* Above Items Ad */}
-            <AdUnit type="leaderboard" />
+            <AdUnit type="leaderboard" id="revbid-cat-content" />
 
             {/* Item Cards Grid */}
             <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12">

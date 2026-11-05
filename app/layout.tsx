@@ -113,9 +113,13 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <AdUnit type="responsive" />
+          <AdUnit type="leaderboard" id="revbid-global-prefooter" />
         </div>
         <Footer />
+        {/* Sticky Anchor Footer Ad */}
+        <div className="sticky bottom-0 z-30 w-full bg-[#FAF7F2]/95 border-t border-[#DECDB8] shadow-md py-1 flex justify-center">
+          <AdUnit type="footer" id="revbid-footer" />
+        </div>
         <CookieConsent />
         <GoogleAnalytics gaId="G-3X1V1Y7Y7G" />
       </body>

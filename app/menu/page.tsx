@@ -68,7 +68,7 @@ export default function MenuPage() {
           ]}
         />
         
-        <AdUnit type="leaderboard" />
+        <AdUnit type="leaderboard" id="revbid-menu-top" />
 
         <div className="mt-8 mb-12">
           <h1 className="font-display font-black text-4xl md:text-5xl text-[#1A1A1A] mb-4">
@@ -176,7 +176,7 @@ export default function MenuPage() {
               {/* Mid-Content Ad after the 3rd category */}
               {index === 2 && (
                 <div className="mt-12">
-                  <AdUnit type="responsive" />
+                  <AdUnit type="leaderboard" id="revbid-menu-mid" />
                 </div>
               )}
             </div>
@@ -197,6 +197,8 @@ export default function MenuPage() {
           <div className="bg-white rounded-3xl shadow-sm border border-[#EAE3D5] p-1 overflow-hidden">
             <MenuTable items={allItemsWithCategory} />
           </div>
+          <AdUnit type="leaderboard" id="revbid-menu-bottom" className="mt-10" />
+
         </div>
       </div>
     </>

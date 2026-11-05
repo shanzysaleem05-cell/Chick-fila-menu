@@ -1,5 +1,3 @@
-"use client";
-
 import { menuCategories } from "@/lib/menu-data";
 
 export default function ByTheNumbers() {

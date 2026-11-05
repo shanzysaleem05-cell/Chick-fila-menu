@@ -150,7 +150,7 @@ export default function HomePage() {
       </section>
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-10">
-        <AdUnit type="leaderboard" />
+        <AdUnit type="leaderboard" id="revbid-home-top" />
       </div>
 
       {/* Popular Items / Nutrition Guide Promo */}
@@ -409,6 +409,10 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 my-10">
+        <AdUnit type="leaderboard" id="revbid-home-mid" />
+      </div>
+
       {/* By The Numbers & Home FAQs */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <ByTheNumbers />
@@ -486,6 +490,7 @@ export default function HomePage() {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <AdUnit type="leaderboard" id="revbid-home-bottom" className="mb-10" />
         <FAQAccordion items={homeFaqs} title="Frequently Asked Questions" />
       </div>
     </div>

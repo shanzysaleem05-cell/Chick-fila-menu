@@ -51,7 +51,7 @@ export default async function CateringCategoryPage({
         ]}
       />
 
-      <AdUnit type="leaderboard" />
+      <AdUnit type="leaderboard" id="revbid-catring-cat-top" />
 
       {/* Category Header */}
       <div className="mt-8 mb-12">
@@ -81,7 +81,7 @@ export default async function CateringCategoryPage({
         )}
       </div>
 
-      <AdUnit type="responsive" />
+      <AdUnit type="leaderboard" id="revbid-catring-cat-mid" />
     </div>
   );
 }

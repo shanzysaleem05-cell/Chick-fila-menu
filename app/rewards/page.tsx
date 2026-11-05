@@ -107,7 +107,7 @@ export default function RewardsPage() {
           ]}
         />
 
-        <AdUnit type="leaderboard" />
+        <AdUnit type="leaderboard" id="revbid-rewards-top" />
 
         <div className="mt-8 mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 text-[#DD0033] font-bold text-sm mb-6 border border-red-100">
@@ -324,7 +324,7 @@ export default function RewardsPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-28 space-y-6">
-              <AdUnit type="rectangle" />
+              <AdUnit type="square" id="revbid-rewards-sidebar" />
 
               <div className="bg-[#FAF7F2] rounded-2xl p-6 border border-[#EAE3D5]">
                 <h3 className="font-display font-bold text-xl text-[#1A1A1A] mb-4">
@@ -361,7 +361,7 @@ export default function RewardsPage() {
           </div>
         </div>
 
-        <AdUnit type="leaderboard" />
+        <AdUnit type="leaderboard" id="revbid-rewards-bottom" />
 
         <div className="mt-16 max-w-4xl">
           <FAQAccordion items={faqs} title="Rewards FAQs" />

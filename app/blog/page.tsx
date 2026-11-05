@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AdUnit from "@/components/AdUnit";
 import { ArrowRight, Clock, User } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -136,6 +137,7 @@ export default function BlogPage() {
           need to get the most out of your Chick-fil-A visit.
         </p>
       </div>
+      <AdUnit type="leaderboard" id="revbid-blog-list-top" className="my-6" />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
@@ -178,6 +180,7 @@ export default function BlogPage() {
           </Link>
         ))}
       </div>
+      <AdUnit type="leaderboard" id="revbid-blog-list-bottom" className="mt-10 mb-4" />
     </div>
   );
 }

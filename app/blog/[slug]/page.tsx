@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AdUnit from "@/components/AdUnit";
 import { Clock, User, ArrowRight } from "lucide-react";
 import { getAllItems, menuCategories } from "@/lib/menu-data";
 import { formatPrice } from "@/lib/utils";
@@ -1462,10 +1463,16 @@ export default async function BlogPostPage({
             </div>
           </div>
 
+          {/* In-Content High Viewability Square Ad */}
+          <AdUnit type="square" id="revbid-blog-incontent" className="my-6" />
+
           {/* Article Body */}
           <div className="bg-white rounded-2xl shadow-sm border border-[#EAE3D5] p-6 md:p-8 text-[#1A1A1A]">
             {content}
           </div>
+
+          {/* Article Bottom Leaderboard */}
+          <AdUnit type="leaderboard" id="revbid-blog-bottom" className="my-6" />
 
           {/* Disclaimer */}
           <div className="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-500">
@@ -1524,6 +1531,16 @@ export default async function BlogPostPage({
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               ))}
+            </div>
+          </div>
+
+          {/* Sticky Sidebar Skyscraper Ad */}
+          <div className="sticky top-24">
+            <div className="bg-white rounded-2xl shadow-sm border border-[#EAE3D5] p-4 text-center">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block mb-2">
+                Advertisement
+              </span>
+              <AdUnit type="big-skyscraper" id="revbid-blog-sidebar" />
             </div>
           </div>
         </div>

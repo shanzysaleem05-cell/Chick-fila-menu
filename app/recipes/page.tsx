@@ -183,7 +183,7 @@ export default function RecipesPage() {
           />
 
           <div className="mt-8 mb-12">
-            <AdUnit type="leaderboard" />
+            <AdUnit type="leaderboard" id="revbid-recipes-top" />
           </div>
 
           {/* Page Header */}
@@ -272,7 +272,7 @@ export default function RecipesPage() {
               </div>
 
               <div className="pt-4">
-                <AdUnit type="responsive" />
+                <AdUnit type="leaderboard" id="revbid-recipes-mid" />
               </div>
 
               {/* FAQs using global component */}

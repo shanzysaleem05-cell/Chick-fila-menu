@@ -17,15 +17,27 @@ export default function CookieConsent() {
 
   const accept = () => {
     localStorage.setItem("cookie-consent", "accepted");
+    window.dispatchEvent(new Event("cfa-consent-change"));
     setVisible(false);
   };
 
   const decline = () => {
     localStorage.setItem("cookie-consent", "declined");
+    window.dispatchEvent(new Event("cfa-consent-change"));
     setVisible(false);
   };
 
-  if (!visible) return null;
+  if (!visible) {
+    return (
+      <button
+        type="button"
+        onClick={() => setVisible(true)}
+        className="fixed bottom-3 left-3 z-50 rounded-full border border-[#D5CEC4] bg-white px-3 py-2 text-xs font-semibold text-[#2B1B15] shadow-md hover:text-[#C8102E]"
+      >
+        Privacy choices
+      </button>
+    );
+  }
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6">
@@ -34,13 +46,13 @@ export default function CookieConsent() {
           <div className="flex-1">
             <p className="font-bold text-base mb-1">🍪 We Use Cookies</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              We use cookies to analyze site traffic and serve personalized ads through{" "}
-              <strong>Google AdSense</strong>. By clicking &quot;Accept,&quot; you consent to our use of
+              We use cookies and similar technologies for analytics and advertising through{" "}
+              <strong>Google Analytics and RevBid advertising partners</strong>. By clicking &quot;Accept,&quot; you consent to our use of
               cookies as described in our{" "}
               <Link href="/privacy-policy" className="text-[#DD0033] hover:underline font-medium">
                 Privacy Policy
               </Link>
-              . You can opt out of personalized ads at{" "}
+              . Declining keeps optional advertising and analytics scripts disabled on this device. You can also manage Google ad personalization at{" "}
               <a
                 href="https://www.google.com/settings/ads"
                 target="_blank"

@@ -6,6 +6,7 @@ import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/recipes" },
   title: "Copycat Chick-fil-A Recipes | Make It At Home",
   description:
     "Love Chick-fil-A? Learn how to make the famous Chicken Sandwich, Chick-fil-A Sauce, Nuggets, and more right in your own kitchen with these 5 authentic copycat recipes.",

@@ -182,7 +182,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin/", "/private/", "/site-meta-audit/", "/api/"],
       },
     ],
-    // ✅ CORRECT DOMAIN — chick-fila-menus.com
+    // ✅ PRIMARY DOMAIN — chick-fila-menus.com
     sitemap: [
       `${siteUrl}/sitemap.xml`,
     ],

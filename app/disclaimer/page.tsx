@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/disclaimer" },
   title: "Disclaimer — CFA Menu Guide",
   description: "Important disclaimer about Chick-fil-A menu prices and nutrition data on CFA Menu Guide. Prices are estimates and not official.",
 };

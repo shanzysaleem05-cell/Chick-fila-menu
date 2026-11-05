@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact CFA Menu Guide",
   description: "Contact the CFA Menu Guide team for corrections, suggestions, or general inquiries.",
 };
@@ -13,66 +15,14 @@ export default function ContactPage() {
       <div className="mt-6">
         <h1 className="section-title mb-4">Contact Us</h1>
         <p className="text-brand-gray-text mb-8">
-          Have a correction, suggestion, or question? Fill out the form below or email us directly at <strong>admin@cfamenuguide.com</strong> and
-          we&apos;ll get back to you as soon as possible.
+          Have a correction, source update, copyright concern or question? Email our editorial team and include the page URL plus supporting details. We normally review messages within two business days.
         </p>
-        <form className="space-y-5">
-          <div>
-            <label htmlFor="contact-name" className="block text-sm font-semibold text-brand-dark mb-1">
-              Your Name
-            </label>
-            <input
-              id="contact-name"
-              type="text"
-              required
-              placeholder="John Doe"
-              className="w-full px-4 py-3 rounded-xl border border-brand-gray-mid focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 outline-none transition-all"
-            />
-          </div>
-          <div>
-            <label htmlFor="contact-email" className="block text-sm font-semibold text-brand-dark mb-1">
-              Email Address
-            </label>
-            <input
-              id="contact-email"
-              type="email"
-              required
-              placeholder="you@example.com"
-              className="w-full px-4 py-3 rounded-xl border border-brand-gray-mid focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 outline-none transition-all"
-            />
-          </div>
-          <div>
-            <label htmlFor="contact-subject" className="block text-sm font-semibold text-brand-dark mb-1">
-              Subject
-            </label>
-            <select
-              id="contact-subject"
-              className="w-full px-4 py-3 rounded-xl border border-brand-gray-mid focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 outline-none transition-all bg-white"
-            >
-              <option>Price Correction</option>
-              <option>Nutrition Data Error</option>
-              <option>New Item Suggestion</option>
-              <option>Partnership Inquiry</option>
-              <option>General Question</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="contact-message" className="block text-sm font-semibold text-brand-dark mb-1">
-              Message
-            </label>
-            <textarea
-              id="contact-message"
-              required
-              rows={5}
-              placeholder="Tell us what's on your mind..."
-              className="w-full px-4 py-3 rounded-xl border border-brand-gray-mid focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 outline-none transition-all resize-none"
-            />
-          </div>
-          <button type="submit" className="btn-primary w-full justify-center">
-            Send Message
-          </button>
-        </form>
+        <div className="rounded-2xl border border-[#EAE3D5] bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-[#1A1A1A] mb-2">Editorial and general inquiries</h2>
+          <a href="mailto:admin@cfamenuguide.com" className="text-[#C8102E] font-bold hover:underline">admin@cfamenuguide.com</a>
+          <p className="mt-4 text-sm text-gray-600">For price or nutrition corrections, please include the restaurant location, date checked and a link or photo showing the updated information.</p>
+        </div>
+        <p className="mt-6 text-sm text-gray-600">Copyright notices can also follow our <Link href="/dmca" className="text-[#C8102E] underline">DMCA process</Link>. We are an independent guide and cannot handle restaurant orders, refunds or Chick-fil-A account support.</p>
       </div>
     </div>
   );

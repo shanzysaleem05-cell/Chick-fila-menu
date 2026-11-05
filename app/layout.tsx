@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AdUnit from "@/components/AdUnit";
 import CookieConsent from "@/components/CookieConsent";
+import ConsentScripts from "@/components/ConsentScripts";
+import SiteSchema from "@/components/SiteSchema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -96,32 +96,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        {/* RevBid Official Site Script */}
-        <script 
-          type="text/javascript" 
-          src="//prebid.revbid.net/23503/revbid.js" 
-          async
-        ></script>
-        {/* Google AdSense Script */}
-        <script 
-          async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4953411501541980" 
-          crossOrigin="anonymous"
-        ></script>
+        <link rel="preconnect" href="https://prebid.revbid.net" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://prebid.revbid.net" />
       </head>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", backgroundColor: "#FAF7F2", color: "#2B1B15" }}>
+        <SiteSchema />
         <Header />
         <main id="main-content">{children}</main>
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <AdUnit type="leaderboard" id="revbid-global-prefooter" />
-        </div>
         <Footer />
-        {/* Sticky Anchor Footer Ad */}
-        <div className="sticky bottom-0 z-30 w-full bg-[#FAF7F2]/95 border-t border-[#DECDB8] shadow-md py-1 flex justify-center">
-          <AdUnit type="footer" id="revbid-footer" />
-        </div>
         <CookieConsent />
-        <GoogleAnalytics gaId="G-3X1V1Y7Y7G" />
+        <ConsentScripts />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/coupons" },
   title: "Chick-fil-A Coupons, Deals & Promo Codes (2026)",
   description:
     "Find the latest Chick-fil-A coupons, promo codes, and learn how to get free food using the Chick-fil-A One rewards program in 2026.",

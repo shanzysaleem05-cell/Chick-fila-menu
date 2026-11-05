@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { BookOpen, Users, Target, Shield, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About Us — CFA Menu Guide",
   description:
     "CFA Menu Guide is an independent Chick-fil-A fan resource built by food enthusiasts. We provide complete menu prices, nutrition data, and ordering guides — no affiliation with Chick-fil-A, Inc.",

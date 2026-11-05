@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: siteUrl, lastModified: now, changeFrequency: "daily", priority: 1.0 },
     { url: `${siteUrl}/menu`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${siteUrl}/prices`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/calories`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/hours`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${siteUrl}/catering`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
@@ -28,12 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogSlugs = [
+    "nuggets-and-strips-mix-2026",
+    "white-plains-opening-2026",
     "healthiest-items",
     "breakfast-guide",
     "cheapest-ways-to-order",
     "chicken-sandwich-comparison",
     "secret-menu-items",
     "keto-friendly-options",
+    "best-sauces-ranked",
+    "family-meal-ideas",
+    "high-protein-meals",
+    "ultimate-catering-guide",
+    "gluten-free-menu-guide",
+    "vegetarian-vegan-options",
   ];
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
     url: `${siteUrl}/blog/${slug}`,

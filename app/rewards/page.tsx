@@ -15,6 +15,7 @@ import AdUnit from "@/components/AdUnit";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/rewards" },
   title: "Chick-fil-A Rewards Program (Chick-fil-A One®) Guide",
   description:
     "Learn how the Chick-fil-A One® rewards program works. Discover points, benefits, tiers (Member, Silver, Red, Signature), and how to redeem free food.",

@@ -7,6 +7,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { cateringCategories } from "@/lib/catering-data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/catering" },
   title: "Chick-fil-A Catering Menu & Prices (2026) | Order Trays & Meals",
   description:
     "Complete Chick-fil-A catering menu with prices for 2026. Order nugget trays, breakfast, packaged meals, and beverages for your next event or meeting.",

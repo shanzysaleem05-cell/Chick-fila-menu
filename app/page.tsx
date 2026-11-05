@@ -150,7 +150,7 @@ export default function HomePage() {
       </section>
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-10">
-        <AdUnit type="leaderboard" id="revbid-home-top" />
+        <AdUnit type="big-leaderboard" id="revbid-big-leaderboard-6309" />
       </div>
 
       {/* Popular Items / Nutrition Guide Promo */}

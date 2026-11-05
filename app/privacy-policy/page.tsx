@@ -3,9 +3,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy-policy" },
   title: "Privacy Policy",
   description:
-    "CFA Menu Guide privacy policy — how we collect, use, and protect your data. Includes Google AdSense and Google Analytics disclosures.",
+    "CFA Menu Guide privacy policy covering cookies, Google Analytics, RevBid advertising partners, consent choices and data rights.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -23,7 +24,7 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
         <p className="text-gray-500 text-sm mb-8">
-          <strong>Last Updated:</strong> August 24, 2026
+          <strong>Last Updated:</strong> November 5, 2026
         </p>
 
         <div className="space-y-8 text-gray-700 leading-relaxed">
@@ -32,7 +33,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-bold text-[#1A1A1A] mb-3">1. Introduction</h2>
             <p>
               CFA Menu Guide (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the website{" "}
-              <strong>cfamenuguide.com</strong>. This Privacy Policy explains what information we
+              <strong>chick-fila-menus.com</strong>. This Privacy Policy explains what information we
               collect when you visit our site, how we use it, and your rights regarding your
               personal data.
             </p>
@@ -71,7 +72,7 @@ export default function PrivacyPolicyPage() {
               <li>To respond to inquiries submitted via the contact form</li>
               <li>To analyze site traffic and content performance via Google Analytics</li>
               <li>
-                To serve relevant advertisements through Google AdSense (see Section 5 for full
+                To serve relevant advertisements through RevBid and its advertising partners (see Section 5 for full
                 disclosure)
               </li>
             </ul>
@@ -104,8 +105,8 @@ export default function PrivacyPolicyPage() {
                 .
               </li>
               <li>
-                <strong>Advertising Cookies (Google AdSense):</strong> We use Google AdSense to
-                display advertisements on this site (see Section 5 below for full disclosure).
+                <strong>Advertising Cookies:</strong> With consent, RevBid and participating demand
+                partners may use cookies or similar identifiers to deliver, measure and limit advertisements.
               </li>
             </ul>
             <p className="mt-3">
@@ -114,21 +115,20 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
 
-          {/* Google AdSense Disclosure */}
+          {/* Advertising disclosure */}
           <section className="bg-amber-50 border border-amber-200 rounded-xl p-6">
             <h2 className="text-xl font-bold text-[#1A1A1A] mb-3">
-              5. Advertising — Google AdSense Disclosure
+              5. Advertising Partners and Consent
             </h2>
             <p className="mb-3">
-              This website uses <strong>Google AdSense</strong>, a third-party advertising service
-              provided by Google LLC, to display advertisements. Google AdSense may use cookies,
-              web beacons, and similar tracking technologies to serve ads based on your prior
-              visits to this website and other websites.
+              This website uses <strong>RevBid</strong> to manage advertising inventory. RevBid may
+              connect participating advertising demand partners, which can include Google and other
+              exchanges listed in our public ads.txt file. With your consent, these companies may use
+              cookies, web beacons and similar technologies to deliver and measure advertisements.
             </p>
             <p className="mb-3">
-              Google&apos;s use of advertising cookies enables it and its partners to serve ads to
-              you based on your visit to our site and/or other sites on the Internet. You may opt
-              out of personalized advertising by visiting{" "}
+              Optional analytics and advertising scripts remain disabled unless you choose
+              &quot;Accept All&quot; in our consent notice. You may also manage Google ad personalization at{" "}
               <a
                 href="https://www.google.com/settings/ads"
                 target="_blank"
@@ -140,19 +140,16 @@ export default function PrivacyPolicyPage() {
               .
             </p>
             <p className="mb-3">
-              <strong>Google DoubleClick DART Cookie:</strong> Google, as a third-party vendor, uses
-              the DART cookie to serve ads to our site visitors based upon their visit to our site
-              and other sites on the Internet. Users may opt out of the use of the DART cookie by
-              visiting the{" "}
+              The companies authorized to sell or resell our inventory are disclosed in our{" "}
               <a
-                href="https://policies.google.com/technologies/ads"
+                href="/ads.txt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#DD0033] hover:underline"
               >
-                Google advertising and content network Privacy Policy
+                ads.txt file
               </a>
-              .
+              . Partner participation can change as the advertising supply chain is updated.
             </p>
             <p>
               For more information about how Google uses data when you use our site, visit:{" "}

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdUnit from "@/components/AdUnit";
 import { ArrowRight, Clock, User } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Chick-fil-A Blog — Ordering Tips, Nutrition Guides & More",
   description:
     "Expert guides on Chick-fil-A — healthiest menu items, ordering tips, secret menu hacks, calorie breakdowns, and how to get the best value from Chick-fil-A.",
@@ -15,6 +17,24 @@ export const metadata: Metadata = {
 };
 
 const blogPosts = [
+  {
+    slug: "nuggets-and-strips-mix-2026",
+    title: "Chick-fil-A Tests New Nuggets & Strips Mix: Locations, Dates and What’s Included",
+    description: "The new limited-time box combines five nuggets with two Chick-n-Strips. Here’s where it is being tested, how long it is available and what customers should know.",
+    category: "Menu News",
+    readTime: "5 min read",
+    date: "2026-11-05",
+    image: "/chick-fil-a-nuggets-strips-mix-2026.webp",
+  },
+  {
+    slug: "white-plains-opening-2026",
+    title: "Chick-fil-A White Plains Opens November 5: Hours, Address and Opening-Day Offer",
+    description: "Westchester County’s newest Chick-fil-A opens in White Plains with about 100 jobs, a community donation and a cow-print opening-day promotion.",
+    category: "Restaurant News",
+    readTime: "5 min read",
+    date: "2026-11-05",
+    image: "/chick-fil-a-white-plains-opening-2026.webp",
+  },
   {
     slug: "healthiest-items",
     title: "10 Healthiest Items on the Chick-fil-A Menu (2026)",
@@ -148,9 +168,11 @@ export default function BlogPage() {
           >
             {/* Thumbnail Image */}
             <div className="aspect-[16/9] overflow-hidden">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
+                width={1200}
+                height={630}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>

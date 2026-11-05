@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap');
 @import "tailwindcss";
 
 /* ========================================
@@ -258,3 +257,46 @@ img {
 .prose a { color: #DD0033; text-decoration: underline; }
 .prose a:hover { color: #B8002A; }
 .prose .not-prose { all: unset; display: block; }
+
+/* Reserve space before RevBid renders to protect CLS and viewability. */
+.ad-unit {
+  width: 100%;
+  margin-block: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  contain: layout paint;
+}
+.ad-unit__label {
+  margin-bottom: .35rem;
+  color: #756d67;
+  font-size: .625rem;
+  line-height: 1;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.ad-unit__slot { min-width: 300px; min-height: 90px; text-align: center; }
+.ad-unit--square .ad-unit__slot,
+.ad-unit--rectangle .ad-unit__slot { min-height: 250px; }
+.ad-unit--mobile .ad-unit__slot { min-height: 100px; }
+.ad-unit--skyscraper .ad-unit__slot,
+.ad-unit--big-skyscraper .ad-unit__slot { min-width: 160px; min-height: 600px; }
+.ad-unit--footer { margin: 0; }
+.ad-unit--footer .ad-unit__label { display: none; }
+.ad-unit--footer .ad-unit__slot { min-width: 320px; min-height: 50px; }
+
+@media (min-width: 768px) {
+  .ad-unit--leaderboard .ad-unit__slot,
+  .ad-unit--responsive .ad-unit__slot,
+  .ad-unit--billboard .ad-unit__slot,
+  .ad-unit--big-leaderboard .ad-unit__slot { min-width: 728px; }
+}
+
+@media (max-width: 767px) {
+  .ad-unit--skyscraper,
+  .ad-unit--big-skyscraper { display: none; }
+}
+
+.mobile-nav summary::-webkit-details-marker { display: none; }

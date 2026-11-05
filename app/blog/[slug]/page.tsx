@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdUnit from "@/components/AdUnit";
 import { Clock, User, ArrowRight } from "lucide-react";
@@ -10,6 +11,22 @@ import { formatPrice } from "@/lib/utils";
 export const revalidate = 86400;
 
 const POST_META: Record<string, { title: string; description: string; date: string; readTime: string; category: string; image: string }> = {
+  "nuggets-and-strips-mix-2026": {
+    title: "Chick-fil-A Nuggets & Strips Mix 2026: Locations, Dates and Details",
+    description: "Chick-fil-A is testing a limited-time Nuggets & Strips Mix in Nashville and Las Vegas. See what is included, availability dates, ordering options and catering details.",
+    date: "2026-11-05",
+    readTime: "5 min read",
+    category: "Menu News",
+    image: "/chick-fil-a-nuggets-strips-mix-2026.webp",
+  },
+  "white-plains-opening-2026": {
+    title: "Chick-fil-A White Plains Opens November 5, 2026: Complete Guide",
+    description: "Chick-fil-A White Plains opens at 20 Tarrytown Road on November 5. Find confirmed hours, service options, jobs, community support and opening-day offer details.",
+    date: "2026-11-05",
+    readTime: "5 min read",
+    category: "Restaurant News",
+    image: "/chick-fil-a-white-plains-opening-2026.webp",
+  },
   "healthiest-items": {
     title: "10 Healthiest Items on the Chick-fil-A Menu (2026)",
     description: "Looking for healthy options at Chick-fil-A? We ranked the top 10 low-calorie, high-protein menu items with full nutrition data so you can eat smart every visit.",
@@ -108,6 +125,11 @@ const POST_META: Record<string, { title: string; description: string; date: stri
   },
 };
 
+const NEWS_SOURCES: Record<string, string> = {
+  "nuggets-and-strips-mix-2026": "https://www.chick-fil-a.com/customer-support/our-food/our-menu/what-is-the-new-chick-fil-a-nuggets-and-strips-mix",
+  "white-plains-opening-2026": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-white-plains",
+};
+
 export async function generateStaticParams() {
   return Object.keys(POST_META).map((slug) => ({ slug }));
 }
@@ -162,6 +184,107 @@ export default async function BlogPostPage({
     .slice(0, 10);
 
   const contentMap: Record<string, React.ReactNode> = {
+    "nuggets-and-strips-mix-2026": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Chick-fil-A has introduced a limited-time <strong>Nuggets &amp; Strips Mix</strong> at select restaurants, giving customers two of its chicken formats in one order. The test is geographically limited, so this is not yet a nationwide menu launch.
+        </p>
+
+        <div className="rounded-xl border border-[#EAE3D5] bg-[#FAF7F2] p-5 mb-8">
+          <h2 className="text-xl font-bold text-[#1A1A1A] mb-3">Confirmed details at a glance</h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li><strong>What is included:</strong> five nuggets and two Chick-n-Strips in one box.</li>
+            <li><strong>Nugget choice:</strong> original or grilled nuggets.</li>
+            <li><strong>Test markets:</strong> select restaurants in Nashville, Tennessee, and Las Vegas, Nevada.</li>
+            <li><strong>Availability:</strong> October 5, 2026 through April 3, 2027, while offered at participating locations.</li>
+            <li><strong>Ordering:</strong> entrée only or as a meal, with dine-in, pickup and delivery options.</li>
+          </ul>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">What exactly is the Nuggets &amp; Strips Mix?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          The test combines a 5-count nugget order with two Chick-n-Strips. Customers can choose classic breaded nuggets or grilled nuggets, which makes the box more flexible than a standard single-item entrée. Chick-fil-A says it can be ordered by itself or as part of a meal.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          The practical appeal is variety: diners do not have to choose between bite-size nuggets and larger strips. It may also help groups or first-time customers compare textures and select more than one dipping sauce. That assessment is our editorial analysis; Chick-fil-A has not announced whether the test will expand nationally.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Where can you order it?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Availability is limited to participating restaurants in the Nashville and Las Vegas markets. Because individual restaurant participation can vary, check the Chick-fil-A app or online ordering menu for your selected location before making a trip. The company lists April 3, 2027 as the end of the current test window.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Can rewards points be used?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Chick-fil-A states that customers can earn Chick-fil-A One points on the purchase, but the mixed entrée is not currently available as a points redemption reward. Normal account and participating-location rules still apply.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Is there a catering version?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Yes. The official support page lists a Nuggets &amp; Strips Mix catering tray with 65 nuggets and 20 Chick-n-Strips. Pricing and availability can differ by restaurant, so confirm both in the app or with the local catering team.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Will it become a nationwide item?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          No nationwide rollout has been announced as of November 5, 2026. Restaurant tests commonly help brands measure demand and operational impact, but a test does not guarantee a permanent release. We will update this guide if Chick-fil-A publishes a broader launch.
+        </p>
+
+        <section className="mt-9 border-t border-[#EAE3D5] pt-6" aria-labelledby="mix-sources">
+          <h2 id="mix-sources" className="text-xl font-bold text-[#1A1A1A] mb-3">Source and update note</h2>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Fact-checked November 5, 2026 against Chick-fil-A&apos;s official <a className="text-[#C8102E] underline" href="https://www.chick-fil-a.com/customer-support/our-food/our-menu/what-is-the-new-chick-fil-a-nuggets-and-strips-mix" target="_blank" rel="noopener noreferrer">Nuggets &amp; Strips Mix support page</a>. Availability and local pricing may change. Hero image is an original editorial illustration and does not depict official packaging.
+          </p>
+        </section>
+      </article>
+    ),
+    "white-plains-opening-2026": (
+      <article>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          Chick-fil-A White Plains is scheduled to open in Westchester County on <strong>Thursday, November 5, 2026 at 6:30 a.m.</strong> The restaurant is located at 20 Tarrytown Road and will be operated by Ben Tuliebitz.
+        </p>
+
+        <div className="rounded-xl border border-[#EAE3D5] bg-[#FAF7F2] p-5 mb-8">
+          <h2 className="text-xl font-bold text-[#1A1A1A] mb-3">Opening details</h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li><strong>Opening:</strong> November 5, 2026 at 6:30 a.m.</li>
+            <li><strong>Address:</strong> 20 Tarrytown Road, White Plains, New York.</li>
+            <li><strong>Regular hours:</strong> Monday–Saturday, 6:30 a.m.–10:30 p.m.</li>
+            <li><strong>Service:</strong> dine-in, drive-thru, carry-out and mobile pickup.</li>
+            <li><strong>Operator:</strong> Ben Tuliebitz.</li>
+          </ul>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">What is the opening-day offer?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Guests who visit in cow-print attire on opening day can receive one eligible entrée or kid&apos;s meal while supplies last. The official announcement says no purchase is required and limits the offer to one per person in cow attire. A full cow costume is not required; a cow-spotted accessory can qualify, subject to the restaurant&apos;s final offer terms.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Eligible breakfast selections listed by Chick-fil-A include a Chicken Biscuit, Egg White Grill or 4-count Chick-n-Minis. Lunch and dinner choices include selected chicken sandwiches, nuggets, grilled nuggets or a 5-count nugget kid&apos;s meal. Confirm availability with the restaurant because the offer is supply-limited.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Jobs and community support</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Chick-fil-A expects the location to create approximately 100 jobs. The company also announced a $25,000 Feeding America donation supporting Feeding Westchester. The restaurant plans to participate in the Chick-fil-A Shared Table program, which redirects eligible surplus food to local nonprofit organizations.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">What customers should know before visiting</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Opening mornings can be busier than a normal service day, especially when a limited promotion is available. Mobile pickup may be useful later, but app availability can change based on restaurant capacity. For the opening-day giveaway, arriving early and checking the location&apos;s official listing is sensible.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 mt-8">Who is the local Owner-Operator?</h2>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          Ben Tuliebitz previously spent 25 years working with the New York Yankees, according to Chick-fil-A&apos;s announcement. Chick-fil-A describes its restaurants as locally operated, meaning the selected operator leads the individual restaurant and its team while the location remains part of the wider brand system.
+        </p>
+
+        <section className="mt-9 border-t border-[#EAE3D5] pt-6" aria-labelledby="white-plains-sources">
+          <h2 id="white-plains-sources" className="text-xl font-bold text-[#1A1A1A] mb-3">Source and update note</h2>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Fact-checked November 5, 2026 using Chick-fil-A&apos;s official <a className="text-[#C8102E] underline" href="https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-white-plains" target="_blank" rel="noopener noreferrer">White Plains opening announcement</a>, published November 2, 2026. Offer terms and operating details can change locally. Hero image is an original editorial illustration, not a photograph of the location.
+          </p>
+        </section>
+      </article>
+    ),
     "healthiest-items": (
       <article>
         <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -1383,6 +1506,7 @@ export default async function BlogPostPage({
         },
         datePublished: post.date,
         dateModified: post.date,
+        isBasedOn: NEWS_SOURCES[slug],
         author: {
           "@type": "Organization",
           name: "CFA Menu Guide",
@@ -1393,7 +1517,7 @@ export default async function BlogPostPage({
           name: "CFA Menu Guide",
           logo: {
             "@type": "ImageObject",
-            url: `${siteUrl}/icon.png`,
+            url: `${siteUrl}/apple-touch-icon.png`,
           },
         },
         mainEntityOfPage: {
@@ -1434,9 +1558,12 @@ export default async function BlogPostPage({
             {/* Hero Image */}
             {post.image && (
               <div className="aspect-[16/7] overflow-hidden">
-                <img
+                <Image
                   src={post.image}
                   alt={post.title}
+                  width={1200}
+                  height={630}
+                  priority
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -1464,7 +1591,7 @@ export default async function BlogPostPage({
           </div>
 
           {/* In-Content High Viewability Square Ad */}
-          <AdUnit type="square" id="revbid-blog-incontent" className="my-6" />
+          <AdUnit type="square" id="revbid-square-16422" className="my-6" />
 
           {/* Article Body */}
           <div className="bg-white rounded-2xl shadow-sm border border-[#EAE3D5] p-6 md:p-8 text-[#1A1A1A]">

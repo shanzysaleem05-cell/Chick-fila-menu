@@ -22,7 +22,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `${process.env.SITE_URL || "https://chickfilamenu.info"}${item.href}`,
+      item: `${process.env.SITE_URL || "https://chick-fila-menus.com"}${item.href}`,
     })),
   };
 

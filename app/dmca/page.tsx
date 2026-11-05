@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/dmca" },
   title: "DMCA Policy",
   description: "DMCA Policy for CFA Menu Guide. Information regarding copyright infringement claims.",
 };

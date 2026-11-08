@@ -18,7 +18,7 @@ export default function StickyAd() {
       >
         ×
       </button>
-      <AdUnit type="footer" id="revbid-footer" />
+      <AdUnit type="mobile" id="revbid-mobile-3755" />
     </aside>
   );
 }

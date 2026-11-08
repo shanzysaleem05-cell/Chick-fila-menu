@@ -287,6 +287,30 @@ img {
 .ad-unit--footer .ad-unit__label { display: none; }
 .ad-unit--footer .ad-unit__slot { min-width: 320px; min-height: 50px; }
 
+/* Sitewide RevBid inventory: top, bottom, and non-overlapping desktop rails. */
+.sitewide-banner {
+  width: min(100%, 80rem);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+.sitewide-banner .ad-unit { margin-block: 1rem; }
+.site-ad-rails { display: none; }
+
+@media (min-width: 1720px) {
+  .site-ad-rails { display: block; }
+  .site-ad-rail {
+    position: fixed;
+    top: 10rem;
+    z-index: 20;
+    width: 160px;
+    max-height: calc(100vh - 11rem);
+    overflow: hidden;
+  }
+  .site-ad-rail--left { left: max(1rem, calc(50vw - 850px)); }
+  .site-ad-rail--right { right: max(1rem, calc(50vw - 850px)); }
+  .site-ad-rail .ad-unit { margin: 0; }
+}
+
 @media (min-width: 768px) {
   .ad-unit--leaderboard .ad-unit__slot,
   .ad-unit--responsive .ad-unit__slot,
@@ -297,6 +321,11 @@ img {
 @media (max-width: 767px) {
   .ad-unit--skyscraper,
   .ad-unit--big-skyscraper { display: none; }
+}
+
+@media (max-width: 767px) {
+  .sitewide-banner { padding-inline: .5rem; }
+  .sitewide-banner .ad-unit { margin-block: .75rem; }
 }
 
 .mobile-nav summary::-webkit-details-marker { display: none; }

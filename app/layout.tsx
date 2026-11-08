@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import ConsentScripts from "@/components/ConsentScripts";
 import SiteSchema from "@/components/SiteSchema";
+import SitewideAds from "@/components/SitewideAds";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -102,6 +103,8 @@ export default function RootLayout({
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", backgroundColor: "#FAF7F2", color: "#2B1B15" }}>
         <SiteSchema />
         <Header />
+        <SitewideAds position="header" />
+        <SitewideAds position="rails" />
         <main id="main-content">{children}</main>
         <Footer />
         <CookieConsent />

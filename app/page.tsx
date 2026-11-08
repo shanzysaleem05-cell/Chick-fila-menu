@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, User, ArrowRight, Award, Heart, Utensils, Coffee, Sun, ClipboardList, ChevronDown } from "lucide-react";
+import { Clock, User, ArrowRight, Award, Heart, Utensils, Sun, ClipboardList, ChevronDown } from "lucide-react";
 import { menuCategories } from "@/lib/menu-data";
 import MenuTable from "@/components/MenuTable";
 import AdUnit from "@/components/AdUnit";
@@ -149,10 +149,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-10">
-        <AdUnit type="big-leaderboard" id="revbid-big-leaderboard-6309" />
-      </div>
-
       {/* Popular Items / Nutrition Guide Promo */}
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mb-1">
@@ -170,7 +166,7 @@ export default function HomePage() {
               Chick-fil-A Nutrition Guide
             </h3>
             <p className="text-gray-300 mb-8 text-sm leading-relaxed">
-              Find out exactly what's in your favorite meals. We track calories, protein, and allergens so you can order with confidence.
+              Find out exactly what&apos;s in your favorite meals. We track calories, protein, and allergens so you can order with confidence.
             </p>
             <Link href="/calories" className="bg-[#C8102E] hover:bg-[#A80020] text-white text-center font-bold py-3 px-6 rounded-full transition-colors self-start">
               View Nutrition
@@ -238,7 +234,7 @@ export default function HomePage() {
             </div>
             <h3 className="font-display font-bold text-xl text-[#1A1A1A] mb-3">Legendary Service</h3>
             <p className="text-[#594E48] text-sm leading-relaxed">
-              "My pleasure." We believe in serving communities and treating every guest with honor, dignity, and respect inside and outside our restaurants.
+              &ldquo;My pleasure.&rdquo; We believe in serving communities and treating every guest with honor, dignity, and respect inside and outside our restaurants.
             </p>
           </div>
         </div>

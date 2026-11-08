@@ -18,6 +18,17 @@ The corresponding wrapper script is:
 
 The project renders these through `components/AdUnit.tsx` and loads the wrapper through `components/ConsentScripts.tsx` after advertising consent.
 
+## Sitewide ad frame
+
+The shared layout now renders the requested sitewide inventory:
+
+- Header: `revbid-big-leaderboard-6309`
+- Left desktop rail: `revbid-big-skyscraper-5316`
+- Right desktop rail: `revbid-skyscraper-3254`
+- Dismissible bottom/footer anchor: `revbid-mobile-3755`
+
+The rail units appear only at viewport widths of 1720px or more, where they cannot cover the page content. Smaller desktop, tablet, and mobile screens keep the rails hidden. Confirm placements `5316`, `3254`, and `3755` are active for this domain in RevBid; a container cannot receive ads when its account-side zone is inactive.
+
 ## 1. Deploy the correct application first
 
 Deploy this repository to the production host and attach `chick-fila-menus.com` to that deployment. Confirm that the domain serves this Next.js application before troubleshooting ad fill.

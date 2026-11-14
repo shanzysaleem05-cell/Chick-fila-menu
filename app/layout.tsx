@@ -103,6 +103,12 @@ export default function RootLayout({
         <meta name="monetag" content="6bcd35ebdf6f1e9b3579332eea1b5b9d" />
         <link rel="preconnect" href="https://prebid.revbid.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://prebid.revbid.net" />
+        <script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="309964"
+          async
+          data-cfasync="false"
+        />
       </head>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", backgroundColor: "#FAF7F2", color: "#2B1B15" }}>
         <SiteSchema />

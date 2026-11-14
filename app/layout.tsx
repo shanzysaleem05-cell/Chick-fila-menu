@@ -87,6 +87,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    monetag: "6bcd35ebdf6f1e9b3579332eea1b5b9d",
+  },
 };
 
 export default function RootLayout({
@@ -97,6 +100,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        <meta name="monetag" content="6bcd35ebdf6f1e9b3579332eea1b5b9d" />
         <link rel="preconnect" href="https://prebid.revbid.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://prebid.revbid.net" />
       </head>
